@@ -8,7 +8,6 @@ import TrustedBrands from './components/TrustedBrands';
 import Benefits from './components/Benefits';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
-import About from './components/About';
 import Footer from './components/Footer';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
@@ -72,7 +71,7 @@ export default function App() {
                 <AIFeatures />
                 {/* <Pricing /> */}
                 <Testimonials />
-                <About />
+                {/* <About /> */}
                 {/* <Contact /> */}
                 <Footer />
                 <ExitIntent />

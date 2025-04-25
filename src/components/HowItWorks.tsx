@@ -62,7 +62,7 @@ export default function HowItWorks() {
     <div className="bg-white" id="how-it-works">
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">Process</h2>
+          <h2 className="text-base font-semibold text-[#E0FF82] tracking-wide uppercase">Process</h2>
           <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight">
             Seamless Marketing in 4 Steps
           </p>
@@ -81,9 +81,9 @@ export default function HowItWorks() {
               >
                 <div className="flex items-center space-x-5">
                   <div className="flex-shrink-0">
-                    <div className="relative flex items-center justify-center h-16 w-16 rounded-full bg-indigo-50">
-                      <step.icon className="h-8 w-8 text-indigo-600" aria-hidden="true" />
-                      <span className="absolute -top-2 -right-2 h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold">
+                    <div className="relative flex items-center justify-center h-16 w-16 rounded-full bg-primary/10">
+                      <step.icon className="h-8 w-8 text-primary" aria-hidden="true" />
+                      <span className="absolute -top-2 -right-2 h-8 w-8 rounded-full bg-primary flex items-center justify-center text-black font-bold">
                         {index + 1}
                       </span>
                     </div>
@@ -100,7 +100,7 @@ export default function HowItWorks() {
           <div className="mt-16 text-center">
             <a
               href="/pricing"
-              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10 transition-colors"
             >
               Start Your First Marketing Request Today
               <ArrowRight className="ml-2 h-5 w-5" />
