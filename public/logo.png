@@ -1,0 +1,1 @@
+<command>curl -o public/logo.png https://raw.githubusercontent.com/stackblitz/bolt/main/packages/bolt-app/public/bolt-logo.png</command>
