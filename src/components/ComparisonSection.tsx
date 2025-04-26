@@ -63,7 +63,7 @@ export default function ComparisonSection() {
   const [hoveredRow, setHoveredRow] = useState<string | null>(null);
 
   return (
-    <div className="bg-gray-50 py-24">
+    <div className="bg-[#FFF] py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Comparison Section */}
         <div className="mb-24">

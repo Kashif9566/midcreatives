@@ -64,6 +64,7 @@ export default function Hero() {
                       Access a dedicated team of marketing experts for SEO, PPC,
                       social media, content, and more. No hiring, no hassle.
                     </p>
+                    
 
                     <div className="mt-6 space-y-4">
                       {features.map((feature) => (

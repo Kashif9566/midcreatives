@@ -1,99 +1,4 @@
 import React, { useState } from 'react';
-import { Check, X, ArrowRight, Info, Shield, Clock, Zap } from 'lucide-react';
-import Footer from '../Footer';
-import type { PricingPlan } from '../types';
-
-interface TooltipProps {
-  content: string;
-  children: React.ReactNode;
-}
-
-const Tooltip: React.FC<TooltipProps> = ({ content, children }) => {
-  const [show, setShow] = useState(false);
-
-  return (
-    <div className="relative inline-block">
-      <div
-        onMouseEnter={() => setShow(true)}
-        onMouseLeave={() => setShow(false)}
-        className="inline-flex items-center cursor-help"
-      >
-        {children}
-        <Info className="h-4 w-4 ml-1 text-gray-400" />
-      </div>
-      {show && (
-        <div className="absolute z-10 w-64 px-4 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-lg -top-2 left-full ml-2 transform -translate-y-full">
-          {content}
-          <div className="absolute w-2 h-2 bg-gray-900 transform rotate-45 -left-1 top-1/2 -translate-y-1/2"></div>
-        </div>
-      )}
-    </div>
-  );
-};
-
-const plans: PricingPlan[] = [
-  {
-    name: 'Starter',
-    description: 'Perfect for small businesses and startups getting started with digital marketing.',
-    price: '$999',
-    features: [
-      'Up to 3 marketing requests/month',
-      'Basic SEO optimization',
-      '2 social media platforms',
-      'Monthly content creation (8 posts)',
-      'Basic performance analytics',
-      'Email support',
-      'Response within 48 hours',
-      'Monthly strategy call'
-    ]
-  },
-  {
-    name: 'Growth',
-    description: 'Ideal for growing businesses ready to scale their marketing efforts.',
-    price: '$1,999',
-    features: [
-      'Up to 6 marketing requests/month',
-      'Advanced SEO strategy',
-      '4 social media platforms',
-      'Weekly content creation (12 posts)',
-      'PPC campaign management',
-      'Email marketing automation',
-      'Priority support',
-      'Bi-weekly strategy calls',
-      'Dedicated account manager'
-    ]
-  },
-  {
-    name: 'Growth+',
-    description: 'Full-stack marketing execution for high-growth brands.',
-    price: '$2,499',
-    highlighted: true,
-    features: [
-      'Up to 12 marketing requests',
-      'Full SEO management',
-      'All social media platforms',
-      'Daily content creation',
-      'Advanced PPC optimization',
-      'Custom email campaigns',
-      '24/7 priority support',
-      'Weekly strategy calls',
-      'Senior marketing manager',
-      'Custom reporting dashboard'
-    ]
-  }
-];
-
-const featureTooltips = {
-  'Up to 3 marketing requests/month': 'Submit up to 3 different marketing tasks each month, such as creating social posts, optimizing SEO, or designing ads.',
-  'Basic SEO optimization': 'Includes keyword research, on-page optimization, and basic technical SEO improvements.',
-  'Advanced SEO strategy': 'Comprehensive SEO plan including competitive analysis, content strategy, and link building.',
-  'Full SEO management': 'Complete management of your SEO including technical SEO, content creation, and off-page optimization.',
-  'Up to 12 marketing requests': 'Submit up to 12 comprehensive marketing requests with priority processing.',
-  'Weekly strategy calls': 'Regular calls with your marketing manager to discuss strategy and performance.',
-  'Custom reporting dashboard': 'Access a personalized dashboard showing all your marketing metrics in one place.',
-  'Dedicated account manager': 'A dedicated marketing professional who understands your business and manages your campaigns.',
-  'Senior marketing manager': 'An experienced senior marketing professional with expertise in your industry.',
-};
 
 export default function Pricing() {
   const [showCalculator, setShowCalculator] = useState(false);
@@ -122,112 +27,123 @@ export default function Pricing() {
 
   return (
     <div className="bg-white py-24" id="pricing">
+      {/* Comparison Section Header */}
+      <div className="text-center mb-16">
+        <h2 className="text-base font-normal text-black tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
+        Pricing Model
+        </h2>
+        <p className="text-[54px] pt-5 font-semibold text-black text-center leading-[60px]">
+        A subscription built{' '}
+        </p>
+        <p className="text-[54px] font-semibold text-black text-center leading-[60px]">
+          to fuel your{' '}
+          <span className="relative inline-block">
+            <span className="absolute inset-0 bg-[#E0FF82] h-[50%] top-1/2 -translate-y-1/2 -z-10 rounded"></span>
+            growth
+          </span>
+        </p>
+      </div>
+
       {/* Hero Pricing Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
           {/* Left Column */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 md:p-12 overflow-hidden border border-indigo-100">
-              <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-gradient-to-br from-indigo-200 to-purple-200 rounded-full opacity-50"></div>
+          <div className="bg-[#E0FF82] rounded-[12px] p-6 sm:p-8 lg:p-[40px_59px_40px_60px] overflow-hidden h-full">
+            <div className="text-center">
+              <h2 className="text-[14px] sm:text-[16px] font-normal text-black tracking-wide text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
+                Starting at $999/month
+              </h2>
+              <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-['Onest'] font-medium text-black text-center leading-[1.3] mt-4">
+                Flexible Marketing Plans for Every Business
+              </h2>
               
-              <div className="relative">
-                <h2 className="text-3xl font-bold text-gray-900">
-                  Flexible Marketing Plans for Every Business
-                </h2>
-                
-                <p className="mt-4 text-lg text-gray-600">
-                  Choose a plan that fits your needs—get expert marketing execution without hiring in-house teams.
-                </p>
+              <p className="mt-4 text-[18px] sm:text-[20px] lg:text-[22px] font-['Onest'] font-normal text-black text-center leading-[1.4]">
+                Choose a plan that fits your needs—get expert marketing execution without hiring in-house teams.
+              </p>
 
-                <div className="mt-8 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
-                  Starting at $999/month
+              <div className="mt-8 space-y-1 flex flex-col items-center">
+                <div className="flex items-center text-[14px] sm:text-[16px] font-['Onest'] font-normal text-black text-center leading-[1.6]">
+                  <span className="mr-2">•</span>
+                  <span>No long-term contracts</span>
                 </div>
+                <div className="flex items-center text-[14px] sm:text-[16px] font-['Onest'] font-normal text-black text-center leading-[1.6]">
+                  <span className="mr-2">•</span>
+                  <span>24-hour turnaround time</span>
+                </div>
+                <div className="flex items-center text-[14px] sm:text-[16px] font-['Onest'] font-normal text-black text-center leading-[1.6]">
+                  <span className="mr-2">•</span>
+                  <span>Cancel anytime</span>
+                </div>
+              </div>
 
-                <div className="mt-8 space-y-4">
-                  <div className="flex items-center text-gray-700">
-                    <Shield className="h-5 w-5 text-indigo-600 mr-2" />
-                    <span>No long-term contracts</span>
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <Clock className="h-5 w-5 text-indigo-600 mr-2" />
-                    <span>24-hour turnaround time</span>
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <Zap className="h-5 w-5 text-indigo-600 mr-2" />
-                    <span>Cancel anytime</span>
-                  </div>
-                </div>
-
-                <div className="mt-10">
-                  <a
-                    href="/pricing"
-                    className="inline-flex items-center justify-center w-full px-6 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-                  >
-                    View All Plans
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </div>
+              <div className="mt-12 sm:mt-16 lg:mt-[97px]">
+                <a
+                  href="/pricing"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 lg:px-[64px] py-[10px] rounded-[8px] bg-[#1F2223] text-white text-[14px] sm:text-[16px] font-medium leading-[1.6]"
+                >
+                  Book a Call
+                </a>
               </div>
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="mt-12 lg:mt-0">
-            <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="text-lg font-medium text-gray-900 mb-6">
-                What's Included in All Plans:
+          <div className="mt-8 lg:mt-0 w-full bg-[#F7F8F8] rounded-[12px]">
+            <div className="p-6 sm:p-8 h-full">
+              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-4 sm:mb-6">
+                Included in all plans:
               </h3>
-              <div className="space-y-6">
-                <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <h4 className="font-medium text-gray-900 mb-4">Marketing Services</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="ml-3 text-gray-600">Dedicated Marketing Manager</span>
+              <div className="space-y-4 sm:space-y-6">
+                <div>
+                  <h4 className="font-medium text-gray-900 mb-3 sm:mb-4">Marketing Services</h4>
+                  <ul className="space-y-2">
+                    <li className="flex items-center justify-between border-b border-gray-200 pb-1">
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Dedicated Marketing Manager</span>
+                      <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="ml-3 text-gray-600">SEO & Content Strategy</span>
+                    <li className="flex items-center justify-between border-b border-gray-200 pb-1">
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">SEO & Content Strategy</span>
+                      <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="ml-3 text-gray-600">Social Media Management</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <h4 className="font-medium text-gray-900 mb-4">Platform Features</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="ml-3 text-gray-600">Performance Analytics Dashboard</span>
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="ml-3 text-gray-600">Marketing Request System</span>
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="ml-3 text-gray-600">Asset Management</span>
+                    <li className="flex items-center justify-between border-b border-gray-200 pb-1">
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Social Media Management</span>
+                      <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
                   </ul>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <h4 className="font-medium text-gray-900 mb-4">Support & Training</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="ml-3 text-gray-600">Priority Support</span>
+                <div>
+                  <h4 className="font-medium text-gray-900 mb-3 sm:mb-4">Platform Features</h4>
+                  <ul className="space-y-2">
+                    <li className="flex items-center justify-between border-b border-gray-200 pb-1">
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Performance Analytics Dashboard</span>
+                      <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="ml-3 text-gray-600">Strategy Consultations</span>
+                    <li className="flex items-center justify-between border-b border-gray-200 pb-1">
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Marketing Request System</span>
+                      <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="ml-3 text-gray-600">Training Resources</span>
+                    <li className="flex items-center justify-between border-b border-gray-200 pb-1">
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Asset Management</span>
+                      <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-medium text-gray-900 mb-3 sm:mb-4">Support & Training</h4>
+                  <ul className="space-y-2">
+                    <li className="flex items-center justify-between border-b border-gray-200 pb-1">
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Priority Support</span>
+                      <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
+                    </li>
+                    <li className="flex items-center justify-between border-b border-gray-200 pb-1">
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Strategy Consultations</span>
+                      <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
+                    </li>
+                    <li className="flex items-center justify-between">
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Training Resources</span>
+                      <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
                   </ul>
                 </div>

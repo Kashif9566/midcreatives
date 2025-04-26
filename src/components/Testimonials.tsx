@@ -30,7 +30,9 @@ export default function Testimonials() {
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600">Testimonials</h2>
+        <h2 className="text-base font-normal text-black tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
+        Testimonials
+        </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             What Our Clients Say
           </p>
@@ -71,7 +73,7 @@ export default function Testimonials() {
         <div className="mt-16 flex justify-center">
           <a
             href="/testimonials"
-            className="inline-flex items-center px-6 py-3 text-base font-medium text-indigo-600 hover:text-indigo-500"
+            className="inline-flex items-center px-6 py-3 text-base font-medium text-black"
           >
             View All Testimonials
             <ArrowRight className="ml-2 h-5 w-5" />

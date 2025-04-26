@@ -96,8 +96,10 @@ export default function AIFeatures() {
     <div className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">AI-Powered</h2>
-          <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight">
+        <h2 className="text-base font-normal text-black tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
+        AI-Powered
+        </h2>
+          <p className="mt-3 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight">
             AI-Powered Insights & Automation
           </p>
           <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
@@ -108,7 +110,7 @@ export default function AIFeatures() {
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Dashboard Preview */}
           <div className="relative order-2 lg:order-1">
-            <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg shadow-xl overflow-hidden">
+            <div className="bg-gradient-to-r from-[#1F2223] to-[#2A2D2E] rounded-lg shadow-xl overflow-hidden">
               <div className="relative">
                 <div className="aspect-w-16 aspect-h-9">
                   {preloadedImages.length > 0 && (
@@ -147,13 +149,13 @@ export default function AIFeatures() {
                         onClick={() => !isAnimating && handleTabChange(index)}
                         className={`flex items-center px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-all duration-300 ${
                           activeTab === index
-                            ? 'bg-indigo-100 text-indigo-700 shadow-sm transform scale-105'
+                            ? 'bg-[#E0FF82] text-[#1F2223] shadow-sm transform scale-105'
                             : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
                         }`}
                         disabled={isAnimating}
                       >
                         <FeatureIcon className={`h-5 w-5 transition-colors duration-300 ${
-                          activeTab === index ? 'text-indigo-600' : 'text-gray-400'
+                          activeTab === index ? 'text-[#1F2223]' : 'text-gray-400'
                         }`} />
                         <span className="ml-2">{feature.title}</span>
                       </button>
@@ -172,17 +174,17 @@ export default function AIFeatures() {
                 <div 
                   key={feature.title} 
                   className={`bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer transform ${
-                    activeTab === index ? 'ring-2 ring-indigo-500 scale-105' : 'hover:scale-102'
+                    activeTab === index ? 'ring-2 ring-[#E0FF82] scale-105' : 'hover:scale-102'
                   }`}
                   onClick={() => !isAnimating && handleTabChange(index)}
                 >
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
                       <div className={`flex items-center justify-center h-12 w-12 rounded-md ${
-                        activeTab === index ? 'bg-indigo-500' : 'bg-indigo-100'
+                        activeTab === index ? 'bg-[#E0FF82]' : 'bg-gray-100'
                       } text-white transition-colors duration-300`}>
                         <FeatureIcon className={`h-6 w-6 ${
-                          activeTab === index ? 'text-white' : 'text-indigo-600'
+                          activeTab === index ? 'text-[#1F2223]' : 'text-gray-600'
                         }`} />
                       </div>
                     </div>
@@ -198,7 +200,7 @@ export default function AIFeatures() {
             <div className="mt-8">
               <button
                 onClick={() => setShowEarlyAccessForm(true)}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#1F2223] hover:bg-[#2A2D2E] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
               >
                 Get Early Access to AI Features
                 <ArrowRight className="ml-2 h-5 w-5" />

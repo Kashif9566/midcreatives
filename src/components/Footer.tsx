@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
-import Logo from './Logo';
+
 
 const navigation = {
   solutions: [
@@ -61,15 +61,29 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900" aria-labelledby="footer-heading">
+    <footer className="bg-[#000] px-4 sm:px-[90px] pt-[50px] sm:pt-[95px] pb-0" aria-labelledby="footer-heading">
+      <div className="mx-4 sm:mx-[200px] flex items-center justify-center flex-col">
+        <h2 className="text-[#FFF] text-center text-[32px] sm:text-[54px] font-semibold leading-[40px] sm:leading-[60px]">
+          Break free from traditional agencies & freelancers
+        </h2>
+        <p className="mt-4 sm:mt-8 text-[#919191] text-center text-[16px] sm:text-[20px] font-normal leading-[24px] sm:leading-[32px]">
+          Frustrated by slow agencies and rigid contracts? MaaS is built differently— fast, transparent, and growth-focused. Fill out a quick form, and we'll deliver a tailored plan in 3 days to accelerate your startup's growth.
+        </p>
+        <button className="rounded-[8px] bg-[#E0FF82] px-6 sm:px-8 py-[10px] text-[#000] font-['Onest'] text-[14px] sm:text-[16px] font-medium leading-[22px] sm:leading-[26px] mt-6 sm:mt-8">
+          Get Started Now
+        </button>
+      </div>
+      <div className="w-full border-t border-gray-700 mt-8 sm:mt-12"></div>
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div className="max-w-7xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:py-16 lg:px-8 pb-0">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8 xl:col-span-1">
-            <Logo className="text-white" />
-            <p className="text-gray-400 text-base">
+          <div className="space-y-6 sm:space-y-8 xl:col-span-1">
+            <h3 className="text-[#FFF] text-[20px] sm:text-[24px] font-semibold leading-[28px] sm:leading-[32px]">
+              MaaS
+            </h3>
+            <p className="text-[#919191] text-[12px] sm:text-[13px] font-normal leading-[18px] sm:leading-[20px]">
               Making marketing simple and scalable for businesses worldwide. Your success is our mission.
             </p>
             <div className="flex space-x-6">
@@ -80,23 +94,23 @@ export default function Footer() {
                   className="text-gray-400 hover:text-gray-300 transition-colors"
                 >
                   <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                  <item.icon className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
                 </a>
               ))}
             </div>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-200 tracking-wider uppercase">
+                <h4 className="text-[#FFF] font-['Onest'] text-[16px] font-semibold leading-[32px] tracking-wider uppercase">
                   Solutions
-                </h3>
-                <ul className="mt-4 space-y-4">
+                </h4>
+                <ul className="mt-4 space-y-2">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-base text-gray-400 hover:text-gray-300 transition-colors"
+                        className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors"
                       >
                         {item.name}
                       </a>
@@ -104,16 +118,16 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-200 tracking-wider uppercase">
+              <div className="mt-8 sm:mt-0">
+                <h4 className="text-[#FFF] font-['Onest'] text-[16px] font-semibold leading-[32px] tracking-wider uppercase">
                   Company
-                </h3>
-                <ul className="mt-4 space-y-4">
+                </h4>
+                <ul className="mt-4 space-y-2">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-base text-gray-400 hover:text-gray-300 transition-colors"
+                        className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors"
                       >
                         {item.name}
                       </a>
@@ -122,17 +136,17 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-200 tracking-wider uppercase">
+                <h4 className="text-[#FFF] font-['Onest'] text-[16px] font-semibold leading-[32px] tracking-wider uppercase">
                   Support
-                </h3>
-                <ul className="mt-4 space-y-4">
+                </h4>
+                <ul className="mt-4 space-y-2">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-base text-gray-400 hover:text-gray-300 transition-colors"
+                        className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors"
                       >
                         {item.name}
                       </a>
@@ -140,14 +154,14 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-200 tracking-wider uppercase">
+              <div className="mt-8 sm:mt-0">
+                <h4 className="text-[#FFF] text-[14px] font-semibold leading-[32px] tracking-wider uppercase">
                   Subscribe to our newsletter
-                </h3>
-                <p className="mt-4 text-base text-gray-400">
+                </h4>
+                <p className="mt-4 text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px]">
                   Get the latest marketing insights, strategies, and updates delivered to your inbox.
                 </p>
-                <form className="mt-4 sm:flex sm:max-w-md" onSubmit={handleSubscribe}>
+                <form className="mt-4 sm:flex sm:max-w-md flex-col" onSubmit={handleSubscribe}>
                   <label htmlFor="email-address" className="sr-only">
                     Email address
                   </label>
@@ -159,13 +173,13 @@ export default function Footer() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="appearance-none min-w-0 w-full bg-gray-800 border border-transparent rounded-md py-2 px-4 text-base text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-indigo-500 focus:border-indigo-500 focus:placeholder-gray-400"
+                    className="appearance-none min-w-0 w-full bg-[#1A1A1A] border border-transparent rounded-md py-2 px-4 text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-[#E0FF82] focus:border-[#E0FF82] focus:placeholder-gray-400 mb-3"
                     placeholder="Enter your email"
                   />
-                  <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                  <div className="rounded-md sm:flex-shrink-0">
                     <button
                       type="submit"
-                      className="w-full bg-indigo-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-indigo-500"
+                      className="w-full bg-[#E0FF82] border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-[#000] hover:bg-[#c9e673] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-[#E0FF82]"
                     >
                       Subscribe
                       <Send className="ml-2 h-5 w-5" />
@@ -181,10 +195,23 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-gray-700 pt-8">
-          <p className="text-base text-gray-400 xl:text-center">
-            &copy; {new Date().getFullYear()} Marketing as a Service. All rights reserved.
-          </p>
+        <div className="mt-12 border-t border-gray-700 pt-8 pb-0">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px]">
+              &copy; {new Date().getFullYear()} Marketing as a Service. All rights reserved.
+            </p>
+            <div className="flex space-x-6">
+              <a href="/terms" className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors">
+                Terms
+              </a>
+              <a href="/privacy" className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors">
+                Privacy
+              </a>
+              <a href="/cookies" className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors">
+                Cookies
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

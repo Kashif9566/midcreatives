@@ -105,14 +105,14 @@ export default function Navigation() {
 
             <Link
               to="/login"
-              className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
+              className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-[#1F2223] bg-[#E0FF82] hover:bg-[#D0EF72] transition-colors"
             >
               Login
             </Link>
             
             <Link
               to="/get-started"
-              className={`inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-colors shadow-md hover:shadow-lg ${
+              className={`inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#1F2223] hover:bg-[#2A2D2E] transition-colors shadow-md hover:shadow-lg ${
                 scrolled ? 'opacity-100' : 'opacity-0'
               } transition-opacity duration-300`}
             >
@@ -170,7 +170,7 @@ export default function Navigation() {
           <div className="px-3 py-2">
             <Link
               to="/login"
-              className="block w-full text-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
+              className="block w-full text-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-[#1F2223] bg-[#E0FF82] hover:bg-[#D0EF72] transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Login
@@ -180,7 +180,7 @@ export default function Navigation() {
           <div className="px-3 py-2">
             <Link
               to="/get-started"
-              className="block w-full text-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-colors"
+              className="block w-full text-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-[#1F2223] hover:bg-[#2A2D2E] transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Get Started

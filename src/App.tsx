@@ -31,7 +31,9 @@ import ComparisonSection from './components/ComparisonSection';
 import AIFeatures from './components/AIFeatures';
 import ExitIntent from './components/ExitIntent';
 import OnboardingQuestionnaire from './components/onboarding/OnboardingQuestionnaire';
-
+import Pricing from './components/Pricing';
+import Services from './components/Services';
+import About from './components/About';
 export default function App() {
   const user = useAuthStore(state => state.user);
   const checkOnboardingStatus = useAuthStore(state => state.checkOnboardingStatus);
@@ -66,12 +68,12 @@ export default function App() {
                 <TrustedBrands />
                 <Benefits />
                 <HowItWorks />
-                {/* <Services /> */}
+                <Services />
                 <ComparisonSection />
                 <AIFeatures />
-                {/* <Pricing /> */}
+                <Pricing />
                 <Testimonials />
-                {/* <About /> */}
+                <About />
                 {/* <Contact /> */}
                 <Footer />
                 <ExitIntent />
