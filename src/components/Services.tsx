@@ -113,7 +113,7 @@ export default function Services() {
   };
 
   return (
-    <div className="bg-[#FFF] py-24">
+    <div className="bg-[#FFF] py-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-black text-center font-semibold text-[54px] leading-[60px] font-[Onest]">

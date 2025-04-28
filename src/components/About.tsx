@@ -166,7 +166,7 @@ export default function About() {
       </div> */}
 
       {/* What Makes Us Different Section */}
-      {/* <div className="bg-gray-50 py-24">
+      <div className="bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900">
@@ -186,8 +186,8 @@ export default function About() {
               >
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                      <difference.icon className="h-6 w-6" />
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-black">
+                      <difference.icon className="h-6 w-6"  />
                     </div>
                   </div>
                   <div className="ml-4">
@@ -212,7 +212,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* CTA Section */}
       {/* <div className="bg-indigo-700">

@@ -26,7 +26,7 @@ export default function Benefits() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-centerlg:text-center">
           <img src="/images/wcu.png" alt="Benefits" height={59.861} width="auto"/>
-          <h2 className="text-black text-center font-[Onest] text-[54px] font-semibold leading-[60px]"> Everything you <br></br>need, all in <span className="relative inline-block">
+          <h2 className="text-black text-center font-[Onest] text-[54px] font-semibold leading-[60px] mt-5"> Everything you <br></br>need, all in <span className="relative inline-block">
             <span className="absolute w-full bg-primary h-[35px] top-[25px] -z-10 rounded"></span>
             one place
           </span></h2>

@@ -46,7 +46,7 @@ export default function Hero() {
   return (
     <div className="relative overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 bg-white sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
+        <div className="relative z-10 bg-white">
           <div className="pt-16 sm:pt-12">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">

@@ -63,10 +63,10 @@ export default function ComparisonSection() {
   const [hoveredRow, setHoveredRow] = useState<string | null>(null);
 
   return (
-    <div className="bg-[#FFF] py-24">
+    <div className="bg-[#FFF] py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Comparison Section */}
-        <div className="mb-24">
+        <div className="">
           <div className="text-center mb-16">
             <h2 className="text-base font-normal text-black tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
             MaaS vs Traditional Alternatives

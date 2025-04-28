@@ -26,7 +26,7 @@ export default function Pricing() {
   const savings = calculateSavings();
 
   return (
-    <div className="bg-white py-24" id="pricing">
+    <div className="bg-white py-10" id="pricing">
       {/* Comparison Section Header */}
       <div className="text-center mb-16">
         <h2 className="text-base font-normal text-black tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
