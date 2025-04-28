@@ -63,7 +63,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#000] px-4 sm:px-[90px] pt-[50px] sm:pt-[95px] pb-0" aria-labelledby="footer-heading">
       <div className="mx-4 sm:mx-[200px] flex items-center justify-center flex-col">
-        <h2 className="text-[#FFF] text-center text-[32px] sm:text-[54px] font-semibold leading-[40px] sm:leading-[60px]">
+        <h2 className="text-[#FFF] text-center text-[32px] sm:text-[54px] font-[500] leading-[40px] sm:leading-[60px]">
           Break free from traditional agencies & freelancers
         </h2>
         <p className="mt-4 sm:mt-8 text-[#919191] text-center text-[16px] sm:text-[20px] font-normal leading-[24px] sm:leading-[32px]">

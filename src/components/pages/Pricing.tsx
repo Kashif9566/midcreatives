@@ -234,8 +234,16 @@ export default function PricingPage() {
       <div className="bg-white pt-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-[54px] font-semibold leading-[60px] text-black font-[Onest]">
-              Transparent Pricing.
+            <h2 className="text-black_remote font-['Onest'] text-[32px] sm:text-[40px] md:text-[54px] font-[500] leading-[1.2] sm:leading-[1.1] md:leading-[60px]">
+              Transparent <span style={{
+              display: 'inline',
+              backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+              backgroundSize: '100% 60%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center 60%',
+              whiteSpace: 'nowrap',
+              padding: 0
+            }}>Pricing</span>.
               <br />
               No added fees.
             </h2>
@@ -319,7 +327,7 @@ export default function PricingPage() {
                   key={index}
                   className="rounded-[12px] border border-[#CECECE] bg-white p-8"
                 >
-                  <h3 className="text-[31px] font-semibold font-['Onest'] text-left text-black leading-[44px] mb-4">
+                  <h3 className="text-[31px] font-[500] font-['Onest'] text-left text-black leading-[44px] mb-4">
                     {card.title}
                   </h3>
                   <div className="text-left mb-6">
@@ -342,7 +350,7 @@ export default function PricingPage() {
                   >
                     Get started for free
                   </button>
-                  <h4 className="text-[18px] font-semibold font-['Onest'] text-black leading-[22px] mb-4">
+                  <h4 className="text-[18px] font-[500] font-['Onest'] text-black leading-[22px] mb-4">
                     Features
                   </h4>
                   <ul className="space-y-1">
@@ -372,10 +380,21 @@ export default function PricingPage() {
       </div>
 
       {/* What's Included vs Not Included */}
-      <div className="bg-gray-50 py-24">
+      <div className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-[54px] font-semibold leading-[60px] text-black text-center font-[Onest] mb-12">
-            What's Included vs <br />What's Not
+          <h2 className="text-black_remote text-center font-[500] text-[54px] leading-[60px] font-[Onest] mb-12">
+            What's Included vs <br /> 
+            <span style={{
+              display: 'inline',
+              backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+              backgroundSize: '100% 60%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center 60%',
+              whiteSpace: 'nowrap',
+              padding: 0
+            }}>What's Not</span>
+            
+
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -427,8 +446,16 @@ export default function PricingPage() {
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-          <h2 className="text-[54px] font-semibold leading-[60px] text-black text-center font-[Onest]">
-  Frequently Asked Questions
+          <h2 className="text-black_remote text-center font-[500] text-[54px] leading-[60px] font-[Onest]">
+  Frequently Asked <span style={{
+              display: 'inline',
+              backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+              backgroundSize: '100% 60%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center 60%',
+              whiteSpace: 'nowrap',
+              padding: 0
+            }}>Questions</span>
 </h2>
 
             <p className="mt-4 text-lg text-gray-500">
@@ -533,26 +560,6 @@ export default function PricingPage() {
               ))}
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-indigo-700">
-        <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            <span className="block">Ready to transform your marketing?</span>
-            <span className="block">Get started today.</span>
-          </h2>
-          <p className="mt-4 text-lg leading-6 text-indigo-200">
-            Join the marketing revolution.
-          </p>
-          <a
-            href="/contact"
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto"
-          >
-            Schedule a Free Consultation
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
         </div>
       </div>
 

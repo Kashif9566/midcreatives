@@ -26,21 +26,26 @@ export default function Pricing() {
   const savings = calculateSavings();
 
   return (
-    <div className="bg-white py-10" id="pricing">
+    <div className="bg-white py-24" id="pricing">
       {/* Comparison Section Header */}
       <div className="text-center mb-16">
-        <h2 className="text-base font-normal text-black tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
+        <h2 className="text-base font-normal text_black_remote tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
         Pricing Model
         </h2>
-        <p className="text-[54px] pt-5 font-semibold text-black text-center leading-[60px]">
+        <p className="text-[54px] pt-5 font-[500] text_black_remote text-center leading-[60px]">
         A subscription built{' '}
         </p>
-        <p className="text-[54px] font-semibold text-black text-center leading-[60px]">
+        <p className="text-[54px] font-[500] text_black_remote text-center leading-[60px]">
           to fuel your{' '}
-          <span className="relative inline-block">
-            <span className="absolute inset-0 bg-[#E0FF82] h-[50%] top-1/2 -translate-y-1/2 -z-10 rounded"></span>
-            growth
-          </span>
+          <span style={{
+            display: 'inline',
+            backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+            backgroundSize: '100% 60%',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center 60%',
+            whiteSpace: 'nowrap',
+            padding: 0
+          }}>growth</span>
         </p>
       </div>
 
@@ -50,27 +55,27 @@ export default function Pricing() {
           {/* Left Column */}
           <div className="bg-[#E0FF82] rounded-[12px] p-6 sm:p-8 lg:p-[40px_59px_40px_60px] overflow-hidden h-full">
             <div className="text-center">
-              <h2 className="text-[14px] sm:text-[16px] font-normal text-black tracking-wide text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
+              <h2 className="text-[14px] sm:text-[16px] font-normal text_black_remote tracking-wide text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
                 Starting at $999/month
               </h2>
-              <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-['Onest'] font-medium text-black text-center leading-[1.3] mt-4">
+              <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-['Onest'] font-medium text_black_remote text-center leading-[1.3] mt-4">
                 Flexible Marketing Plans for Every Business
               </h2>
               
-              <p className="mt-4 text-[18px] sm:text-[20px] lg:text-[22px] font-['Onest'] font-normal text-black text-center leading-[1.4]">
+              <p className="mt-4 text-[18px] sm:text-[20px] lg:text-[22px] font-['Onest'] font-normal text_black_remote text-center leading-[1.4]">
                 Choose a plan that fits your needs—get expert marketing execution without hiring in-house teams.
               </p>
 
               <div className="mt-8 space-y-1 flex flex-col items-center">
-                <div className="flex items-center text-[14px] sm:text-[16px] font-['Onest'] font-normal text-black text-center leading-[1.6]">
+                <div className="flex items-center text-[14px] sm:text-[16px] font-['Onest'] font-normal text_black_remote text-center leading-[1.6]">
                   <span className="mr-2">•</span>
                   <span>No long-term contracts</span>
                 </div>
-                <div className="flex items-center text-[14px] sm:text-[16px] font-['Onest'] font-normal text-black text-center leading-[1.6]">
+                <div className="flex items-center text-[14px] sm:text-[16px] font-['Onest'] font-normal text_black_remote text-center leading-[1.6]">
                   <span className="mr-2">•</span>
                   <span>24-hour turnaround time</span>
                 </div>
-                <div className="flex items-center text-[14px] sm:text-[16px] font-['Onest'] font-normal text-black text-center leading-[1.6]">
+                <div className="flex items-center text-[14px] sm:text-[16px] font-['Onest'] font-normal text_black_remote text-center leading-[1.6]">
                   <span className="mr-2">•</span>
                   <span>Cancel anytime</span>
                 </div>
@@ -98,15 +103,15 @@ export default function Pricing() {
                   <h4 className="font-medium text-gray-900 mb-3 sm:mb-4">Marketing Services</h4>
                   <ul className="space-y-2">
                     <li className="flex items-center justify-between border-b border-gray-200 pb-1">
-                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Dedicated Marketing Manager</span>
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text_black_remote leading-[1.8]">Dedicated Marketing Manager</span>
                       <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
                     <li className="flex items-center justify-between border-b border-gray-200 pb-1">
-                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">SEO & Content Strategy</span>
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text_black_remote leading-[1.8]">SEO & Content Strategy</span>
                       <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
                     <li className="flex items-center justify-between border-b border-gray-200 pb-1">
-                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Social Media Management</span>
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text_black_remote leading-[1.8]">Social Media Management</span>
                       <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
                   </ul>
@@ -116,15 +121,15 @@ export default function Pricing() {
                   <h4 className="font-medium text-gray-900 mb-3 sm:mb-4">Platform Features</h4>
                   <ul className="space-y-2">
                     <li className="flex items-center justify-between border-b border-gray-200 pb-1">
-                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Performance Analytics Dashboard</span>
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text_black_remote leading-[1.8]">Performance Analytics Dashboard</span>
                       <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
                     <li className="flex items-center justify-between border-b border-gray-200 pb-1">
-                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Marketing Request System</span>
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text_black_remote leading-[1.8]">Marketing Request System</span>
                       <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
                     <li className="flex items-center justify-between border-b border-gray-200 pb-1">
-                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Asset Management</span>
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text_black_remote leading-[1.8]">Asset Management</span>
                       <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
                   </ul>
@@ -134,15 +139,15 @@ export default function Pricing() {
                   <h4 className="font-medium text-gray-900 mb-3 sm:mb-4">Support & Training</h4>
                   <ul className="space-y-2">
                     <li className="flex items-center justify-between border-b border-gray-200 pb-1">
-                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Priority Support</span>
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text_black_remote leading-[1.8]">Priority Support</span>
                       <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
                     <li className="flex items-center justify-between border-b border-gray-200 pb-1">
-                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Strategy Consultations</span>
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text_black_remote leading-[1.8]">Strategy Consultations</span>
                       <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
                     <li className="flex items-center justify-between">
-                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text-black leading-[1.8]">Training Resources</span>
+                      <span className="text-[13px] sm:text-[14px] font-['Onest'] font-normal text_black_remote leading-[1.8]">Training Resources</span>
                       <img src="/images/fi_190411.png" alt="check" className="w-4 h-4" />
                     </li>
                   </ul>

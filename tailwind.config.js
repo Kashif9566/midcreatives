@@ -8,6 +8,7 @@ export default {
       },
       colors: {
         primary: '#E0FF82',
+        black_remote: '#1F2223',
       },
     },
   },

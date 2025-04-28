@@ -93,14 +93,22 @@ export default function AIFeatures() {
   const ActiveFeatureIcon = aiFeatures[activeTab].icon;
 
   return (
-    <div className="bg-white py-10">
+    <div className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-        <h2 className="text-base font-normal text-black tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
+        <h2 className="text-base font-normal text_black_remote tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
         AI-Powered
         </h2>
-          <p className="mt-3 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight">
-            AI-Powered Insights & Automation
+          <p className="mt-3 text-4xl font-[500] text-gray-900 sm:text-5xl sm:tracking-tight">
+            AI-Powered Insights & <span style={{
+              display: 'inline',
+              backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+              backgroundSize: '100% 60%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center 60%',
+              whiteSpace: 'nowrap',
+              padding: 0
+            }}>Automation</span>
           </p>
           <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
             Harness the power of artificial intelligence to supercharge your marketing efforts
@@ -147,15 +155,15 @@ export default function AIFeatures() {
                       <button
                         key={feature.title}
                         onClick={() => !isAnimating && handleTabChange(index)}
-                        className={`flex items-center px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-all duration-300 ${
+                        className={`flex items-center px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-all duration-300 hover:bg-gray-50 ${
                           activeTab === index
                             ? 'bg-[#E0FF82] text-[#1F2223] shadow-sm transform scale-105'
-                            : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                            : 'text-gray-500 hover:text-gray-700'
                         }`}
                         disabled={isAnimating}
                       >
                         <FeatureIcon className={`h-5 w-5 transition-colors duration-300 ${
-                          activeTab === index ? 'text-[#1F2223]' : 'text-gray-400'
+                          activeTab === index ? 'text-[#1F2223]' : 'text-gray-400 hover:text-[#1F2223]'
                         }`} />
                         <span className="ml-2">{feature.title}</span>
                       </button>
@@ -173,7 +181,7 @@ export default function AIFeatures() {
               return (
                 <div 
                   key={feature.title} 
-                  className={`bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer transform ${
+                  className={`bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:bg-gray-50 ${
                     activeTab === index ? 'ring-2 ring-[#E0FF82] scale-105' : 'hover:scale-102'
                   }`}
                   onClick={() => !isAnimating && handleTabChange(index)}
@@ -181,10 +189,10 @@ export default function AIFeatures() {
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
                       <div className={`flex items-center justify-center h-12 w-12 rounded-md ${
-                        activeTab === index ? 'bg-[#E0FF82]' : 'bg-gray-100'
+                        activeTab === index ? 'bg-[#E0FF82]' : 'bg-gray-100 hover:bg-primary' 
                       } text-white transition-colors duration-300`}>
                         <FeatureIcon className={`h-6 w-6 ${
-                          activeTab === index ? 'text-[#1F2223]' : 'text-gray-600'
+                          activeTab === index ? 'text-[#1F2223]' : 'text-gray-600 hover:text_black_remote'
                         }`} />
                       </div>
                     </div>

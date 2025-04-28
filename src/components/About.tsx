@@ -91,15 +91,23 @@ const differences = [
 export default function About() {
   return (
     <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-18 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {/* Left side - Hero Section */}
           <div className="md:col-span-6">
-            <span className="text-[#000] text-center font-['Onest'] text-[16px] sm:text-[18px] font-semibold leading-normal uppercase inline-block rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5">
+            <span className="text-[#000] text-center font-['Onest'] text-[16px] sm:text-[18px] font-[500] leading-normal uppercase inline-block rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5">
               A NEW ERA OF CREATIVE WORK
             </span>
-            <h2 className="text-[#000] font-['Onest'] text-[28px] sm:text-[32px] md:text-[40px] font-bold leading-[1.2] mt-4 sm:mt-6 mb-3 sm:mb-4">
-              Redefining Marketing<br className="hidden sm:block" />with Technology
+            <h2 className="text-black_remote font-['Onest'] text-[28px] sm:text-[32px] md:text-[40px] font-[500] leading-[1.2] mt-4 sm:mt-6 mb-3 sm:mb-4">
+              Redefining Marketing<br className="hidden sm:block" />with <span style={{
+                display: 'inline',
+                backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+                backgroundSize: '100% 60%',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center 60%',
+                whiteSpace: 'nowrap',
+                padding: 0
+              }}>Technology</span>
             </h2>
             <p className="text-[#727986] font-['Onest'] text-[16px] sm:text-[18px] md:text-[22px] font-normal leading-[24px] sm:leading-[28px] md:leading-[32px] max-w-3xl">
               We're a tech-driven marketing platform built to help businesses scale
@@ -169,9 +177,18 @@ export default function About() {
       <div className="bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900">
-              What Makes Us Different
+            <h2 className="text-black_remote text-center font-[500] text-[54px] leading-[60px] font-[Onest]">
+              What Makes Us <span style={{
+                display: 'inline',
+                backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+                backgroundSize: '100% 60%',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center 60%',
+                whiteSpace: 'nowrap',
+                padding: 0
+              }}>Different</span>
             </h2>
+
             <p className="mt-4 text-lg text-gray-500">
               We combine technology, expertise, and data to deliver exceptional
               marketing results

@@ -59,16 +59,16 @@ export default function HowItWorks() {
   }, []);
 
   return (
-    <div className="bg-white py-5" id="how-it-works">
+    <div className="bg-white py-24" id="how-it-works">
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
-        <h2 className="text-base font-normal text-black tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
+        <h2 className="text-base font-normal text_black_remote tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
         Process
         </h2>
-          <p className="pt-5 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight">
+          <p className="pt-5 text-4xl font-[500] text-gray-900 sm:text-5xl sm:tracking-tight">
             Seamless Marketing in 4 Steps
           </p>
-          <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+          <p className="max-w-xl mt-5 mx-auto font-normal text-xl text-gray-500">
             Get your marketing campaigns up and running quickly with our streamlined process
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function HowItWorks() {
                   <div className="flex-shrink-0">
                     <div className="relative flex items-center justify-center h-16 w-16 rounded-full bg-primary">
                       <step.icon className="h-8 w-8" aria-hidden="true" />
-                      <span className="absolute -top-2 -right-2 h-8 w-8 rounded-full bg-primary flex items-center justify-center text-black font-bold">
+                      <span className="absolute -top-2 -right-2 h-8 w-8 rounded-full bg-primary flex items-center justify-center text_black_remote font-bold">
                         {index + 1}
                       </span>
                     </div>
@@ -102,7 +102,7 @@ export default function HowItWorks() {
           <div className="mt-16 text-center">
             <a
               href="/pricing"
-              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text_black_remote bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10 transition-colors"
             >
               Start Your First Marketing Request Today
               <ArrowRight className="ml-2 h-5 w-5" />

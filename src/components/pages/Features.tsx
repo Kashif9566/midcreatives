@@ -62,9 +62,21 @@ export default function Features() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
           {/* Left column */}
           <div className="col-span-1 md:col-span-6">
-
-            <h2 className="text-[#000] font-['Onest'] text-[32px] sm:text-[40px] md:text-[54px] font-semibold leading-[1.2] sm:leading-[1.1] md:leading-[60px]">
-              A Powerful Platform for Marketing Success
+            <h2 className="text-black_remote font-['Onest'] text-[32px] sm:text-[40px] md:text-[54px] font-[500] leading-[1.2] sm:leading-[1.1] md:leading-[60px]">
+              A Powerful Platform for{" "}
+              <span
+                style={{
+                  display: "inline",
+                  backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+                  backgroundSize: "100% 60%",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center 60%",
+                  whiteSpace: "nowrap",
+                  padding: 0,
+                }}
+              >
+                Marketing Success
+              </span>
             </h2>
             <p className="mt-4 sm:mt-6 text-[#727986] font-['Onest'] text-[16px] sm:text-[18px] md:text-[22px] font-normal leading-[24px] sm:leading-[28px] md:leading-[32px] max-w-xl">
               Discover how our tech-driven platform delivers fast, scalable
@@ -83,12 +95,26 @@ export default function Features() {
       </div>
 
       {/* Key Features Section */}
-      <div className="py-12 sm:py-10 md:py-10">
+      <div className="py-12 sm:py-24 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-[#000] font-['Onest'] text-[28px] sm:text-[32px] md:text-[40px] font-semibold leading-[1.2]">
-              Key Features
+            <h2 className="text-black_remote text-center font-[500] text-[54px] leading-[60px] font-[Onest]">
+              Key{" "}
+              <span
+                style={{
+                  display: "inline",
+                  backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+                  backgroundSize: "100% 60%",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center 60%",
+                  whiteSpace: "nowrap",
+                  padding: 0,
+                }}
+              >
+                Features
+              </span>
             </h2>
+
             <p className="mt-4 text-[#727986] font-['Onest'] text-[16px] sm:text-[18px] md:text-[22px] font-normal leading-[24px] sm:leading-[28px] md:leading-[32px] max-w-2xl mx-auto">
               Everything you need to scale your marketing efforts
             </p>
@@ -100,9 +126,10 @@ export default function Features() {
                 key={feature.name}
                 className="bg-white rounded-lg shadow-lg p-6"
               >
-                <div className="text-indigo-600">
-                  <feature.icon className="h-8 w-8" />
+                <div className="text-black bg-primary rounded-[12px] p-3 inline-flex items-center justify-center">
+                  <feature.icon className="h-6 w-6" />
                 </div>
+
                 <h3 className="mt-4 text-lg font-medium text-gray-900">
                   {feature.name}
                 </h3>
@@ -114,11 +141,19 @@ export default function Features() {
       </div>
 
       {/* How It Works Section */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900">
-              How It Works
+            <h2 className="text-black_remote text-center font-semibold text-[54px] leading-[60px] font-[Onest]">
+              How It <span style={{
+              display: 'inline',
+              backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+              backgroundSize: '100% 60%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center 60%',
+              whiteSpace: 'nowrap',
+              padding: 0
+            }}>Works</span>
             </h2>
             <p className="mt-4 text-lg text-gray-500">
               Simple steps to marketing success
@@ -151,8 +186,8 @@ export default function Features() {
                 },
               ].map((step) => (
                 <div key={step.step} className="relative">
-                  <div className="border-2 border-indigo-600 rounded-lg p-6">
-                    <span className="text-4xl font-bold text-indigo-600">
+                  <div className="border-2 border-gray-200 rounded-lg p-6 flex flex-col items-start w-full h-full min-h-[230px]">
+                    <span className="text-4xl font-bold text-gray-900">
                       {step.step}
                     </span>
                     <h3 className="mt-4 text-xl font-medium text-gray-900">
@@ -168,11 +203,19 @@ export default function Features() {
       </div>
 
       {/* Integrations Section */}
-      <div className="py-16">
+      <div className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900">
-              Integration Capabilities
+            <h2 className="text-black_remote text-center font-[500] text-[54px] leading-[60px] font-[Onest]">
+              Integration <span style={{
+              display: 'inline',
+              backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+              backgroundSize: '100% 60%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center 60%',
+              whiteSpace: 'nowrap',
+              padding: 0
+            }}>Capabilities</span> 
             </h2>
             <p className="mt-4 text-lg text-gray-500">
               Connect with your favorite tools
@@ -201,27 +244,6 @@ export default function Features() {
           </div>
         </div>
       </div>
-
-      {/* CTA Section */}
-      <div className="bg-indigo-700">
-        <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            <span className="block">Ready to transform your marketing?</span>
-            <span className="block">See our platform in action.</span>
-          </h2>
-          <p className="mt-4 text-lg leading-6 text-indigo-200">
-            Book a demo to experience our features firsthand.
-          </p>
-          <a
-            href="/demo"
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto"
-          >
-            Get a Demo
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
-        </div>
-      </div>
-
       <Footer />
     </div>
   );

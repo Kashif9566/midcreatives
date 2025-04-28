@@ -47,13 +47,13 @@ export default function Hero() {
     <div className="relative overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="relative z-10 bg-white">
-          <div className="pt-16 sm:pt-12">
+          <div className="pt-16 sm:pt-20 pb-14">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
                 {/* Left Column */}
                 <div className="lg:flex lg:space-x-12 items-center">
                   <div className="lg:w-[45.83%]">
-                    <h1 className="font-semibold text-[36px] leading-[44px] sm:text-[42px] sm:leading-[50px] md:text-[48px] md:leading-[56px] lg:text-[54px] lg:leading-[60px] tracking-[0] text-gray-900">
+                    <h1 className="font-[500] text-[36px] leading-[44px] sm:text-[42px] sm:leading-[50px] md:text-[48px] md:leading-[56px] lg:text-[54px] lg:leading-[60px] tracking-[0] text-black_remote">
                       <span className="block">Scalable Marketing,</span>
                       <span className="relative inline-block">
                         <span className="absolute inset-0 bg-[#E0FF82] h-[50%] top-1/2 -translate-y-1/2 -z-10 rounded"></span>
