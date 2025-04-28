@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 
 const navigation = {
   solutions: [
     { name: 'SEO Services', href: '/services/seo' },
-    { name: 'PPC Advertising', href: '/services/ppc' },
-    { name: 'Social Media', href: '/services/social' },
-    { name: 'Content Marketing', href: '/services/content' },
-    { name: 'Email Marketing', href: '/services/email' },
+    { name: 'PPC Advertising', href: '/services/ppc-advertising' },
+    { name: 'Social Media', href: '/services/social-media-marketing' },
+    { name: 'Content Marketing', href: '/services/content-marketing' },
+    { name: 'Email Marketing', href: '/services/email-marketing' },
   ],
   company: [
     { name: 'About Us', href: '/about' },
@@ -108,12 +109,12 @@ export default function Footer() {
                 <ul className="mt-4 space-y-2">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
+                      <Link
+                        to={item.href}
                         className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -125,12 +126,12 @@ export default function Footer() {
                 <ul className="mt-4 space-y-2">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
+                      <Link
+                        to={item.href}
                         className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -144,12 +145,12 @@ export default function Footer() {
                 <ul className="mt-4 space-y-2">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
+                      <Link
+                        to={item.href}
                         className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -201,15 +202,15 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Marketing as a Service. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="/terms" className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors">
+              <Link to="/terms" className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors">
                 Terms
-              </a>
-              <a href="/privacy" className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors">
+              </Link>
+              <Link to="/privacy" className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors">
                 Privacy
-              </a>
-              <a href="/cookies" className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors">
+              </Link>
+              <Link to="/cookies" className="text-[#919191] font-['Onest'] text-[14px] font-normal leading-[32px] hover:text-gray-300 transition-colors">
                 Cookies
-              </a>
+              </Link>
             </div>
           </div>
         </div>
