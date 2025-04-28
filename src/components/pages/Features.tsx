@@ -83,7 +83,7 @@ export default function Features() {
       </div>
 
       {/* Key Features Section */}
-      <div className="py-12 sm:py-16 md:py-24">
+      <div className="py-12 sm:py-10 md:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-[#000] font-['Onest'] text-[28px] sm:text-[32px] md:text-[40px] font-semibold leading-[1.2]">

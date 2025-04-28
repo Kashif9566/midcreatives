@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Check, X, ArrowRight, Info, CheckCircle } from 'lucide-react';
-import Footer from '../Footer';
-import type { PricingPlan } from '../../types';
+import React, { useState } from "react";
+import { Check, X, ArrowRight, Info, CheckCircle } from "lucide-react";
+import Footer from "../Footer";
+import type { PricingPlan } from "../../types";
 
 interface TooltipProps {
   content: string;
@@ -32,146 +32,218 @@ const Tooltip: React.FC<TooltipProps> = ({ content, children }) => {
 };
 
 const tooltips = {
-  'Up to 3 marketing requests/month': 'Submit up to 3 marketing requests per month, including blog writing, ad creative design, and social media content.',
-  'Up to 6 marketing requests/month': 'Submit up to 6 different marketing tasks each month with faster turnaround times.',
-  'Up to 12 marketing requests': 'Submit up to 12 comprehensive marketing requests with priority processing.',
-  'Basic SEO optimization': 'Includes technical SEO audit, on-page optimization, and keyword research.',
-  'Advanced SEO strategy': 'Comprehensive SEO plan including competitive analysis, content strategy, and link building.',
-  'Full SEO management': 'Complete management of your SEO including technical SEO, content creation, and off-page optimization.',
-  '2 social media platforms': 'Manage content for up to 2 platforms of your choice (Instagram, LinkedIn, Twitter, etc.).',
-  '4 social media platforms': 'Expanded social media management across 4 major platforms.',
-  'All social media platforms': 'Comprehensive management across all major social media platforms.',
-  'Monthly content creation (8 posts)': 'Includes blog posts, email newsletters, or social media content, up to 8 pieces per month.',
-  'Weekly content creation (12 posts)': 'Regular content creation with 12 high-quality posts delivered weekly.',
-  'Daily content creation': 'Continuous content creation with daily posts and updates.',
-  'PPC campaign management': 'Covers ad setup, monitoring, and optimization with up to $2,500 ad spend management.',
-  'Advanced PPC optimization': 'Advanced campaign optimization, A/B testing, and performance scaling.',
-  'Custom reporting dashboard': 'Access a personalized dashboard with campaign performance insights and analytics.',
-  'Custom email campaigns': 'Tailored email marketing campaigns with advanced segmentation and automation.',
-  'Dedicated account manager': 'A dedicated marketing professional who understands your business and manages your campaigns.',
-  'Senior marketing manager': 'An experienced senior marketing professional with expertise in your industry.',
+  "Up to 3 marketing requests/month":
+    "Submit up to 3 marketing requests per month, including blog writing, ad creative design, and social media content.",
+  "Up to 6 marketing requests/month":
+    "Submit up to 6 different marketing tasks each month with faster turnaround times.",
+  "Up to 12 marketing requests":
+    "Submit up to 12 comprehensive marketing requests with priority processing.",
+  "Basic SEO optimization":
+    "Includes technical SEO audit, on-page optimization, and keyword research.",
+  "Advanced SEO strategy":
+    "Comprehensive SEO plan including competitive analysis, content strategy, and link building.",
+  "Full SEO management":
+    "Complete management of your SEO including technical SEO, content creation, and off-page optimization.",
+  "2 social media platforms":
+    "Manage content for up to 2 platforms of your choice (Instagram, LinkedIn, Twitter, etc.).",
+  "4 social media platforms":
+    "Expanded social media management across 4 major platforms.",
+  "All social media platforms":
+    "Comprehensive management across all major social media platforms.",
+  "Monthly content creation (8 posts)":
+    "Includes blog posts, email newsletters, or social media content, up to 8 pieces per month.",
+  "Weekly content creation (12 posts)":
+    "Regular content creation with 12 high-quality posts delivered weekly.",
+  "Daily content creation":
+    "Continuous content creation with daily posts and updates.",
+  "PPC campaign management":
+    "Covers ad setup, monitoring, and optimization with up to $2,500 ad spend management.",
+  "Advanced PPC optimization":
+    "Advanced campaign optimization, A/B testing, and performance scaling.",
+  "Custom reporting dashboard":
+    "Access a personalized dashboard with campaign performance insights and analytics.",
+  "Custom email campaigns":
+    "Tailored email marketing campaigns with advanced segmentation and automation.",
+  "Dedicated account manager":
+    "A dedicated marketing professional who understands your business and manages your campaigns.",
+  "Senior marketing manager":
+    "An experienced senior marketing professional with expertise in your industry.",
 };
 
 const plans: PricingPlan[] = [
   {
-    name: 'Starter',
-    description: 'Perfect for small businesses and startups getting started with digital marketing.',
-    price: '$999',
+    name: "Starter",
+    description:
+      "Perfect for small businesses and startups getting started with digital marketing.",
+    price: "$999",
     features: [
-      'Up to 3 marketing requests/month',
-      'Basic SEO optimization',
-      '2 social media platforms',
-      'Monthly content creation (8 posts)',
-      'Basic performance analytics',
-      'Email support',
-      'Response within 48 hours',
-      'Monthly strategy call'
-    ]
+      "Up to 3 marketing requests/month",
+      "Basic SEO optimization",
+      "2 social media platforms",
+      "Monthly content creation (8 posts)",
+      "Basic performance analytics",
+      "Email support",
+      "Response within 48 hours",
+      "Monthly strategy call",
+    ],
   },
   {
-    name: 'Growth',
-    description: 'Ideal for growing businesses ready to scale their marketing efforts.',
-    price: '$1,999',
+    name: "Growth",
+    description:
+      "Ideal for growing businesses ready to scale their marketing efforts.",
+    price: "$1,999",
     features: [
-      'Up to 6 marketing requests/month',
-      'Advanced SEO strategy',
-      '4 social media platforms',
-      'Weekly content creation (12 posts)',
-      'PPC campaign management',
-      'Email marketing automation',
-      'Priority support',
-      'Bi-weekly strategy calls',
-      'Dedicated account manager'
-    ]
+      "Up to 6 marketing requests/month",
+      "Advanced SEO strategy",
+      "4 social media platforms",
+      "Weekly content creation (12 posts)",
+      "PPC campaign management",
+      "Email marketing automation",
+      "Priority support",
+      "Bi-weekly strategy calls",
+      "Dedicated account manager",
+    ],
   },
   {
-    name: 'Growth+',
-    description: 'Full-stack marketing execution for high-growth brands.',
-    price: '$2,499',
+    name: "Growth+",
+    description: "Full-stack marketing execution for high-growth brands.",
+    price: "$2,499",
     highlighted: true,
     features: [
-      'Up to 12 marketing requests',
-      'Full SEO management',
-      'All social media platforms',
-      'Daily content creation',
-      'Advanced PPC optimization',
-      'Custom email campaigns',
-      '24/7 priority support',
-      'Weekly strategy calls',
-      'Senior marketing manager',
-      'Custom reporting dashboard'
-    ]
+      "Up to 12 marketing requests",
+      "Full SEO management",
+      "All social media platforms",
+      "Daily content creation",
+      "Advanced PPC optimization",
+      "Custom email campaigns",
+      "24/7 priority support",
+      "Weekly strategy calls",
+      "Senior marketing manager",
+      "Custom reporting dashboard",
+    ],
   },
   {
-    name: 'Enterprise',
-    description: 'Advanced strategy & performance-based pricing for large-scale companies.',
-    price: 'Custom',
+    name: "Enterprise",
+    description:
+      "Advanced strategy & performance-based pricing for large-scale companies.",
+    price: "Custom",
     features: [
-      'Custom marketing strategy',
-      'Multi-brand management',
-      'Custom integrations',
-      'Dedicated marketing team',
-      'Performance-based pricing',
-      'White-label services',
-      'Quarterly business reviews',
-      'API access',
-      'Custom SLAs',
-      'Enterprise support'
-    ]
-  }
+      "Custom marketing strategy",
+      "Multi-brand management",
+      "Custom integrations",
+      "Dedicated marketing team",
+      "Performance-based pricing",
+      "White-label services",
+      "Quarterly business reviews",
+      "API access",
+      "Custom SLAs",
+      "Enterprise support",
+    ],
+  },
 ];
 
 const includedFeatures = [
-  'Access to marketing platform',
-  'Dedicated marketing manager',
-  'Real-time performance tracking',
-  'Monthly performance reports',
-  'Unlimited revisions',
-  'Brand asset storage',
-  'Marketing calendar',
-  'Campaign analytics'
+  "Access to marketing platform",
+  "Dedicated marketing manager",
+  "Real-time performance tracking",
+  "Monthly performance reports",
+  "Unlimited revisions",
+  "Brand asset storage",
+  "Marketing calendar",
+  "Campaign analytics",
 ];
 
 const notIncludedFeatures = [
-  'Ad spend budget',
-  'Third-party software costs',
-  'Stock photo licenses',
-  'Custom development work',
-  'Print materials',
-  'Event sponsorships'
+  "Ad spend budget",
+  "Third-party software costs",
+  "Stock photo licenses",
+  "Custom development work",
+  "Print materials",
+  "Event sponsorships",
+];
+
+interface PricingCard {
+  title: string;
+  price: string;
+  features: string[];
+}
+
+const pricingCards: PricingCard[] = [
+  {
+    title: "Pay-as-you-go",
+    price: "$0",
+    features: [
+      "Expert Copywriters",
+      "Dedicated Client Success",
+      "Manager Up to 10 content requests/mo*",
+      "48-hour delivery available",
+      "Content strategy + planning tools",
+    ],
+  },
+  {
+    title: "Ad Management",
+    price: "$0",
+    features: [
+      "Expert Copywriters",
+      "Dedicated Client Success",
+      "Manager Up to 10 content requests/mo*",
+      "48-hour delivery available",
+      "Content strategy + planning tools",
+    ],
+  },
+  {
+    title: "Social Management",
+    price: "$0",
+    features: [
+      "Expert Copywriters",
+      "Dedicated Client Success",
+      "Manager Up to 10 content requests/mo*",
+      "48-hour delivery available",
+      "Content strategy + planning tools",
+    ],
+  },
+];
+
+const includedItems = [
+  "Access to all marketing services (based on plan)",
+  "Dedicated Marketing Manager",
+  "Standard & Priority Marketing Requests (based on plan)",
+  "Real-time performance insights",
+  "Social media content creation",
+  "SEO blog writing & strategy",
+  "Email marketing automation",
+  "Paid ad campaign setup & optimization (client pays for ad spend)",
+  "Monthly performance reports",
+  "Integration with Slack or Microsoft Teams (Growth+ & Enterprise)"
+];
+
+const notIncludedItems = [
+  "Paid ad spend for campaigns (client's responsibility)",
+  "Third-party software costs (e.g., Mailchimp, HubSpot, Unbounce)",
+  "Custom web development & app development",
+  "Business intelligence software & advanced analytics (unless pre-integrated)",
+  "Press releases & external PR outreach",
+  "24/7 support for Starter plan users"
 ];
 
 export default function PricingPage() {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <div className="relative pt-32 pb-16 sm:pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-              Flexible Plans That Grow With Your Business
-            </h1>
-            <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              A fully managed marketing team, available on-demand. No hiring, no headaches.
-            </p>
-          </div>
-        </div>
-      </div>
-
+    
       {/* Pricing Plans */}
-      <div className="bg-white py-24">
+      <div className="bg-white pt-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">Pricing</h2>
-            <p className="mt-1 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Choose the Plan That's Right for You
-            </p>
-            <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-              Scale your marketing efforts with confidence.
-            </p>
+            <h2 className="text-[54px] font-semibold leading-[60px] text-black font-[Onest]">
+              Transparent Pricing.
+              <br />
+              No added fees.
+            </h2>
           </div>
 
-          <div className="mt-20 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-x-6">
+          {/* OLD CARDS */}
+
+          {/* <div className="mt-20 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-x-6">
             {plans.map((plan) => (
               <div
                 key={plan.name}
@@ -237,92 +309,114 @@ export default function PricingPage() {
                 </div>
               </div>
             ))}
+          </div> */}
+
+          {/* NEW CARDS */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingCards.map((card, index) => (
+                <div
+                  key={index}
+                  className="rounded-[12px] border border-[#CECECE] bg-white p-8"
+                >
+                  <h3 className="text-[31px] font-semibold font-['Onest'] text-left text-black leading-[44px] mb-4">
+                    {card.title}
+                  </h3>
+                  <div className="text-left mb-6">
+                    <span className="text-[40px] font-medium font-['Onest'] text-black">
+                      {card.price}
+                    </span>
+                    <span className="text-[14px] font-normal font-['Plus_Jakarta_Sans'] text-black">
+                      {" "}
+                      per user/mo
+                    </span>
+                  </div>
+                  <button
+                    className={`w-full py-3 px-4 rounded-[8px] font-['Onest'] text-[16px] font-medium leading-[26px] mb-8 ${
+                      index === 1
+                        ? "bg-black text-white"
+                        : index === 2
+                          ? "bg-white text-black border border-black"
+                          : "bg-[#E0FF82] text-black"
+                    }`}
+                  >
+                    Get started for free
+                  </button>
+                  <h4 className="text-[18px] font-semibold font-['Onest'] text-black leading-[22px] mb-4">
+                    Features
+                  </h4>
+                  <ul className="space-y-1">
+                    {card.features.map((feature, featureIndex) => (
+                      <li
+                        key={featureIndex}
+                        className="text-[14px] font-normal font-['Onest'] text-black leading-[32px] flex items-center"
+                      >
+                        <span className="mr-2">•</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
+        </div>
+      </div>
+      <div className="bg-white py-[88px]">
+        <div className="max-w-7xl mx-auto flex flex-col items-center justify-center">
+          <h2 className="text-[18px] font-normal leading-[26px] text-[#727986] text-center font-[Onest]">
+            16,000+ businesses trust MaaS
+          </h2>
+          <img className="mt-3" src="/images/image 1.svg" alt="Trust MaaS" />
         </div>
       </div>
 
       {/* What's Included vs Not Included */}
       <div className="bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-center text-gray-900 mb-12">
-            What's Included vs. What's Not
+          <h2 className="text-[54px] font-semibold leading-[60px] text-black text-center font-[Onest] mb-12">
+            What's Included vs <br />What's Not
           </h2>
-          <p className="text-center text-lg text-gray-500 mb-12">
-            Transparency matters. Know exactly what you get with your plan.
-          </p>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-lg font-semibold text-indigo-600 mb-6">What's Included</h3>
+            <div className="rounded-[12px] bg-[#F7F8F8] p-8">
+              <h3 className="text-[24px] font-medium font-['Onest'] text-black mb-6">
+                What's Included
+              </h3>
               <ul className="space-y-4">
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Access to all marketing services (based on plan)</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Dedicated Marketing Manager</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Standard & Priority Marketing Requests (based on plan)</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Real-time performance insights</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Social media content creation</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">SEO blog writing & strategy</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Email marketing automation</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Paid ad campaign setup & optimization (client pays for ad spend)</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Monthly performance reports</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Integration with Slack or Microsoft Teams (Growth+ & Enterprise)</span>
-                </li>
+                {includedItems.map((item, index) => (
+                  <li 
+                    key={index} 
+                    className={`flex items-center justify-between ${
+                      index !== includedItems.length - 1 ? 'border-b border-gray-200' : ''
+                    } pb-4`}
+                  >
+                    <span className="text-[14px] font-normal font-['Onest'] text-black leading-[26px]">
+                      {item}
+                    </span>
+                    <img src="/images/fi_190411.svg" alt="Check" className="h-5 w-5" />
+                  </li>
+                ))}
               </ul>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-lg font-semibold text-red-600 mb-6">What's Not Included</h3>
+            <div className="rounded-[12px] bg-[#FFFDF7] p-8">
+              <h3 className="text-[24px] font-medium font-['Onest'] text-black mb-6">
+                What's Not Included
+              </h3>
               <ul className="space-y-4">
-                <li className="flex items-start">
-                  <X className="h-5 w-5 text-red-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Paid ad spend for campaigns (client's responsibility)</span>
-                </li>
-                <li className="flex items-start">
-                  <X className="h-5 w-5 text-red-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Third-party software costs (e.g., Mailchimp, HubSpot, Unbounce)</span>
-                </li>
-                <li className="flex items-start">
-                  <X className="h-5 w-5 text-red-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Custom web development & app development</span>
-                </li>
-                <li className="flex items-start">
-                  <X className="h-5 w-5 text-red-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Business intelligence software & advanced analytics (unless pre-integrated)</span>
-                </li>
-                <li className="flex items-start">
-                  <X className="h-5 w-5 text-red-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">Press releases & external PR outreach</span>
-                </li>
-                <li className="flex items-start">
-                  <X className="h-5 w-5 text-red-500 flex-shrink-0" />
-                  <span className="ml-3 text-gray-600">24/7 support for Starter plan users</span>
-                </li>
+                {notIncludedItems.map((item, index) => (
+                  <li 
+                    key={index} 
+                    className={`flex items-center justify-between ${
+                      index !== notIncludedItems.length - 1 ? 'border-b border-gray-200' : ''
+                    } pb-4`}
+                  >
+                    <span className="text-[14px] font-normal font-['Onest'] text-black leading-[26px]">
+                      {item}
+                    </span>
+                    <img src="/images/fi_6711656.svg" alt="Cross" className="h-5 w-5" />
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -333,9 +427,13 @@ export default function PricingPage() {
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900">Frequently Asked Questions</h2>
+          <h2 className="text-[54px] font-semibold leading-[60px] text-black text-center font-[Onest]">
+  Frequently Asked Questions
+</h2>
+
             <p className="mt-4 text-lg text-gray-500">
-              Have questions about our pricing? Find answers to common questions below.
+              Have questions about our pricing? Find answers to common questions
+              below.
             </p>
           </div>
 
@@ -344,54 +442,70 @@ export default function PricingPage() {
               {[
                 {
                   question: "Are there any contracts or commitments?",
-                  answer: "No, all our plans are month-to-month with no long-term commitments. You can cancel or change your plan at any time without penalties."
+                  answer:
+                    "No, all our plans are month-to-month with no long-term commitments. You can cancel or change your plan at any time without penalties.",
                 },
                 {
                   question: "What payment options do you offer?",
-                  answer: "We accept all major credit cards (Visa, MasterCard, American Express) and offer monthly invoicing for enterprise clients. All payments are processed securely through our payment gateway."
+                  answer:
+                    "We accept all major credit cards (Visa, MasterCard, American Express) and offer monthly invoicing for enterprise clients. All payments are processed securely through our payment gateway.",
                 },
                 {
                   question: "Can I change my plan later?",
-                  answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle. There are no fees or penalties for changing plans."
+                  answer:
+                    "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle. There are no fees or penalties for changing plans.",
                 },
                 {
                   question: "What kind of support do you offer?",
-                  answer: "All plans include email support with 24-hour response time. Growth and Growth+ plans include priority support with 4-hour response time and dedicated account managers. Enterprise plans include 24/7 phone support."
+                  answer:
+                    "All plans include email support with 24-hour response time. Growth and Growth+ plans include priority support with 4-hour response time and dedicated account managers. Enterprise plans include 24/7 phone support.",
                 },
                 {
                   question: "Do unused marketing requests roll over?",
-                  answer: "No, marketing requests do not roll over to the next month. We encourage you to use your full allocation each month for maximum value."
+                  answer:
+                    "No, marketing requests do not roll over to the next month. We encourage you to use your full allocation each month for maximum value.",
                 },
                 {
                   question: "Can I get a custom plan for my specific needs?",
-                  answer: "Absolutely! Contact our sales team to discuss your specific requirements and we'll create a custom plan tailored to your business."
-                }
+                  answer:
+                    "Absolutely! Contact our sales team to discuss your specific requirements and we'll create a custom plan tailored to your business.",
+                },
               ].map((faq, index) => (
-                <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
+                <div
+                  key={index}
+                  className="border border-gray-200 rounded-lg overflow-hidden"
+                >
                   <button
-                    className="w-full text-left px-6 py-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-50 hover:bg-gray-100 transition-colors duration-200"
+                    className="w-full text-left px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#E0FF82] bg-gray-50 hover:bg-gray-100 transition-colors duration-200"
                     onClick={(e) => {
-                      const content = e.currentTarget.nextElementSibling as HTMLElement;
-                      const isExpanded = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
-                      
+                      const content = e.currentTarget
+                        .nextElementSibling as HTMLElement;
+                      const isExpanded =
+                        content.style.maxHeight !== "0px" &&
+                        content.style.maxHeight !== "";
+
                       // Close all other FAQs
-                      document.querySelectorAll('.faq-content').forEach((el) => {
-                        (el as HTMLElement).style.maxHeight = '0px';
-                        el.classList.remove('border-t');
-                      });
-                      
+                      document
+                        .querySelectorAll(".faq-content")
+                        .forEach((el) => {
+                          (el as HTMLElement).style.maxHeight = "0px";
+                          el.classList.remove("border-t");
+                        });
+
                       // Toggle current FAQ
                       if (!isExpanded) {
                         content.style.maxHeight = `${content.scrollHeight}px`;
-                        content.classList.add('border-t');
+                        content.classList.add("border-t");
                       } else {
-                        content.style.maxHeight = '0px';
-                        content.classList.remove('border-t');
+                        content.style.maxHeight = "0px";
+                        content.classList.remove("border-t");
                       }
                     }}
                   >
                     <div className="flex justify-between items-center">
-                      <span className="text-lg font-medium text-gray-900">{faq.question}</span>
+                      <span className="text-lg font-medium text-gray-900">
+                        {faq.question}
+                      </span>
                       <svg
                         className="h-5 w-5 text-gray-500 transform transition-transform duration-200"
                         fill="none"
@@ -409,7 +523,7 @@ export default function PricingPage() {
                   </button>
                   <div
                     className="faq-content overflow-hidden transition-all duration-300 ease-in-out"
-                    style={{ maxHeight: '0px' }}
+                    style={{ maxHeight: "0px" }}
                   >
                     <div className="px-6 py-4 bg-white">
                       <p className="text-gray-600">{faq.answer}</p>

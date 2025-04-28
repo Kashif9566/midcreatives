@@ -154,7 +154,7 @@ export default function Pricing() {
       </div>
 
       {/* ROI Calculator */}
-      <div className="max-w-7xl mx-auto mt-16 px-4 sm:px-6 lg:px-8">
+      {/* <div className="max-w-7xl mx-auto mt-16 px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl shadow-xl overflow-hidden">
           <div className="px-6 py-12 sm:p-16">
             <div className="text-center">
@@ -274,7 +274,7 @@ export default function Pricing() {
             )}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
