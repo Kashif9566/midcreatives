@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Cpu, Zap, BarChart, Target, MessageSquare, ArrowRight } from 'lucide-react';
+import { Zap, BarChart, Target, MessageSquare, ArrowRight } from 'lucide-react';
 import EarlyAccessForm from './EarlyAccessForm';
 
 interface AIFeature {
   title: string;
   description: string;
-  icon: React.ComponentType;
+  icon: React.ComponentType<{ className?: string }>;
   image: string;
 }
 
@@ -178,21 +178,22 @@ export default function AIFeatures() {
           <div className="space-y-8 order-1 lg:order-2">
             {aiFeatures.map((feature, index) => {
               const FeatureIcon = feature.icon;
+              const isActive = activeTab === index;
               return (
                 <div 
                   key={feature.title} 
-                  className={`bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:bg-gray-50 ${
-                    activeTab === index ? 'ring-2 ring-[#E0FF82] scale-105' : 'hover:scale-102'
+                  className={`bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer transform group ${
+                    isActive ? 'ring-2 ring-[#E0FF82] scale-105' : 'hover:scale-102 hover:ring-2 hover:ring-[#E0FF82]'
                   }`}
                   onClick={() => !isAnimating && handleTabChange(index)}
                 >
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
                       <div className={`flex items-center justify-center h-12 w-12 rounded-md ${
-                        activeTab === index ? 'bg-[#E0FF82]' : 'bg-gray-100 hover:bg-primary' 
+                        isActive ? 'bg-[#E0FF82]' : 'bg-gray-100 group-hover:bg-[#E0FF82]' 
                       } text-white transition-colors duration-300`}>
                         <FeatureIcon className={`h-6 w-6 ${
-                          activeTab === index ? 'text-[#1F2223]' : 'text-gray-600 hover:text_black_remote'
+                          isActive ? 'text-[#1F2223]' : 'text-gray-600 group-hover:text-[#1F2223]'
                         }`} />
                       </div>
                     </div>

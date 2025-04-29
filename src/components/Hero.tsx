@@ -40,7 +40,7 @@ export default function Hero() {
   const [showVideo, setShowVideo] = useState(false);
 
   const handleStartRequest = () => {
-    navigate("/pricing");
+    navigate("/register");
   };
 
   return (

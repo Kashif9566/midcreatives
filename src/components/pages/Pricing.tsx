@@ -173,33 +173,48 @@ const pricingCards: PricingCard[] = [
     title: "Pay-as-you-go",
     price: "$0",
     features: [
-      "Expert Copywriters",
-      "Dedicated Client Success",
-      "Manager Up to 10 content requests/mo*",
-      "48-hour delivery available",
-      "Content strategy + planning tools",
+      "Access to on-demand marketing team (paid media, social, design, copy)",
+      "48–72 hour turnaround on most tasks",
+      "Expert copywriters, strategists, and creatives",
+      "Centralized dashboard for task submission & tracking",
+      "Dedicated client success support",
+      "Buy credits, use them however you need — across ad, social, design, or strategy.",
     ],
   },
   {
     title: "Ad Management",
-    price: "$0",
+    price: "$2500",
     features: [
-      "Expert Copywriters",
-      "Dedicated Client Success",
-      "Manager Up to 10 content requests/mo*",
-      "48-hour delivery available",
-      "Content strategy + planning tools",
+      "Campaign setup end-to-end",
+      "Weekly optimization & bid management",
+      "Conversion tracking setup & testing",
+      "Ad creative coordination (copy + design)",
+      "Weekly performance dashboard (live client access)",
+      "Weekly reporting + Slack/email summaries",
+      "2x Monthly strategy calls",
+      "Dedicated client manager",
+      "Creative Support",
+      "Static ad creatives",
+      "Copy variations for A/B testing",
+      "Up to 10 ad iterations/month",
+      "Unlimited revisions (within reason)",
     ],
   },
   {
     title: "Social Management",
-    price: "$0",
+    price: "$1999",
     features: [
-      "Expert Copywriters",
-      "Dedicated Client Success",
-      "Manager Up to 10 content requests/mo*",
-      "48-hour delivery available",
-      "Content strategy + planning tools",
+      "12 social media posts/month (graphics + copywriting)",
+      "4 short-form video edits/month",
+      "2 monthly content pillars/themes customized to your brand",
+      "Content calendar planning & scheduling",
+      "Hashtag strategy + trend research",
+      "Monthly performance reporting",
+      "Dedicated content manager + strategist",
+      "Audience Growth & Engagement",
+      "Community building",
+      "Engagement strategy (outreach to niche accounts, audience interaction)",
+      "Monthly social growth insights + recommendations",
     ],
   },
 ];
@@ -336,7 +351,7 @@ export default function PricingPage() {
                     </span>
                     <span className="text-[14px] font-normal font-['Plus_Jakarta_Sans'] text-black">
                       {" "}
-                      per user/mo
+                      {card.title === "Pay-as-you-go" ? "No monthly retainers" : "per user/mo"}
                     </span>
                   </div>
                   <button
@@ -357,10 +372,20 @@ export default function PricingPage() {
                     {card.features.map((feature, featureIndex) => (
                       <li
                         key={featureIndex}
-                        className="text-[14px] font-normal font-['Onest'] text-black leading-[32px] flex items-center"
+                        className={`text-[14px] font-normal font-['Onest'] text-black leading-[32px] flex items-start ${
+                          feature === "Creative Support" || feature === "Audience Growth & Engagement"
+                            ? "text-[18px] font-[600] mt-4 mb-2"
+                            : ""
+                        }`}
                       >
-                        <span className="mr-2">•</span>
-                        {feature}
+                        {feature === "Creative Support" || feature === "Audience Growth & Engagement" ? (
+                          feature
+                        ) : (
+                          <>
+                            <span className="mr-2 leading-[32px]">•</span>
+                            <span className="flex-1">{feature}</span>
+                          </>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -375,7 +400,17 @@ export default function PricingPage() {
           <h2 className="text-[18px] font-normal leading-[26px] text-[#727986] text-center font-[Onest]">
             16,000+ businesses trust MaaS
           </h2>
-          <img className="mt-3" src="/images/image 1.svg" alt="Trust MaaS" />
+          <div className="mt-8 flex flex-col items-center gap-8">
+            <div className="flex gap-12">
+              <img src="/images/JW-Logo-Gold-Black.svg" alt="JW Logo" className="h-8" />
+              <img src="/images/memphis-colored.svg" alt="Memphis Logo" className="h-8" />
+              <img src="/images/Springfield-colored.svg" alt="Springfield Logo" className="h-8" />
+            </div>
+            <div className="flex gap-12">
+              <img src="/images/Basel-colored.svg" alt="Basel Logo" className="h-8" />
+              <img src="/images/Drink Myx.webp" alt="Drink Myx Logo" className="h-8" />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -468,34 +503,49 @@ export default function PricingPage() {
             <div className="space-y-4">
               {[
                 {
-                  question: "Are there any contracts or commitments?",
+                  question: "How does Pay-as-you-go work?",
                   answer:
-                    "No, all our plans are month-to-month with no long-term commitments. You can cancel or change your plan at any time without penalties.",
+                    "You purchase credits and submit marketing tasks when you need them — no monthly fees, no long-term contracts. Each task has a transparent credit cost listed upfront."
                 },
                 {
-                  question: "What payment options do you offer?",
+                  question: "What is included in Ad Management plans?",
                   answer:
-                    "We accept all major credit cards (Visa, MasterCard, American Express) and offer monthly invoicing for enterprise clients. All payments are processed securely through our payment gateway.",
+                    "We fully manage your ad campaigns across Google, Meta, LinkedIn, TikTok, and YouTube — from setup, optimization, tracking, reporting, and creative guidance",
                 },
                 {
-                  question: "Can I change my plan later?",
+                  question: "What is included in Social Media Management plans?",
                   answer:
-                    "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle. There are no fees or penalties for changing plans.",
+                    "We help grow your brand across LinkedIn, YouTube, Instagram, TikTok, and X — including content planning, post creation, community building, and basic newsletters.",
                 },
                 {
-                  question: "What kind of support do you offer?",
+                  question: "Can I combine Pay-as-you-go credits with my Ad/Social plan?",
                   answer:
-                    "All plans include email support with 24-hour response time. Growth and Growth+ plans include priority support with 4-hour response time and dedicated account managers. Enterprise plans include 24/7 phone support.",
+                    "Yes, absolutely. Many clients use Pay-as-you-go credits for additional tasks like blogs, landing page builds, or extra creative support alongside their main plan.",
                 },
                 {
-                  question: "Do unused marketing requests roll over?",
+                  question: "What if I need custom deliverables or advanced services?",
                   answer:
-                    "No, marketing requests do not roll over to the next month. We encourage you to use your full allocation each month for maximum value.",
+                    "No problem. We offer flexible add-ons for advanced funnel building, landing page creation, influencer sourcing, and AI marketing integration.",
                 },
                 {
-                  question: "Can I get a custom plan for my specific needs?",
+                  question: "Is there a minimum commitment?",
                   answer:
-                    "Absolutely! Contact our sales team to discuss your specific requirements and we'll create a custom plan tailored to your business.",
+                    "No minimums. You can cancel, pause, or top-up credits anytime. We're built for maximum flexibility",
+                },
+                {
+                  question: "How fast is delivery?",
+                  answer:
+                    "Most core deliverables are delivered within 48–72 hours depending on task complexity. Urgent tasks can be prioritized on request.",
+                },
+                {
+                  question: "Do unused Pay-as-you-go credits expire?",
+                  answer:
+                    "Credits are valid for 6 months after purchase. We'll remind you if you're nearing expiry so you get full value.",
+                },
+                {
+                  question: "What if I'm not satisfied with a deliverable?",
+                  answer:
+                    "We offer revisions to ensure you're happy. If something doesn't hit the mark, your dedicated success manager will make it right.",
                 },
               ].map((faq, index) => (
                 <div

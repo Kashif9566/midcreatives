@@ -56,14 +56,14 @@ export default function Pricing() {
           <div className="bg-[#E0FF82] rounded-[12px] p-6 sm:p-8 lg:p-[40px_59px_40px_60px] overflow-hidden h-full">
             <div className="text-center">
               <h2 className="text-[14px] sm:text-[16px] font-normal text_black_remote tracking-wide text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
-                Starting at $999/month
+                Starting at $0/month
               </h2>
               <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-['Onest'] font-medium text_black_remote text-center leading-[1.3] mt-4">
                 Flexible Marketing Plans for Every Business
               </h2>
               
               <p className="mt-4 text-[18px] sm:text-[20px] lg:text-[22px] font-['Onest'] font-normal text_black_remote text-center leading-[1.4]">
-                Choose a plan that fits your needs—get expert marketing execution without hiring in-house teams.
+              Choose a plan that fits your needs—get expert marketing execution without any upfront cost of high agency retainers
               </p>
 
               <div className="mt-8 space-y-1 flex flex-col items-center">

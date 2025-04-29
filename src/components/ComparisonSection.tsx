@@ -5,57 +5,57 @@ interface ComparisonItem {
   name: string;
   description: string;
   metrics: {
-    speed: boolean;
-    flexibility: boolean;
-    quality: boolean;
-    scalability: boolean;
-    costEffectiveness: boolean;
+    speed: { value: boolean; description: string };
+    flexibility: { value: boolean; description: string };
+    quality: { value: boolean; description: string };
+    scalability: { value: boolean; description: string };
+    costEffectiveness: { value: boolean; description: string };
   };
 }
 
 const comparisonData: ComparisonItem[] = [
   {
-    name: 'MaaS Platform',
-    description: 'Work with our expert team of marketing professionals, powered by cutting-edge technology.',
+    name: 'Your Marketing Platform',
+    description: 'On-demand talent + campaign execution powered by expert marketers',
     metrics: {
-      speed: true,
-      flexibility: true,
-      quality: true,
-      scalability: true,
-      costEffectiveness: true
+      speed: { value: true, description: '48–72 hr turnaround' },
+      flexibility: { value: true, description: 'Pay-as-you-go or subscription' },
+      quality: { value: true, description: 'Expert-vetted team + AI tools' },
+      scalability: { value: true, description: 'Scale up or down monthly' },
+      costEffectiveness: { value: true, description: 'Transparent pricing, no overhead' }
     }
   },
   {
     name: 'In-house team',
-    description: 'In-house teams often lack specialized expertise and resources for diverse marketing needs.',
+    description: 'Slow onboarding, limited channel expertise',
     metrics: {
-      speed: false,
-      flexibility: false,
-      quality: true,
-      scalability: true,
-      costEffectiveness: false
+      speed: { value: false, description: '' },
+      flexibility: { value: false, description: '' },
+      quality: { value: true, description: '' },
+      scalability: { value: true, description: '' },
+      costEffectiveness: { value: false, description: 'High salaries & overhead' }
     }
   },
   {
-    name: 'Marketing agencies',
-    description: 'Traditional agencies can be slow, expensive, and inflexible.',
+    name: 'Agencies',
+    description: 'Expensive retainers, rigid processes',
     metrics: {
-      speed: false,
-      flexibility: false,
-      quality: true,
-      scalability: true,
-      costEffectiveness: false
+      speed: { value: false, description: '' },
+      flexibility: { value: false, description: '' },
+      quality: { value: true, description: '' },
+      scalability: { value: true, description: '' },
+      costEffectiveness: { value: false, description: 'Hidden fees, bloated scope' }
     }
   },
   {
     name: 'Freelancers',
-    description: 'Freelancers can be unreliable and hard to scale, leading to inconsistent results.',
+    description: 'Unpredictable and hard to manage at scale',
     metrics: {
-      speed: false,
-      flexibility: false,
-      quality: true,
-      scalability: true,
-      costEffectiveness: true
+      speed: { value: false, description: '' },
+      flexibility: { value: false, description: '' },
+      quality: { value: true, description: '*(varies)' },
+      scalability: { value: true, description: '' },
+      costEffectiveness: { value: true, description: '(but inconsistent)' }
     }
   }
 ];
@@ -121,13 +121,16 @@ export default function ComparisonSection() {
                     </div>
                     <div className="flex items-center">
                       <div className="grid grid-cols-5 gap-7">
-                        {Object.entries(option.metrics).map(([key, value]) => (
-                          <div key={key} className="flex items-center justify-center">
-                            {value ? (
+                        {Object.entries(option.metrics).map(([key, metric]) => (
+                          <div key={key} className="flex flex-col items-center justify-center">
+                            {metric.value ? (
                               <Check className="h-5 w-5 text-green-500" />
                             ) : (
                               <X className="h-5 w-5 text-red-500" />
                             )}
+                            <span className="text-[10px] text-gray-600 text-center mt-1 max-w-[80px]">
+                              {metric.description}
+                            </span>
                           </div>
                         ))}
                       </div>
@@ -142,11 +145,11 @@ export default function ComparisonSection() {
               <thead>
                 <tr className="text-left">
                   <th className="pb-8 w-1/3"></th>
-                  <th className="pb-8 text-[16px] font-semibold text_black_remote">Speed</th>
-                  <th className="pb-8 text-[16px] font-semibold text_black_remote">Flexibility</th>
-                  <th className="pb-8 text-[16px] font-semibold text_black_remote">Quality</th>
-                  <th className="pb-8 text-[16px] font-semibold text_black_remote">Scalability</th>
-                  <th className="pb-8 text-[16px] font-semibold text_black_remote">Cost-effectiveness</th>
+                  <th className="pb-8 text-[16px] font-semibold text_black_remote text-center">Speed</th>
+                  <th className="pb-8 text-[16px] font-semibold text_black_remote text-center">Flexibility</th>
+                  <th className="pb-8 text-[16px] font-semibold text_black_remote text-center">Quality</th>
+                  <th className="pb-8 text-[16px] font-semibold text_black_remote text-center">Scalability</th>
+                  <th className="pb-8 text-[16px] font-semibold text_black_remote text-center">Cost-effectiveness</th>
                 </tr>
               </thead>
               <tbody>
@@ -158,13 +161,18 @@ export default function ComparisonSection() {
                         <span className="text-[14px] font-normal text_black_remote">{option.description}</span>
                       </div>
                     </td>
-                    {Object.values(option.metrics).map((value, i) => (
+                    {Object.values(option.metrics).map((metric, i) => (
                       <td key={i} className={`py-6 pl-4 px-8 ${index === 0 && i === Object.values(option.metrics).length - 1 ? 'rounded-r-[16px]' : ''}`}>
-                        {value ? (
-                          <Check className="h-6 w-6 text-green-500" />
-                        ) : (
-                          <X className="h-6 w-6 text-red-500" />
-                        )}
+                        <div className="flex flex-col items-center">
+                          {metric.value ? (
+                            <Check className="h-6 w-6 text-green-500" />
+                          ) : (
+                            <X className="h-6 w-6 text-red-500" />
+                          )}
+                          <span className="text-[12px] text-gray-600 text-center mt-2 max-w-[120px]">
+                            {metric.description}
+                          </span>
+                        </div>
                       </td>
                     ))}
                   </tr>

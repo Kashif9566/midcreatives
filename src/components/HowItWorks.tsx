@@ -101,10 +101,10 @@ export default function HowItWorks() {
 
           <div className="mt-16 text-center">
             <a
-              href="/pricing"
+              href="/register"
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text_black_remote bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10 transition-colors"
             >
-              Start Your First Marketing Request Today
+             Launch Your First Campaign
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </div>

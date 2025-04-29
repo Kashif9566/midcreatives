@@ -34,6 +34,8 @@ import OnboardingQuestionnaire from './components/onboarding/OnboardingQuestionn
 import Pricing from './components/Pricing';
 import Services from './components/Services';
 import About from './components/About';
+import ScrollToTop from './components/ScrollToTop';
+
 export default function App() {
   const user = useAuthStore(state => state.user);
   const checkOnboardingStatus = useAuthStore(state => state.checkOnboardingStatus);
@@ -56,6 +58,7 @@ export default function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white">
         {user ? <AuthHeader /> : <Navigation />}
         <Routes>
