@@ -55,7 +55,7 @@ export default function EarlyAccessForm({ onClose }: EarlyAccessFormProps) {
 
           <div className="sm:flex sm:items-start">
             <div className="mt-3 text-center sm:mt-0 sm:text-left w-full">
-              <h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+              <h3 className="text-lg leading-6 font-medium text-black_remote" id="modal-title">
                 Get Early Access to AI Features
               </h3>
               <div className="mt-2">
@@ -67,14 +67,14 @@ export default function EarlyAccessForm({ onClose }: EarlyAccessFormProps) {
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="mt-5">
                   <div>
-                    <label htmlFor="email" className="sr-only">
+                    <label htmlFor="email" className="form-label">
                       Email address
                     </label>
                     <input
                       type="email"
                       name="email"
                       id="email"
-                      className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                      className="form-input focus:border-primary focus:ring-primary"
                       placeholder="Enter your email address"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -82,7 +82,7 @@ export default function EarlyAccessForm({ onClose }: EarlyAccessFormProps) {
                   </div>
 
                   {error && (
-                    <p className="mt-2 text-sm text-red-600">
+                    <p className="form-error">
                       {error}
                     </p>
                   )}
@@ -90,13 +90,13 @@ export default function EarlyAccessForm({ onClose }: EarlyAccessFormProps) {
                   <div className="mt-5 sm:flex sm:flex-row-reverse">
                     <button
                       type="submit"
-                      className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm"
+                      className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-primary text-black_remote text-base font-medium hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:ml-3 sm:w-auto sm:text-sm"
                     >
                       Get Early Access
                     </button>
                     <button
                       type="button"
-                      className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm"
+                      className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-black_remote hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:mt-0 sm:w-auto sm:text-sm"
                       onClick={onClose}
                     >
                       Cancel
@@ -105,7 +105,7 @@ export default function EarlyAccessForm({ onClose }: EarlyAccessFormProps) {
                 </form>
               ) : (
                 <div className="mt-6">
-                  <div className="rounded-md bg-green-50 p-4">
+                  <div className="rounded-md bg-green-50 p-4 card-hover">
                     <div className="flex">
                       <div className="flex-shrink-0">
                         <svg className="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
