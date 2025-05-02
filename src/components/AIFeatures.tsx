@@ -148,17 +148,17 @@ export default function AIFeatures() {
               
               {/* Tabs */}
               <div className="bg-white p-4">
-                <div className="flex space-x-4 overflow-x-auto scrollbar-hide">
+                <div className="flex space-x-4 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                   {aiFeatures.map((feature, index) => {
                     const FeatureIcon = feature.icon;
                     return (
                       <button
                         key={feature.title}
-                        onClick={() => !isAnimating && handleTabChange(index)}
-                        className={`flex items-center px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-all duration-300 hover:bg-gray-50 ${
+                        onMouseEnter={() => !isAnimating && handleTabChange(index)}
+                        className={`flex items-center px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-all duration-300 ${
                           activeTab === index
                             ? 'bg-[#E0FF82] text-[#1F2223] shadow-sm transform scale-105'
-                            : 'text-gray-500 hover:text-gray-700'
+                            : 'text-gray-500 hover:bg-[#E0FF82] hover:text-[#1F2223]'
                         }`}
                         disabled={isAnimating}
                       >
@@ -185,7 +185,7 @@ export default function AIFeatures() {
                   className={`bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer transform group ${
                     isActive ? 'ring-2 ring-[#E0FF82] scale-105' : 'hover:scale-102 hover:ring-2 hover:ring-[#E0FF82]'
                   }`}
-                  onClick={() => !isAnimating && handleTabChange(index)}
+                  onMouseEnter={() => !isAnimating && handleTabChange(index)}
                 >
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
