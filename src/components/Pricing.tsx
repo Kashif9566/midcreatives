@@ -84,9 +84,10 @@ export default function Pricing() {
               <div className="mt-12 sm:mt-16 lg:mt-[97px]">
                 <a
                   href="/pricing"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 lg:px-[64px] py-[10px] rounded-[8px] bg-[#1F2223] text-white text-[14px] sm:text-[16px] font-medium leading-[1.6]"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 lg:px-[64px] py-[10px] rounded-[8px] bg-[#1F2223] text-white text-[14px] sm:text-[16px] font-medium leading-[1.6] sliding-text group"
                 >
-                  Book a Call
+                  <span>Book a Call</span>
+                  <span>Book a Call</span>
                 </a>
               </div>
             </div>

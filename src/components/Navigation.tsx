@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from './Logo';
+import SlidingButton from './SlidingButton';
 
 const services = [
   { name: 'SEO Services', href: '/services/seo' },
@@ -64,7 +65,7 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-gray-600 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-black_remote px-3 py-2 text-sm font-medium"
               >
                 {item.name}
               </Link>
@@ -77,7 +78,7 @@ export default function Navigation() {
               onMouseLeave={() => setShowServices(false)}
             >
               <button
-                className="text-gray-600 group-hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-colors inline-flex items-center"
+                className="text-black_remote px-3 py-2 text-sm font-medium inline-flex items-center"
               >
                 Services
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${showServices ? 'rotate-180' : ''}`} />
@@ -95,7 +96,7 @@ export default function Navigation() {
                   <button
                     key={service.name}
                     onClick={() => handleServiceClick(service.href)}
-                    className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                    className="block w-full text-left px-4 py-3 text-sm text-black_remote"
                   >
                     {service.name}
                   </button>
@@ -103,21 +104,9 @@ export default function Navigation() {
               </div>
             </div> */}
 
-            <Link
-              to="/login"
-              className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-[#1F2223] bg-[#E0FF82] hover:bg-[#D0EF72] transition-colors"
-            >
-              Login
-            </Link>
+            <SlidingButton to="/login" text="Login" variant="primary" />
             
-            <Link
-              to="/get-started"
-              className={`inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#1F2223] hover:bg-[#2A2D2E] transition-colors shadow-md hover:shadow-lg ${
-                scrolled ? 'opacity-100' : 'opacity-0'
-              } transition-opacity duration-300`}
-            >
-              Get Started
-            </Link>
+            <SlidingButton to="/get-started" text="Get Started" variant="secondary" />
           </div>
 
           {/* Mobile menu button */}
@@ -168,23 +157,11 @@ export default function Navigation() {
 
           {/* Mobile Login Button */}
           <div className="px-3 py-2">
-            <Link
-              to="/login"
-              className="block w-full text-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-[#1F2223] bg-[#E0FF82] hover:bg-[#D0EF72] transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Login
-            </Link>
+            <SlidingButton to="/login" text="Login" variant="primary" />
           </div>
           
           <div className="px-3 py-2">
-            <Link
-              to="/get-started"
-              className="block w-full text-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-[#1F2223] hover:bg-[#2A2D2E] transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Get Started
-            </Link>
+            <SlidingButton to="/get-started" text="Get Started" variant="secondary" />
           </div>
         </div>
       </div>

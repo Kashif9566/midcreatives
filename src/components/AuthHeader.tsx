@@ -48,7 +48,7 @@ export default function AuthHeader() {
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <Link to="/dashboard">
-                <Logo />
+                <Logo variant="header" />
               </Link>
             </div>
 

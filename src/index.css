@@ -196,3 +196,35 @@ html {
   @apply animate-spin rounded-full border-4 border-gray-200;
   border-top-color: theme('colors.indigo.600');
 }
+
+@layer components {
+  .sliding-text {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sliding-text span {
+    display: block;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .sliding-text span:first-child {
+    transform: translateY(0);
+  }
+
+  .sliding-text span:last-child {
+    position: absolute;
+    transform: translateY(100%);
+  }
+
+  .sliding-text:hover span:first-child {
+    transform: translateY(-100%);
+  }
+
+  .sliding-text:hover span:last-child {
+    transform: translateY(0);
+  }
+}

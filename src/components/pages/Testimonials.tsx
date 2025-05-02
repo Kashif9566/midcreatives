@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, ArrowRight, Play, BarChart, Users, Clock } from 'lucide-react';
 import Footer from '../Footer';
+import { Link } from 'react-router-dom';
 
 const featuredTestimonial = {
   name: 'Sarah Johnson',
@@ -158,10 +159,10 @@ export default function TestimonialsPage() {
               </div>
               <div className="mt-8">
                 <a
-                  href="/contact"
+                  href="/register"
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
                 >
-                  Start Your Marketing Journey
+                  Launch Your Marketing Campaign
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </div>
@@ -234,13 +235,13 @@ export default function TestimonialsPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <a
-              href="/case-studies"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+            <Link
+              to="/case-studies"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black_remote bg-primary hover:bg-opacity-90"
             >
               See More Success Stories
               <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

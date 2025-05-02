@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 
 const navigation = {
@@ -81,9 +82,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:py-16 lg:px-8 pb-0">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-6 sm:space-y-8 xl:col-span-1">
-            <h3 className="text-[#FFF] text-[20px] sm:text-[24px] font-semibold leading-[28px] sm:leading-[32px]">
-              MaaS
-            </h3>
+            <Logo size="small" variant="footer"/>
             <p className="text-[#919191] text-[12px] sm:text-[13px] font-normal leading-[18px] sm:leading-[20px]">
               Making marketing simple and scalable for businesses worldwide. Your success is our mission.
             </p>

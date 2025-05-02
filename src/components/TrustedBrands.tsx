@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 const brands = [
   {
     name: 'Pizza Hut',
-    logo: '/images/restaurant-pizza-hut-brand-logo-hd-png-701751694705413fxahnps0sd.png',
+    logo: '/images/pizza-hut-seeklogo.png',
   },
   {
     name: 'Memphis',
