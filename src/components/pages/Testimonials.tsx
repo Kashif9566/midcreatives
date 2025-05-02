@@ -158,13 +158,13 @@ export default function TestimonialsPage() {
                 </div>
               </div>
               <div className="mt-8">
-                <a
-                  href="/register"
+                <Link
+                  to="/register"
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
                 >
                   Launch Your Marketing Campaign
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
