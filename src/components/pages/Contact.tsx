@@ -41,22 +41,34 @@ export default function Contact() {
     <div className="bg-white">
       {/* Hero Section */}
       <div className="relative pt-32 pb-16 sm:pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-              Get in Touch
+            <h1 className="text-[54px] font-medium font-['Onest'] tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+              Get in  <span
+                style={{
+                  display: "inline",
+                  backgroundImage: `url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22249%22%20height%3D%2247%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M%200.114%2034.503%20C%200.114%2036.823%202.666%2038.391%207.51%2039.819%20C%2042.556%2047.704%20197.502%2049.003%20225.578%2044.171%20C%20259.493%2038.334%20246.849%2021.457%20245.997%2019.525%20C%20245.147%2017.591%20244.296%2017.591%20244.296%2015.176%20C%20244.296%2012.759%20246.458%206.966%20243.274%204.062%20C%20236.131%20-2.456%20220.974%20-0.128%20181.239%204.062%20C%20121.682%2010.343%2025.638%202.612%2012.024%202.612%20C%20-1.588%202.612%200.114%2014.209%200.964%2018.075%20C%201.815%2021.94%200.964%2022.907%200.113%2024.839%20C%20-0.738%2026.772%203.516%2028.222%202.666%2030.638%20C%201.814%2033.053%200.114%2031.604%200.114%2034.504%20Z%22%20fill%3D%22%23E0FF82%22/%3E%3C/svg%3E')`,
+                  backgroundSize: "100% 60%",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center 60%",
+                  whiteSpace: "nowrap",
+                  padding: 0,
+                }}
+              >
+                Touch.
+              </span>
             </h1>
-            <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            <p className="mt-3 max-w-md mx-auto text-[18px] font-normal text-gray-500 md:mt-5">
               Have questions? We're here to help.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
-          <div>
+      <div className="mx-[240px] px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-12 gap-8">
+          {/* Contact Form - 6 columns */}
+          <div className="col-span-7">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -69,7 +81,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md focus:ring-primary focus:border-primary"
                 />
               </div>
 
@@ -84,7 +96,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md focus:ring-primary focus:border-primary"
                 />
               </div>
 
@@ -98,7 +110,7 @@ export default function Contact() {
                   id="phone"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md focus:ring-primary focus:border-primary"
                 />
               </div>
 
@@ -113,7 +125,7 @@ export default function Contact() {
                   required
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md focus:ring-primary focus:border-primary"
                 />
               </div>
 
@@ -128,14 +140,14 @@ export default function Contact() {
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md focus:ring-primary focus:border-primary"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black_remote hover:bg-black_remote/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
               >
                 {isSubmitting ? (
                   'Sending...'
@@ -166,33 +178,53 @@ export default function Contact() {
             </form>
           </div>
 
-          {/* Contact Information */}
-          <div className="space-y-8">
+          {/* Empty Space - 2 columns */}
+          <div className="col-span-1" />
+
+          {/* Contact Information - 4 columns */}
+          <div className="col-span-4 space-y-8">
             <div>
               <h3 className="text-lg font-medium text-gray-900">Contact Information</h3>
               <div className="mt-6 space-y-4">
                 <div className="flex items-center">
-                  <Mail className="h-6 w-6 text-indigo-600" />
-                  <span className="ml-3 text-gray-500">contact@example.com</span>
+                  <div className="p-2 bg-primary rounded-lg">
+                    <Mail className="h-6 w-6 text-black_remote" />
+                  </div>
+                  <a href="mailto:contact@example.com" className="ml-3 text-gray-500 hover:text-black_remote transition-colors">
+                    contact@example.com
+                  </a>
                 </div>
                 <div className="flex items-center">
-                  <Phone className="h-6 w-6 text-indigo-600" />
-                  <span className="ml-3 text-gray-500">+1 (555) 123-4567</span>
+                  <div className="p-2 bg-primary rounded-lg">
+                    <Phone className="h-6 w-6 text-black_remote" />
+                  </div>
+                  <a href="tel:+15551234567" className="ml-3 text-gray-500 hover:text-black_remote transition-colors">
+                    +1 (555) 123-4567
+                  </a>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="h-6 w-6 text-indigo-600" />
-                  <span className="ml-3 text-gray-500">123 Marketing Street, Suite 100, City, State 12345</span>
+                  <div className="p-2 bg-primary rounded-lg">
+                    <MapPin className="h-6 w-6 text-black_remote" />
+                  </div>
+                  <a 
+                    href="https://www.google.com/maps/place/New+York,+NY" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="ml-3 text-gray-500 hover:text-black_remote transition-colors"
+                  >
+                    New York, USA
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <h3 className="text-lg font-medium text-gray-900">Office Hours</h3>
               <div className="mt-2 text-gray-500">
                 <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>
                 <p>Saturday - Sunday: Closed</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

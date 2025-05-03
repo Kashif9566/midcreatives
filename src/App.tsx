@@ -60,61 +60,66 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-white">
-        {user ? <AuthHeader /> : <Navigation />}
-        <Routes>
-          <Route path="/" element={
-            user ? (
-              <Navigate to="/dashboard" />
-            ) : (
-              <div className="pt-16">
-                <Hero />
-                <TrustedBrands />
-                <Benefits />
-                <HowItWorks />
-                <Services />
-                <ComparisonSection />
-                <AIFeatures />
-                <Pricing />
-                <Testimonials />
-                <About />
-                {/* <Contact /> */}
-                <Footer />
-                <ExitIntent />
-              </div>
-            )
-          } />
-          <Route path="/services/seo" element={<SEOServices />} />
-          <Route path="/services/ppc-advertising" element={<PPCAdvertising />} />
-          <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
-          <Route path="/services/content-marketing" element={<ContentMarketing />} />
-          <Route path="/services/email-marketing" element={<EmailMarketing />} />
-          <Route path="/services/content-creation" element={<ContentCreation />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/features" element={<FeaturesPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/testimonials" element={<TestimonialsPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
-          <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
-          <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <Login />} />
-          <Route path="/register" element={user ? <Navigate to="/dashboard" /> : <Register />} />
-          <Route path="/onboarding" element={
-            <ProtectedRoute>
-              <OnboardingQuestionnaire />
-            </ProtectedRoute>
-          } />
-          <Route path="/dashboard/*" element={
-            <ProtectedRoute>
-              {isCheckingOnboarding ? (
-                <div className="flex items-center justify-center h-screen">
-                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
-                </div>
+        <div className="fixed top-0 left-0 right-0 z-50">
+          {user ? <AuthHeader /> : <Navigation />}
+        </div>
+        <div className="pt-16">
+          <Routes>
+            <Route path="/" element={
+              user ? (
+                <Navigate to="/dashboard" />
               ) : (
-                needsOnboarding ? <Navigate to="/onboarding" /> : <Dashboard />
-              )}
-            </ProtectedRoute>
-          } />
-        </Routes>
+                <div>
+                  <Hero />
+                  <TrustedBrands />
+                  <Benefits />
+                  <HowItWorks />
+                  <Services />
+                  <ComparisonSection />
+                  <AIFeatures />
+                  <Pricing />
+                  <Testimonials />
+                  <About />
+                  {/* <Contact /> */}
+                  <Footer />
+                  <ExitIntent />
+                </div>
+              )
+            } />
+            <Route path="/services/seo" element={<SEOServices />} />
+            <Route path="/services/ppc-advertising" element={<PPCAdvertising />} />
+            <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
+            <Route path="/services/content-marketing" element={<ContentMarketing />} />
+            <Route path="/services/email-marketing" element={<EmailMarketing />} />
+            <Route path="/services/content-creation" element={<ContentCreation />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/features" element={<FeaturesPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/testimonials" element={<TestimonialsPage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
+            <Route path="/get-started" element={user ? <Navigate to="/dashboard" /> : <Register />} />
+            <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <Login />} />
+            <Route path="/register" element={user ? <Navigate to="/dashboard" /> : <Register />} />
+            <Route path="/onboarding" element={
+              <ProtectedRoute>
+                <OnboardingQuestionnaire />
+              </ProtectedRoute>
+            } />
+            <Route path="/dashboard/*" element={
+              <ProtectedRoute>
+                {isCheckingOnboarding ? (
+                  <div className="flex items-center justify-center h-screen">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+                  </div>
+                ) : (
+                  needsOnboarding ? <Navigate to="/onboarding" /> : <Dashboard />
+                )}
+              </ProtectedRoute>
+            } />
+          </Routes>
+        </div>
         <Chatbot />
       </div>
     </Router>
