@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { ClipboardList, Rocket, BarChart3, UserCheck, ArrowRight } from 'lucide-react';
+import AnimatedButton from "./AnimatedButton";
 
 interface Step {
   title: string;
@@ -100,13 +101,17 @@ export default function HowItWorks() {
           </div>
 
           <div className="mt-16 text-center">
-            <a
-              href="/register"
-              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text_black_remote bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10 transition-colors"
+            <AnimatedButton
+              onClick={() => window.location.href = "/register"}
+              className="inline-flex items-center justify-center px-8 py-2 border border-transparent text-base font-[500] rounded-md text_black_remote bg-primary hover:bg-primary/90 md:py-3 md:text-lg md:px-10 transition-colors"
             >
-             Launch Your First Campaign
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+              <span className="flex items-center">
+                Launch Your First Campaign
+                <span className="ml-2">
+                  <ArrowRight size={20} />
+                </span>
+              </span>
+            </AnimatedButton>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Check, X, ArrowRight, Info, CheckCircle } from "lucide-react";
 import Footer from "../Footer";
 import type { PricingPlan } from "../../types";
+import AnimatedButton from "../AnimatedButton";
 
 interface TooltipProps {
   content: string;
@@ -354,7 +355,8 @@ export default function PricingPage() {
                       {card.title === "Pay-as-you-go" ? "No monthly retainers" : "per user/mo"}
                     </span>
                   </div>
-                  <button
+                  <AnimatedButton
+                    onClick={() => window.location.href = '/register'}  
                     className={`w-full py-3 px-4 rounded-[8px] font-['Onest'] text-[16px] font-medium leading-[26px] mb-8 ${
                       index === 1
                         ? "bg-black text-white"
@@ -364,7 +366,7 @@ export default function PricingPage() {
                     }`}
                   >
                     Get started for free
-                  </button>
+                  </AnimatedButton>
                   <h4 className="text-[18px] font-[500] font-['Onest'] text-black leading-[22px] mb-4">
                     Features
                   </h4>

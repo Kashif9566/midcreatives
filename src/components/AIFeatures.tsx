@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Zap, BarChart, Target, MessageSquare, ArrowRight } from 'lucide-react';
 import EarlyAccessForm from './EarlyAccessForm';
+import AnimatedButton from './AnimatedButton';
 
 interface AIFeature {
   title: string;
@@ -207,13 +208,13 @@ export default function AIFeatures() {
             })}
             
             <div className="mt-8">
-              <button
+              <AnimatedButton
                 onClick={() => setShowEarlyAccessForm(true)}
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#1F2223] hover:bg-[#2A2D2E] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
               >
                 Get Early Access to AI Features
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
+              </AnimatedButton>
             </div>
           </div>
         </div>

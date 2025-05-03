@@ -10,6 +10,7 @@ import {
   Star,
   CheckCircle,
 } from "lucide-react";
+import AnimatedButton from "./AnimatedButton";
 
 const values = [
   {
@@ -115,9 +116,9 @@ export default function About() {
               businesses with fast, scalable marketing execution through a seamless
               platform.
             </p>
-            <button className="mt-6 sm:mt-8 rounded-[8px] bg-[#1F2223] px-6 sm:px-8 py-[10px] text-[#FFF] font-['Onest'] text-[14px] sm:text-[16px] font-medium leading-[22px] sm:leading-[26px]" onClick={() => window.location.href = '/register'}>
+            <AnimatedButton onClick={() => window.location.href = '/register'} className="mt-6 sm:mt-8 rounded-[8px] bg-[#1F2223] px-6 sm:px-8 py-[10px] text-[#FFF] font-['Onest'] text-[14px] sm:text-[16px] font-medium leading-[22px] sm:leading-[26px]">
               Get Started Now
-            </button>
+            </AnimatedButton>
           </div>
 
           {/* Right side - Stats Section */}

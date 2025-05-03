@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
-
+import AnimatedButton from './AnimatedButton';
 
 const navigation = {
   solutions: [
@@ -71,9 +71,9 @@ export default function Footer() {
         <p className="mt-4 sm:mt-8 text-[#919191] text-center text-[16px] sm:text-[20px] font-normal leading-[24px] sm:leading-[32px]">
           Frustrated by slow agencies and rigid contracts? MaaS is built differently— fast, transparent, and growth-focused. Fill out a quick form, and we'll deliver a tailored plan in 3 days to accelerate your startup's growth.
         </p>
-        <Link to="/register" className="rounded-[8px] bg-[#E0FF82] px-6 sm:px-8 py-[10px] text-[#000] font-['Onest'] text-[14px] sm:text-[16px] font-medium leading-[22px] sm:leading-[26px] mt-6 sm:mt-8">
-          Get Started Now
-        </Link>
+          <AnimatedButton onClick={() => window.location.href = '/register'} className="rounded-[8px] bg-[#E0FF82] px-6 sm:px-8 py-[10px] text-[#000] font-['Onest'] text-[14px] sm:text-[16px] font-medium leading-[22px] sm:leading-[26px] mt-6 sm:mt-8">
+            Get Started Now
+          </AnimatedButton>
       </div>
       <div className="w-full border-t border-gray-700 mt-8 sm:mt-12"></div>
       <h2 id="footer-heading" className="sr-only">
@@ -177,13 +177,13 @@ export default function Footer() {
                     placeholder="Enter your email"
                   />
                   <div className="rounded-md sm:flex-shrink-0">
-                    <button
+                    <AnimatedButton
                       type="submit"
                       className="w-full bg-[#E0FF82] border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-[#000] hover:bg-[#c9e673] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-[#E0FF82]"
                     >
                       Subscribe
                       <Send className="ml-2 h-5 w-5" />
-                    </button>
+                    </AnimatedButton>
                   </div>
                 </form>
                 {subscribed && (

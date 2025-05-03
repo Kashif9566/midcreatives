@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AnimatedButton from './AnimatedButton';
 
 export default function Pricing() {
   const [showCalculator, setShowCalculator] = useState(false);
@@ -82,13 +83,13 @@ export default function Pricing() {
               </div>
 
               <div className="mt-12 sm:mt-16 lg:mt-[97px]">
-                <a
-                  href="/pricing"
+                <AnimatedButton
+                  onClick={() => window.location.href = "/pricing"}
                   className="inline-flex items-center justify-center px-6 sm:px-8 lg:px-[64px] py-[10px] rounded-[8px] bg-[#1F2223] text-white text-[14px] sm:text-[16px] font-medium leading-[1.6]"
                 >
                Book a Call
                  
-                </a>
+                </AnimatedButton>
               </div>
             </div>
           </div>

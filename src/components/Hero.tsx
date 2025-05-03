@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import AnimatedButton from "./AnimatedButton";
 
 const features = [
   "24/7 Marketing Support",
@@ -78,19 +79,19 @@ export default function Hero() {
                     </div>
 
                     <div className="mt-8 flex gap-4">
-                      <button
+                      <AnimatedButton
                         onClick={handleStartRequest}
-                        className="px-[32px] py-[10px] text-base rounded-[8px] text-white bg-[#1F2223] hover:bg-[#1F2223] transition-colors shadow-md hover:shadow-lg flex justify-center items-center font-[Onest] text-[16px] font-[500] leading-[26px]"
+                        className="px-[32px] py-[10px] text-base rounded-[8px] text-white bg-[#1F2223] hover:bg-[#1F2223] transition-all duration-300 shadow-md hover:shadow-lg flex justify-center items-center font-[Onest] text-[16px] font-[500] leading-[26px]"
                       >
                         Get Started Now
-                      </button>
+                      </AnimatedButton>
 
-                      <button
+                      <AnimatedButton
                         onClick={() => setShowVideo(true)}
-                        className="px-[32px] py-[10px] text-[16px] font-[500] text-[#727986] font-[Onest] leading-[26px] rounded-[8px] bg-gray-100 hover:bg-gray-200 inline-flex items-center justify-center gap-[10px] transition-colors"
+                        className="px-[32px] py-[10px] text-[16px] font-[500] text-[#727986] font-[Onest] leading-[26px] rounded-[8px] bg-gray-100 hover:bg-gray-200 inline-flex items-center justify-center gap-[10px] transition-all duration-300"
                       >
                         See How It Works
-                      </button>
+                      </AnimatedButton>
                     </div>
 
                     <p className="mt-4 text-[14px] text-[#727986] font-[400] font-[Onest] leading-[26px]">

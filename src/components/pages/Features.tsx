@@ -1,7 +1,7 @@
 import React from "react";
 import { Clock, Users, BarChart, Zap, ArrowRight } from "lucide-react";
 import Footer from "../Footer";
-
+import AnimatedButton from "../AnimatedButton";
 const features = [
   {
     name: "24-Hour Turnaround",
@@ -82,9 +82,9 @@ export default function Features() {
               Discover how our tech-driven platform delivers fast, scalable
               marketing solutions.
             </p>
-            <button className="mt-6 sm:mt-8 text-[#FFF] font-['Onest'] text-[14px] sm:text-[16px] font-medium leading-[22px] sm:leading-[26px] rounded-[8px] bg-[#1F2223] py-[10px] px-[24px] sm:px-[32px]">
+            <AnimatedButton onClick={() => window.location.href = '/register'} className="mt-6 sm:mt-8 text-[#FFF] font-['Onest'] text-[14px] sm:text-[16px] font-medium leading-[22px] sm:leading-[26px] rounded-[8px] bg-[#1F2223] py-[10px] px-[24px] sm:px-[32px]">
               Get Started Now
-            </button>
+            </AnimatedButton>
           </div>
 
           {/* Right column */}

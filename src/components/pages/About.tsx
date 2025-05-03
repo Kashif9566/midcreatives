@@ -1,6 +1,7 @@
 import React from 'react';
 import { Rocket, Users, Target, BarChart, ArrowRight } from 'lucide-react';
 import Footer from '../Footer';
+import AnimatedButton from '../AnimatedButton';
 
 const values = [
   {
@@ -69,13 +70,13 @@ export default function About() {
                   We're a tech-driven marketing platform built to help businesses scale with on-demand marketing services. Our mission is to empower businesses with fast, scalable marketing execution through a seamless platform.
                 </p>
                 <div className="mt-8">
-                  <a
-                    href="/contact"
+                  <AnimatedButton
+                    onClick={() => window.location.href = "/register"} 
                     className="inline-flex items-center rounded-md bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   >
                     Get Started
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
+                  </AnimatedButton>
                 </div>
               </div>
             </div>
@@ -157,13 +158,13 @@ export default function About() {
           <p className="mt-4 text-lg leading-6 text-indigo-200">
             Join the marketing revolution.
           </p>
-          <a
-            href="/contact"
+          <AnimatedButton
+            onClick={() => window.location.href = "/contact"}
             className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto"
           >
             Get Started
             <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
+          </AnimatedButton>
         </div>
       </div>
 
