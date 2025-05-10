@@ -42,7 +42,8 @@ export default function Contact() {
       {/* Hero Section */}
       <div className="relative pt-32 pb-16 sm:pb-24">
         <div className="px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="flex flex-col items-center justify-center text-center">
+            <img src="/images/Group 11.svg" alt="Contact" className='mb-5'/>
             <h1 className="text-[54px] font-medium font-['Onest'] tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
               Get in  <span
                 style={{

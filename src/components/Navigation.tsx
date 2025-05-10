@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 import SlidingButton from './SlidingButton';
@@ -14,17 +14,16 @@ const services = [
 ];
 
 const navItems = [
-  { name: 'Home', href: '/' },
+  { name: 'Our Work', href: '/testimonials' },
   { name: 'Features', href: '/features' },
   { name: 'Pricing', href: '/pricing' },
-  { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
 
 export default function Navigation() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  // const [showServices, setShowServices] = useState(false);
+  const [showServices, setShowServices] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -43,7 +42,7 @@ export default function Navigation() {
 
   const handleServiceClick = (href: string) => {
     navigate(href);
-    // setShowServices(false);
+    setShowServices(false);
     setIsOpen(false);
   };
 
@@ -72,7 +71,7 @@ export default function Navigation() {
             ))}
 
             {/* Services Dropdown */}
-            {/* <div 
+            <div 
               className="relative group"
               onMouseEnter={() => setShowServices(true)}
               onMouseLeave={() => setShowServices(false)}
@@ -96,16 +95,15 @@ export default function Navigation() {
                   <button
                     key={service.name}
                     onClick={() => handleServiceClick(service.href)}
-                    className="block w-full text-left px-4 py-3 text-sm text-black_remote"
+                    className="block w-full text-left px-4 py-3 text-sm text-black_remote hover:bg-gray-50"
                   >
                     {service.name}
                   </button>
                 ))}
               </div>
-            </div> */}
+            </div>
 
             <SlidingButton to="/login" text="Login" variant="primary" />
-            
             <SlidingButton to="/get-started" text="Get Started" variant="secondary" />
           </div>
 

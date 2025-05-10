@@ -97,7 +97,7 @@ export default function About() {
           {/* Left side - Hero Section */}
           <div className="md:col-span-6">
             <span className="text-[#000] text-center font-['Onest'] text-[16px] sm:text-[18px] font-[500] leading-normal uppercase inline-block rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5">
-              A NEW ERA OF CREATIVE WORK
+              A NEW ERA OF MARKETING WORK
             </span>
             <h2 className="text-black_remote font-['Onest'] text-[28px] sm:text-[32px] md:text-[40px] font-[500] leading-[1.2] mt-4 sm:mt-6 mb-3 sm:mb-4">
               Redefining Marketing<br className="hidden sm:block" />with <span style={{

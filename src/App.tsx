@@ -73,8 +73,8 @@ export default function App() {
                   <Hero />
                   <TrustedBrands />
                   <Benefits />
-                  <HowItWorks />
                   <Services />
+                  <HowItWorks />
                   <ComparisonSection />
                   <AIFeatures />
                   <Pricing />
