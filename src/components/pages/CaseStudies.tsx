@@ -5,11 +5,9 @@ import {
   TrendingUp,
   Users,
   Search,
-  Filter,
-  ChevronDown,
-  ExternalLink,
 } from "lucide-react";
 import Footer from "../Footer";
+import { Link } from "react-router-dom";
 
 interface CaseStudy {
   id: string;
@@ -189,7 +187,6 @@ export default function CaseStudiesPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredStudies, setFilteredStudies] =
     useState<CaseStudy[]>(caseStudies);
-  const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
     let filtered = caseStudies;
@@ -293,25 +290,10 @@ export default function CaseStudiesPage() {
                 Featured Success Stories
               </h2>
             </div>
-            {/* <div className="mt-4 flex md:mt-0 md:ml-4">
-              <button
-                type="button"
-                onClick={() => setShowFilters(!showFilters)}
-                className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none"
-              >
-                <Filter className="h-5 w-5 mr-2 text-gray-500" />
-                Filters
-                <ChevronDown
-                  className={`ml-1 h-4 w-4 transition-transform ${showFilters ? "rotate-180" : ""}`}
-                />
-              </button>
-            </div> */}
           </div>
 
           {/* Search and Filters */}
-          <div
-            className={`mt-6 transition-all duration-300 ease-in-out ${showFilters ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"}`}
-          >
+          <div className="mt-6">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
               <div>
                 <label
@@ -472,12 +454,12 @@ export default function CaseStudiesPage() {
                   </div>
 
                   <div className="mt-6">
-                    <a
-                      href={`/case-studies/${study.id}`}
+                    <Link
+                      to={`/case-studies/${study.id}`}
                       className="inline-flex items-center px-7 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black_remote transition-colors"
                     >
                       Read Full Case Study
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
