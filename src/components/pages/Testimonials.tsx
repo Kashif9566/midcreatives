@@ -195,9 +195,12 @@ export default function TestimonialsPage() {
     ))}
   </div>
 
-  <button onClick={() => window.location.href = '/register'} className="mt-5 px-[32px] py-[10px] rounded-[8px] bg-black text-white font-[Onest] text-[16px] font-medium leading-[26px]">
+
+<Link to={"/register"}>
+  <button className="mt-5 px-[32px] py-[10px] rounded-[8px] bg-black text-white font-[Onest] text-[16px] font-medium leading-[26px]">
     Launching your marketing campaign
   </button>
+</Link>
 </div>
 
             </div>
