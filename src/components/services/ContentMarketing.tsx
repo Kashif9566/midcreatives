@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { PenTool, FileText, BarChart, Target, ArrowRight, CheckCircle, Globe, Zap } from 'lucide-react';
 import Footer from '../Footer';
 import Testimonials from '../Testimonials';
-
+import { Link } from 'react-router-dom';
+import AnimatedButton from '../AnimatedButton';
 interface StatCard {
   title: string;
   value: string;
@@ -164,12 +165,14 @@ export default function ContentMarketing() {
               Create valuable content that attracts, engages, and converts your target audience into loyal customers.
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <a
-                href="/contact"
+              <Link
+                to="/register"
                 className="bg-black text-white px-4 py-3 rounded-lg"
               >
+                <AnimatedButton>
                 Start Your SEO Journey
-              </a>
+                </AnimatedButton>
+              </Link>
               {/* <a
                 href="/contact"
                 className="btn-secondary"
@@ -381,12 +384,13 @@ export default function ContentMarketing() {
         Start your SEO journey with our expert team today.
         </p>
 
-        <a
-          href="/contact"
+        <Link
+          to="/register"
           className="mt-8 inline-flex items-center px-8 py-3 rounded-[8px] shadow-sm text-white font-onest text-[16px] font-medium leading-[26px] bg-black_remote transition-all"
         >
-          Book a Free Consultation
-        </a>
+          <AnimatedButton>          Book a Free Consultation</AnimatedButton>
+
+        </Link>
       </div>
     </div>
   </div>

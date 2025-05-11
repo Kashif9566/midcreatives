@@ -61,7 +61,7 @@ export default function HowItWorks() {
 
   return (
     <div className="bg-white py-24" id="how-it-works">
-      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 pt-0 pb-16 sm:px-6 lg:px-8">
         <div className="text-center">
         <h2 className="text-base font-normal text_black_remote tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
         Process

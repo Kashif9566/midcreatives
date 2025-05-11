@@ -106,8 +106,21 @@ export default function Services() {
   };
 
   return (
-    <div className="bg-[#FFF] py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#FFF] py-24 relative">
+      {/* Gradient Background */}
+      <div 
+  className="hidden sm:block absolute left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 z-0"
+  style={{
+    width: '535px',
+    height: '535px',
+    borderRadius: '535px',
+    background: '#E0FF82',
+    filter: 'blur(227px)',
+    opacity: 0.7
+  }}
+/>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           <h2 className="text-base font-normal text_black_remote tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
             Product Marketing
@@ -132,8 +145,8 @@ export default function Services() {
           <p className="text-[#727986] mt-5 text-center font-normal text-[16px] sm:text-[18px] leading-[24px] sm:leading-[26px] font-[Onest] px-4 sm:px-0">
             Building a full-stack marketing function takes years. Kaya delivers
             a seasoned team
-            <br className="hidden sm:block" /> and marketing analytics from the get-go, saving you
-            significant time and money.
+            <br className="hidden sm:block" /> and marketing analytics from the
+            get-go, saving you significant time and money.
           </p>
         </div>
         <div className="mt-10">
@@ -145,7 +158,7 @@ export default function Services() {
           <div className="max-w-7xl mx-auto mt-[40px]">
             <div className="grid grid-cols-12 gap-4 sm:gap-6">
               {/* Left Column - 7 columns */}
-              <div className="col-span-12 lg:col-span-7 rounded-[16px] bg-[#F7F8F8] px-4 sm:px-6 py-6 sm:py-7">
+              <div className="col-span-12 lg:col-span-7 rounded-[16px] bg-[#F7F8F8] border border-[#DBFE70] px-4 sm:px-6 py-6 sm:py-7">
                 {/* Logo Grid */}
                 <div className="mt-6 sm:mt-8 lg:mt-[70px] flex items-center justify-center relative">
                   {/* Gradient Circle */}
@@ -223,37 +236,72 @@ export default function Services() {
               </div>
 
               {/* Right Column - 5 columns */}
-              <div className="col-span-12 lg:col-span-5 rounded-[16px] bg-[#EFF2FF] p-4 sm:p-6 lg:p-[28.5px_27px_78px_28px] mt-6 lg:mt-0">
-                <h3 className="text-[#000] font-['Onest'] text-[20px] sm:text-[24px] lg:text-[28px] font-[500] leading-normal">
-                  Expertise at your fingertips
+              <div className="col-span-12 lg:col-span-5 rounded-[16px]">
+                <img src="/images/Comparison Table - 4.png" alt="" className="border-t border-l border-r border-[#DBFE70] rounded-tr-[16px] rounded-tl-[16px]" />
+                <div className="bg-[#F7F8F8] pt-5 pb-6 border border-t-0 border-[#DBFE70] rounded-br-[16px] rounded-bl-[16px] px-4">
+                <h3 className="text-[#000] font-['Onest'] text-[24px] sm:text-[28px] font-[500] leading-normal">
+                Expertise at your fingertips
                 </h3>
                 <p className="text-[#000] font-['Onest'] text-[14px] sm:text-[16px] font-normal leading-[22px] mt-4">
-                  We're YC founders ourselves and our team has years of
-                  experience working with the world's growing startups.
+                We're YC founders ourselves and our team has years of experience working with the world's growing startups.
                 </p>
+                </div>
               </div>
             </div>
           </div>
-          <div className="max-w-7xl mx-auto mt-8">
-            <div className="rounded-[16px] bg-[#EBFFF8] p-4 sm:p-6 lg:p-[28.5px_27px_17px_28px] max-w-[600px] mx-auto">
-              <h2 className="text-[#000] font-['Onest'] text-[20px] sm:text-[22px] lg:text-[25px] font-[500] leading-normal">
-                Marketing analytics you don't need to build
-              </h2>
-              <p className="text-[#000] font-['Onest'] text-[14px] sm:text-[16px] font-normal leading-[22px] mt-4">
-                Get access to dashboards and alerts that uncover insights you
-                need to maximise growth and ROI.
-              </p>
-              <div className="px-2 sm:px-4 lg:px-[110px]">
-                <img
-                  src="/images/home-analytics.DVfEhL-X 1.png"
-                  alt="Analytics Dashboard"
-                  className="w-full mt-3"
-                />
-              </div>
-            </div>
+          <div className="grid grid-cols-12 gap-4 sm:gap-6 mt-8">
+          <div className="col-span-12 lg:col-span-7">
+  <div className="relative overflow-hidden flex justify-center items-center rounded-[16px] bg-[#F7F8F899] border border-[#DBFE70] p-4 sm:p-6 lg:py-[40px] lg:px-6 w-full min-h-[340px]">
+    
+    {/* Center Diamond */}
+    <div className="absolute left-1/2 top-0 transform -translate-x-1/2 z-10 hidden sm:block" style={{ width: 140, height: 140 }}>
+      <div className="w-full h-full flex items-center justify-center rotate-45 rounded-3xl" style={{ background: '#E0FF82', position: 'relative', boxShadow: '0px -6px 24px 0px rgba(255, 255, 255, 0.25), 0px 6px 24px 0px #A6D90C' }}>
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-[65%] h-[65%] rounded-[8px]" style={{ boxShadow: '0px -6px 16px 0px #FCF1CE, 0px 6px 16px 0px #FCF1CE' }} />
+      </div>
+    </div>
+
+    {/* Left Line and Diamond Logo */}
+    <div className="absolute top-[70px] left-10 hidden md:block" style={{ width: 'calc(50% - 74px)', height: 2, background: '#D5D5D5' }} />
+    <div className="absolute top-[50px] left-10 z-20 hidden md:block" style={{ width: 40, height: 40 }}>
+      <div className="w-full h-full flex items-center justify-center rotate-45 bg-white border border-[#D5D5D5] rounded-md">
+        <img src="/images/Ellipse 1.png" alt="Logo Left" className="w-6 h-6 object-contain -rotate-45" />
+      </div>
+    </div>
+
+    {/* Right Line and Diamond Logo */}
+    <div className="absolute top-[70px] left-[calc(50%+70px)] hidden md:block" style={{ width: 80, height: 2, background: '#D5D5D5' }} />
+    <div className="absolute top-[50px] left-[calc(50%+150px)] z-20 hidden md:block" style={{ width: 40, height: 40 }}>
+      <div className="w-full h-full flex items-center justify-center rotate-45 bg-white border border-[#D5D5D5] rounded-md">
+        <img src="/images/Ellipse 1 (1).png" alt="Logo Right" className="w-6 h-6 object-contain -rotate-45" />
+      </div>
+    </div>
+
+    {/* Second Right Line and Diamond Logo */}
+    <div className="absolute top-[70px] left-[calc(50%+190px)] hidden md:block" style={{ width: 60, height: 2, background: '#D5D5D5' }} />
+    <div className="absolute top-[50px] left-[calc(50%+260px)] z-20 hidden md:block" style={{ width: 40, height: 40 }}>
+      <div className="w-full h-full flex items-center justify-center rotate-45 bg-white border border-[#D5D5D5] rounded-md">
+        <img src="/images/Ellipse 1 (2).png" alt="Logo Right 2" className="w-6 h-6 object-contain -rotate-45" />
+      </div>
+    </div>
+
+    {/* Connecting line between the two right diamonds */}
+    <div className="absolute top-[70px] left-[calc(50%+230px)] hidden md:block" style={{ width: 30, height: 2, background: '#D5D5D5' }} />
+
+    {/* Text Content */}
+    <div className="relative z-30 flex flex-col items-start justify-start w-full pt-[120px] sm:pt-[160px] md:pt-[200px]">
+      <h2 className="text-[#000] font-['Onest'] text-[18px] sm:text-[20px] lg:text-[25px] font-[500] leading-normal text-left">
+        Marketing analytics you don't need to build
+      </h2>
+      <p className="text-[#000] font-['Onest'] text-[14px] sm:text-[16px] font-normal leading-[22px] mt-4 text-left">
+        Get access to dashboards and alerts that uncover insights you need to maximise growth and ROI.
+      </p>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
-        <div className="mt-10">
+        <div className="mt-16">
           <h2 className="text_black_remote text-center font-normal text-[18px] uppercase font-['Onest'] leading-normal rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
             Grow your Audience
           </h2>
@@ -261,7 +309,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto mt-8 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-12 gap-4 items-center">
             <div className="col-span-12 lg:col-span-5">
-              <h3 className="text-black_remote font-['Onest'] text-[32px] sm:text-[42px] lg:text-[54px] font-[500] leading-[40px] sm:leading-[50px] lg:leading-[60px]">
+              <h3 className="text-black_remote font-['Onest'] text-[32px] sm:text-[42px] lg:text-[50px] font-[500] leading-[40px] sm:leading-[50px] lg:leading-[60px]">
                 Powerful Platform Marketing Success
               </h3>
             </div>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Star, ArrowRight, Play, BarChart, Users, Clock } from "lucide-react";
+import { Star, ArrowRight, Play, BarChart, Users, Clock, Import } from "lucide-react";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
+import AnimatedButton from "../AnimatedButton";
 
 const featuredTestimonial = {
   name: "Sarah Johnson",
@@ -197,10 +198,11 @@ export default function TestimonialsPage() {
 
 
 <Link to={"/register"}>
-  <button className="mt-5 px-[32px] py-[10px] rounded-[8px] bg-black text-white font-[Onest] text-[16px] font-medium leading-[26px]">
+  <AnimatedButton className="mt-5 px-[32px] py-[10px] rounded-[8px] bg-black text-white font-[Onest] text-[16px] font-medium leading-[26px]">
     Launching your marketing campaign
-  </button>
+  </AnimatedButton>
 </Link>
+
 </div>
 
             </div>
@@ -322,8 +324,10 @@ export default function TestimonialsPage() {
               to="/case-studies"
               className="inline-flex items-center px-[32px] py-[10px] rounded-[8px] text-[#000] bg-[#E0FF82] text-[16px] font-[500] leading-[26px] font-[Onest] hover:bg-opacity-90"
             >
+              <AnimatedButton>
               See More Success Stories
               <ArrowRight className="ml-2 h-5 w-5" />
+              </AnimatedButton>
             </Link>
           </div>
         </div>
@@ -513,12 +517,12 @@ export default function TestimonialsPage() {
               </div>
 
               <div>
-                <button
+                <AnimatedButton
                   type="submit"
                   className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm text-white bg-black hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Send Message
-                </button>
+                </AnimatedButton>
               </div>
             </form>
           </div>

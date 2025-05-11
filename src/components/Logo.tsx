@@ -27,18 +27,27 @@ export default function Logo({
 
   const textColor = variant === 'header' ? 'text-black_remote' : 'text-primary';
 
+  // Set the center line color based on the variant
+  const centerLineColor = variant === 'footer' ? 'bg-white' : 'bg-black_remote';
+
   return (
     <div className={`flex items-center ${className}`}>
+      {showText && (
+        <>
+          <span className={`${textSizeClasses[size]} font-bold ${textColor} ml-2`}>
+            MaaS
+          </span>
+          
+          {/* Vertical Line Separator */}
+          <div className={`h-7 w-[2px] ${centerLineColor} mx-3`} />
+        </>
+      )}
+    
       <img 
         src="/images/mass_logo.png" 
         alt="MaaS Logo" 
         className={`${sizeClasses[size]} object-contain`}
       />
-      {showText && (
-        <span className={`${textSizeClasses[size]} font-bold ${textColor} ml-2`}>
-          MaaS
-        </span>
-      )}
     </div>
   );
 }

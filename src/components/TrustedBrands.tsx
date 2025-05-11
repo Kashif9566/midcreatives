@@ -1,16 +1,25 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PortalModal from './PortalModal';
+import Testimonials from './Testimonials';
+import { useNavigate } from 'react-router-dom';
 
 const brands = [
   {
     name: 'Pizza Hut',
     logo: '/images/pizza-hut-seeklogo.png',
     caseStudy: true,
-    testimonial: 'Pizza Hut trusts us to deliver fast, reliable service and creative campaigns.',
-    author: 'Jane Doe',
-    authorTitle: 'Marketing Lead',
-    authorAvatar: '/images/jane-doe.jpg',
+    caseStudyId: 'pizzahut',
+    testimonial: 'Pizza Huts local UK franchises needed a way to increase both online orders and foot traffic in a competitive delivery market.'
   },
+  {
+    name: 'Manji Tv',
+    logo: '/images/manji.jpeg',
+    caseStudy: true,
+    caseStudyId: 'manji',
+    testimonial: 'Manji wanted to grow their presence on YouTube but lacked a clear strategy and consistent production workflow.',
+  },
+
+
   {
     name: 'Memphis',
     logo: '/images/memphis-colored.svg',
@@ -19,11 +28,15 @@ const brands = [
   {
     name: 'Springfield',
     logo: '/images/Springfield-colored.svg',
-    caseStudy: true,
+    caseStudy: false,
     testimonial: 'Springfield saw a 30% increase in engagement after working with us.',
-    author: 'John Smith',
-    authorTitle: 'CEO',
-    authorAvatar: '/images/john-smith.jpg',
+  },
+  {
+    name: 'CGDEN',
+    logo: '/images/cgden.jpeg',
+    caseStudy: true,
+    caseStudyId: 'ggden',
+    testimonial: 'GGDEN is a fast-growing gaming and fintech startup based in Pakistan, focused on enabling local YouTube streamers to monetize their channels through a frictionless payment gateway.',
   },
   {
     name: 'Basel',
@@ -31,22 +44,23 @@ const brands = [
     caseStudy: false,
   },
   {
-    name: 'JW',
+    name: 'Junto Wealth',
     logo: '/images/JW-Logo-Gold-Black.svg',
     caseStudy: true,
-    testimonial: 'JW relies on our insights for strategic growth and innovation.',
-    author: 'Sarah Lee',
-    authorTitle: 'Cofounder',
-    authorAvatar: '/images/sarah-lee.jpg',
+    caseStudyId: 'juntoWealth',
+    testimonial: 'Junto Wealth needed a scalable way to build trust and drive inbound leads for its financial advisory services.',
   },
   {
     name: 'Myx',
     logo: '/images/Drink Myx.webp',
-    caseStudy: false,
+    caseStudy: true,
+    caseStudyId: 'drinkmyx',
+    testimonial:' Drink MYX was burning ad spend on boosted posts without a clear funnel, tracking, or real results.'
   },
 ];
 
 export default function TrustedBrands() {
+  const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -63,9 +77,14 @@ export default function TrustedBrands() {
         }
       }
     };
+  
+    // Continue scrolling even when hover state changes
     const intervalId = setInterval(scroll, 30);
+  
+    // Clear the interval on component unmount
     return () => clearInterval(intervalId);
-  }, [isHovered]);
+  }, []);  // Removed `isHovered` as dependency to prevent resetting interval
+  
 
   // Helper to handle mouse leave for modal
   const handleModalMouseLeave = () => {
@@ -85,6 +104,13 @@ export default function TrustedBrands() {
         top: rect.bottom + window.scrollY + 8, // 8px gap
         left: rect.left + window.scrollX + rect.width / 2,
       });
+    }
+  };
+
+  // Handle case study click
+  const handleCaseStudyClick = (brand: typeof brands[0]) => {
+    if (brand.caseStudy && brand.caseStudyId) {
+      navigate(`/case-studies/${brand.caseStudyId}`);
     }
   };
 
@@ -121,12 +147,13 @@ export default function TrustedBrands() {
                     className="mb-2 cursor-pointer group flex items-center"
                     onMouseEnter={() => handlePillMouseEnter(index)}
                     onMouseLeave={handleModalMouseLeave}
+                    onClick={() => handleCaseStudyClick(brand)}
                   >
                     <span
                       className="relative flex items-center overflow-hidden"
                     >
                       <span
-                        className="bg-primary text-black text-xs font-medium px-2 py-1 rounded-full transition-all duration-300 ease-in-out flex items-center"
+                        className="bg-primary text-black text-[9px] font-medium px-1 py-0 rounded-full transition-all duration-300 ease-in-out flex items-center"
                         style={{
                           transitionProperty: 'padding, width, background-color',
                         }}
@@ -169,7 +196,7 @@ export default function TrustedBrands() {
                   <span className="font-semibold text-black text-lg">{brands[hoveredIndex % brands.length].name}</span>
                 </div>
                 <div className="text-gray-700 mb-4 text-base">{brands[hoveredIndex % brands.length].testimonial}</div>
-                <div className="flex items-center mt-2">
+                {/* <div className="flex items-center mt-2">
                   {brands[hoveredIndex % brands.length].authorAvatar && (
                     <img src={brands[hoveredIndex % brands.length].authorAvatar} alt={brands[hoveredIndex % brands.length].author} className="w-10 h-10 rounded-full mr-3" />
                   )}
@@ -177,7 +204,7 @@ export default function TrustedBrands() {
                     <div className="font-semibold text-black text-sm">{brands[hoveredIndex % brands.length].author}</div>
                     <div className="text-gray-500 text-xs">{brands[hoveredIndex % brands.length].authorTitle}</div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </PortalModal>
           )}

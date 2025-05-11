@@ -104,7 +104,7 @@ export default function Navigation() {
             </div>
 
             <SlidingButton to="/login" text="Login" variant="primary" />
-            <SlidingButton to="/get-started" text="Get Started" variant="secondary" />
+            {/* <SlidingButton to="/get-started" text="Get Started" variant="secondary" /> */}
           </div>
 
           {/* Mobile menu button */}
@@ -159,7 +159,7 @@ export default function Navigation() {
           </div>
           
           <div className="px-3 py-2">
-            <SlidingButton to="/get-started" text="Get Started" variant="secondary" />
+            {/* <SlidingButton to="/get-started" text="Get Started" variant="secondary" /> */}
           </div>
         </div>
       </div>

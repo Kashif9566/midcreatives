@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
+import AnimatedButton from "../AnimatedButton";
 
 interface CaseStudy {
   id: string;
@@ -34,51 +35,46 @@ interface CaseStudy {
 
 const caseStudies: CaseStudy[] = [
   {
-    id: "techcorp",
-    client: "TechCorp Solutions",
-    industry: "SaaS",
-    service: "SEO",
-    challenge:
-      "TechCorp needed to increase qualified leads while reducing their cost per acquisition. Their organic traffic was stagnant despite having quality products.",
-    solution:
-      "We implemented a comprehensive SEO strategy with technical optimization, content marketing, and backlink acquisition to drive organic traffic and targeted paid campaigns.",
+    id: "juntoWealth",
+    client: "Junto Wealth",
+    industry: "Financial Services",
+    service: "Video Marketing",
+    challenge: "Junto Wealth needed a scalable way to build trust and drive inbound leads for its financial advisory services. They lacked consistent content that positioned them as a trustworthy authority in the high-trust world of financial planning.",
+    solution: "We partnered with Junto to create a premium video series, branded and produced to align with their expertise, including scripting, editing, and multi-platform distribution.",
     results: [
-      { metric: "Organic Traffic", value: "+312%", icon: TrendingUp },
-      { metric: "Lead Generation", value: "+156%", icon: Users },
-      { metric: "Cost Per Acquisition", value: "-45%", icon: BarChart },
+      { metric: "Inbound Leads", value: "+40%", icon: TrendingUp },
+      { metric: "Video Series", value: "6 Episodes", icon: Users },
+      { metric: "Micro Content", value: "25+", icon: BarChart }
     ],
     testimonial: {
-      quote:
-        "The MaaS team transformed our digital presence. Their data-driven approach to SEO delivered results beyond our expectations, and their transparent reporting made it easy to see the ROI.",
+      quote: "The video series has transformed our ability to build trust with potential clients. The quality of conversations we're having has improved significantly, and we're seeing more qualified leads come through organically.",
       author: "Sarah Johnson",
-      position: "Marketing Director, TechCorp Solutions",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      position: "Marketing Director, Junto Wealth",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     },
     logo: "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=80&q=80",
-    image:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80",
-    featured: true,
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80",
+    featured: true
   },
   {
-    id: "growthwave",
-    client: "GrowthWave",
-    industry: "E-commerce",
-    service: "Social Media",
+    id: "manji",
+    client: "Manji TV",
+    industry: "Automotive",
+    service: "YouTube Content",
     challenge:
-      "GrowthWave struggled with low conversion rates and inconsistent social media presence, leading to poor brand recognition and stagnant sales.",
+      "Manji wanted to grow their presence on YouTube but lacked a clear strategy and consistent production workflow.",
     solution:
-      "We developed a social media content calendar and optimized their conversion funnel with A/B testing, while implementing targeted social media advertising.",
+      "We partnered with Manji to build a content engine tailored for YouTube, handling everything from content ideation and video strategy to editing and publishing.",
     results: [
-      { metric: "Conversion Rate", value: "+87%", icon: BarChart },
-      { metric: "Social Engagement", value: "+245%", icon: Users },
-      { metric: "Revenue Growth", value: "+112%", icon: TrendingUp },
+      { metric: "Videos Produced", value: "40+", icon: TrendingUp },
+      { metric: "YouTube Views", value: "+300%", icon: Users },
+      { metric: "Watch Time", value: "4x", icon: BarChart }
     ],
     testimonial: {
       quote:
-        "Working with MaaS has been transformative for our business. Their social media strategy not only increased our engagement but directly impacted our bottom line.",
+        "The team's expertise in YouTube content strategy and production has transformed our channel. We've seen incredible growth in both views and engagement, and our community is growing stronger every day.",
       author: "Michael Chen",
-      position: "CEO, GrowthWave",
+      position: "CEO, Manji TV",
       image:
         "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
@@ -88,76 +84,82 @@ const caseStudies: CaseStudy[] = [
     featured: true,
   },
   {
-    id: "innovate-inc",
-    client: "Innovate Inc",
-    industry: "Finance",
-    service: "Content Marketing",
+    id: "ggden",
+    client: "GGDEN",
+    industry: "Gaming & Fintech",
+    service: "Full-Stack Marketing",
     challenge:
-      "Innovate Inc needed to establish thought leadership in a competitive financial services market while generating qualified leads.",
+      "GGDEN needed full-stack marketing support to drive awareness, acquire users, and scale in a niche market of local payment solutions for YouTube streamers.",
     solution:
-      "We created a comprehensive content marketing strategy with industry reports, webinars, and targeted blog content to position them as experts.",
+      "We became GGDEN's external growth team — responsible for creating all performance and brand marketing content, managing their Meta ad campaigns, and running a targeted outreach effort to onboard creators.",
     results: [
-      { metric: "Content Downloads", value: "+178%", icon: TrendingUp },
-      { metric: "Qualified Leads", value: "+94%", icon: Users },
-      { metric: "Organic Traffic", value: "+125%", icon: BarChart },
+      { metric: "Ad Creatives", value: "25+", icon: TrendingUp },
+      { metric: "Paid Signups", value: "3.2x", icon: Users },
+      { metric: "Creator Partners", value: "20+", icon: BarChart },
     ],
+    testimonial: {
+      quote:
+        "The team's full-stack approach to marketing has been instrumental in our growth. From content creation to paid campaigns and creator partnerships, they've helped us scale efficiently and effectively.",
+      author: "David Rodriguez",
+      position: "CEO, GGDEN",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
     logo: "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=80&q=80",
     image:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80",
   },
   {
-    id: "healthplus",
-    client: "HealthPlus",
-    industry: "Healthcare",
-    service: "PPC",
+    id: "pizzahut",
+    client: "Pizza Hut UK",
+    industry: "Food & Beverage",
+    service: "Local Campaigns",
     challenge:
-      "HealthPlus was struggling to reach their target audience efficiently and their ad spend was producing minimal results.",
+      "Pizza Hut's local UK franchises needed a way to increase both online orders and foot traffic in a competitive delivery market.",
     solution:
-      "We restructured their PPC campaigns with precise audience targeting, compelling ad copy, and optimized landing pages.",
+      "We took full ownership of their local paid media operations across select UK regions, designing hyper-targeted Google Ads campaigns that connected nearby customers to store offers and ordering platforms.",
     results: [
-      { metric: "Click-Through Rate", value: "+215%", icon: TrendingUp },
-      { metric: "Conversion Rate", value: "+76%", icon: BarChart },
-      { metric: "Cost Per Lead", value: "-38%", icon: Users },
+      { metric: "Online Orders", value: "+45%", icon: TrendingUp },
+      { metric: "ROAS", value: "2.1x", icon: Users },
+      { metric: "Foot Traffic", value: "Increased", icon: BarChart },
     ],
+    testimonial: {
+      quote:
+        "The team's local expertise and hands-on approach have transformed our digital marketing. We've seen significant growth in both online orders and foot traffic, with clear visibility into performance.",
+      author: "Sarah Johnson",
+      position: "Marketing Director, Pizza Hut UK",
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
     logo: "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=80&q=80",
     image:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80",
   },
   {
-    id: "retail-co",
-    client: "RetailCo",
-    industry: "Retail",
-    service: "Email Marketing",
+    id: "drinkmyx",
+    client: "Drink MYX",
+    industry: "eCommerce",
+    service: "Meta Ads",
     challenge:
-      "RetailCo had a large email list but low engagement rates and poor conversion from their email campaigns.",
+      "Drink MYX was burning ad spend on boosted posts without a clear funnel, tracking, or real results.",
     solution:
-      "We implemented segmentation, personalization, and automated email sequences to nurture leads and drive conversions.",
+      "We rebuilt their Meta ads system from scratch — installing proper conversion tracking, designing a full-funnel paid strategy, and optimizing creative around actual purchase behavior.",
     results: [
-      { metric: "Email Open Rate", value: "+68%", icon: TrendingUp },
-      { metric: "Click Rate", value: "+103%", icon: Users },
-      { metric: "Email Revenue", value: "+187%", icon: BarChart },
+      { metric: "Ad Spend", value: "-60%", icon: TrendingUp },
+      { metric: "ROAS", value: "2x", icon: Users },
+      { metric: "Conversion Rate", value: "Increased", icon: BarChart },
     ],
+    testimonial: {
+      quote:
+        "The team's expertise in Meta advertising has completely transformed our approach to digital marketing. We're now spending smarter, tracking everything, and seeing real results in our sales.",
+      author: "Michael Chen",
+      position: "CEO, Drink MYX",
+      image:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
     logo: "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=80&q=80",
     image:
       "https://images.unsplash.com/photo-1556742031-c6961e8560b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80",
-  },
-  {
-    id: "edulearn",
-    client: "EduLearn",
-    industry: "Education",
-    service: "SEO",
-    challenge:
-      "EduLearn needed to increase enrollment in their online courses through improved organic visibility.",
-    solution:
-      "We developed an SEO strategy focused on educational content, keyword optimization, and technical SEO improvements.",
-    results: [
-      { metric: "Organic Traffic", value: "+205%", icon: TrendingUp },
-      { metric: "Course Enrollments", value: "+87%", icon: Users },
-      { metric: "Keyword Rankings", value: "+143%", icon: BarChart },
-    ],
-    logo: "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=80&q=80",
-    image:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80",
   },
 ];
 
@@ -269,13 +271,15 @@ export default function CaseStudiesPage() {
             </p>
 
             <div className="mt-8">
-              <a
-                href="/contact"
+              <Link
+                to="/register"
                 className="inline-flex items-center px-[32px] py-[10px] rounded-[8px] bg-[#1F2223] text-white font-onest text-[16px] font-medium leading-[26px] transition-all shadow-lg hover:shadow-xl"
               >
+                <AnimatedButton>
                 Talk to Us
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+                </AnimatedButton>
+              </Link>
             </div>
           </div>
         </div>
@@ -293,7 +297,7 @@ export default function CaseStudiesPage() {
           </div>
 
           {/* Search and Filters */}
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
               <div>
                 <label
@@ -384,7 +388,7 @@ export default function CaseStudiesPage() {
                 </select>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -458,7 +462,9 @@ export default function CaseStudiesPage() {
                       to={`/case-studies/${study.id}`}
                       className="inline-flex items-center px-7 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black_remote transition-colors"
                     >
+                      <AnimatedButton>
                       Read Full Case Study
+                      </AnimatedButton>
                     </Link>
                   </div>
                 </div>
@@ -552,12 +558,14 @@ export default function CaseStudiesPage() {
           Join 100+ businesses that scaled with our full-service marketing solutions.
         </p>
 
-        <a
-          href="/contact"
+        <Link
+          to="/register"
           className="mt-8 inline-flex items-center px-8 py-3 rounded-[8px] shadow-sm text-white font-onest text-[16px] font-medium leading-[26px] bg-black_remote transition-all"
         >
+          <AnimatedButton>
           Book a Free Consultation
-        </a>
+          </AnimatedButton>
+        </Link>
       </div>
     </div>
   </div>

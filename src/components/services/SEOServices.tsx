@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Search, BarChart, FileText, Target, ArrowRight, CheckCircle, Zap, Globe, Users } from 'lucide-react';
 import Footer from '../Footer';
 import Testimonials from '../Testimonials';
+import { Link } from 'react-router-dom';
+import AnimatedButton from '../AnimatedButton';
 interface StatCard {
   title: string;
   value: string;
@@ -130,12 +132,14 @@ export default function SEOServices() {
               Drive organic traffic and improve your search visibility with our comprehensive SEO solutions.
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <a
-                href="/contact"
+              <Link
+                to="/register"
                 className="bg-black text-white px-4 py-3 rounded-lg"
               >
+                <AnimatedButton>
                 Start Your SEO Journey
-              </a>
+                </AnimatedButton>
+              </Link>
               {/* <a
                 href="/contact"
                 className="btn-secondary"
@@ -346,12 +350,14 @@ export default function SEOServices() {
         Start your SEO journey with our expert team today.
         </p>
 
-        <a
-          href="/contact"
+        <Link
+          to="/register"
           className="mt-8 inline-flex items-center px-8 py-3 rounded-[8px] shadow-sm text-white font-onest text-[16px] font-medium leading-[26px] bg-black_remote transition-all"
         >
+          <AnimatedButton>
           Book a Free Consultation
-        </a>
+          </AnimatedButton>
+        </Link>
       </div>
     </div>
   </div>
