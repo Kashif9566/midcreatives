@@ -125,7 +125,7 @@ export default function Services() {
           <h2 className="text-base font-normal text_black_remote tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
             Product Marketing
           </h2>
-          <h3 className="text_black_remote text-center font-[500] text-[32px] sm:text-[42px] lg:text-[54px] leading-[40px] sm:leading-[50px] lg:leading-[60px] font-[Onest]">
+          <h3 className="pt-5 text_black_remote text-center font-[500] text-[32px] sm:text-[42px] lg:text-[54px] leading-[40px] sm:leading-[50px] lg:leading-[60px] font-[Onest]">
             Your ready-made growth{" "}
             <span
               style={{
