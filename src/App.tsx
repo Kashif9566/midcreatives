@@ -120,7 +120,7 @@ export default function App() {
             } />
           </Routes>
         </div>
-        <Chatbot />
+        {/* <Chatbot /> */}
       </div>
     </Router>
   );

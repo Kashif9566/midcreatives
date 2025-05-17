@@ -11,7 +11,7 @@ const featuredTestimonial = {
   image:
     "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   quote:
-    "Our ad campaigns saw a 3x CTR increase within the first month of working with MaaS. Their data-driven approach and expert team have transformed our marketing performance.",
+    "Our ad campaigns saw a 3x CTR increase within the first month of working with Runrly. Their data-driven approach and expert team have transformed our marketing performance.",
   logo: "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=80&q=80",
 };
 
@@ -32,7 +32,7 @@ const testimonials = [
     image:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     quote:
-      "Working with MaaS has streamlined our entire marketing process. Their platform makes it easy to manage campaigns, and the results speak for themselves.",
+      "Working with Runrly has streamlined our entire marketing process. Their platform makes it easy to manage campaigns, and the results speak for themselves.",
   },
   {
     name: "David Wilson",
@@ -41,7 +41,7 @@ const testimonials = [
     image:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     quote:
-      "The MaaS team has become an extension of our marketing department. Their strategic insights and execution capabilities have helped us achieve our growth targets.",
+      "The Runrly team has become an extension of our marketing department. Their strategic insights and execution capabilities have helped us achieve our growth targets.",
   },
 ];
 
@@ -52,7 +52,7 @@ const caseStudies = [
     problem:
       "Struggling to scale marketing efforts while maintaining quality and consistency across channels.",
     solution:
-      "Implemented comprehensive marketing automation and content strategy using MaaS platform.",
+      "Implemented comprehensive marketing automation and content strategy using Runrly platform.",
     results:
       "50% increase in qualified leads within 3 months, 3x improvement in campaign execution speed.",
   },
@@ -162,49 +162,46 @@ export default function TestimonialsPage() {
       {/* Featured Testimonial */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div>
-          <div className="bg-primary px-[100px] py-[40px] rounded-lg">
-            <div className="bg-primary px-[100px] py-[60px] rounded-lg flex flex-col items-center text-center gap-6">
+          <div className="bg-primary px-4 sm:px-[100px] py-6 sm:py-[40px] rounded-lg">
+            <div className="bg-primary px-4 sm:px-[100px] py-8 sm:py-[60px] rounded-lg flex flex-col items-center text-center gap-4 sm:gap-6">
               {/* Image + Name/Title */}
               <div className="flex items-center gap-4">
                 <img
                   src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                   alt="Sarah Johnson"
-                  className="w-[64px] h-[64px] rounded-lg object-cover"
+                  className="w-[48px] h-[48px] sm:w-[64px] sm:h-[64px] rounded-lg object-cover"
                 />
                 <div className="flex flex-col flex-start">
-                  <p className="text-[#0D0D0D] text-[30px] font-semibold font-[Onest] leading-[38px]">
+                  <p className="text-[#0D0D0D] text-[24px] sm:text-[30px] font-semibold font-[Onest] leading-[32px] sm:leading-[38px]">
                     Sarah Johnson
                   </p>
 
-                  <p className="text-[#727986] text-[16px] font-normal font-[Onest] leading-[24px]">
+                  <p className="text-[#727986] text-[14px] sm:text-[16px] font-normal font-[Onest] leading-[20px] sm:leading-[24px]">
                     Director of Marketing
                   </p>
                 </div>
               </div>
 
               {/* Testimonial Text + Star + Button */}
-              <div className="mt-5 flex flex-col items-center gap-4 max-w-3xl">
-  <p className="text-[#5F5F5F] text-center text-[20px] font-normal font-[Onest] leading-[30px]">
-    "Our ad campaigns saw a 3x CTR increase within the first month
-    of working with MaaS. Their data-driven approach and expert
-    team have transformed our marketing performance."
-  </p>
+              <div className="mt-3 sm:mt-5 flex flex-col items-center gap-3 sm:gap-4 max-w-3xl">
+                <p className="text-[#5F5F5F] text-center text-[16px] sm:text-[20px] font-normal font-[Onest] leading-[24px] sm:leading-[30px]">
+                  "Our ad campaigns saw a 3x CTR increase within the first month
+                  of working with Runrly. Their data-driven approach and expert
+                  team have transformed our marketing performance."
+                </p>
 
-  <div className="flex gap-1 mt-5">
-    {[...Array(5)].map((_, i) => (
-      <Star key={i} className="text-[#FABE3A]" />
-    ))}
-  </div>
+                <div className="flex gap-1 mt-3 sm:mt-5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-[#FABE3A] fill-[#FABE3A]" />
+                  ))}
+                </div>
 
-
-<Link to={"/register"}>
-  <AnimatedButton className="mt-5 px-[32px] py-[10px] rounded-[8px] bg-black text-white font-[Onest] text-[16px] font-medium leading-[26px]">
-    Launching your marketing campaign
-  </AnimatedButton>
-</Link>
-
-</div>
-
+                <Link to={"/register"}>
+                  <AnimatedButton className="mt-3 sm:mt-5 px-6 sm:px-[32px] py-2 sm:py-[10px] rounded-[8px] bg-black text-white font-[Onest] text-[14px] sm:text-[16px] font-medium leading-[20px] sm:leading-[26px]">
+                    Launching your marketing campaign
+                  </AnimatedButton>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

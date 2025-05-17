@@ -66,10 +66,10 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="mx-[240px] px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-12 gap-8">
+      <div className="mx-4 md:mx-[240px] px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8">
           {/* Contact Form - 6 columns */}
-          <div className="col-span-7">
+          <div className="col-span-1 md:col-span-7">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -180,10 +180,10 @@ export default function Contact() {
           </div>
 
           {/* Empty Space - 2 columns */}
-          <div className="col-span-1" />
+          <div className="hidden md:block md:col-span-1" />
 
           {/* Contact Information - 4 columns */}
-          <div className="col-span-4 space-y-8">
+          <div className="col-span-1 md:col-span-4 space-y-8 mt-12 md:mt-0">
             <div>
               <h3 className="text-lg font-medium text-gray-900">Contact Information</h3>
               <div className="mt-6 space-y-4">
@@ -231,7 +231,7 @@ export default function Contact() {
       </div>
 
       {/* Map Section */}
-      <div className="mt-16 h-96">
+      <div className="mt-8 md:mt-16 h-64 md:h-96">
         <iframe
           title="Office Location"
           className="w-full h-full"

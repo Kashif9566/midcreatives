@@ -8,21 +8,21 @@ const testimonials = [
     role: 'Marketing Director',
     company: 'TechCorp Solutions',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    content: 'The MaaS platform has transformed how we execute our marketing campaigns. Their tech-driven approach and expert team have delivered exceptional results consistently.',
+    content: 'The Runrly platform has transformed how we execute our marketing campaigns. Their tech-driven approach and expert team have delivered exceptional results consistently.',
   },
   {
     name: 'Michael Chen',
     role: 'CEO',
     company: 'GrowthWave',
     image: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    content: "We've seen a 300% increase in our marketing ROI since partnering with MaaS. Their platform makes it incredibly easy to scale our marketing efforts.",
+    content: "We've seen a 300% increase in our marketing ROI since partnering with Runrly. Their platform makes it incredibly easy to scale our marketing efforts.",
   },
   {
     name: 'Emily Rodriguez',
     role: 'Head of Digital',
     company: 'Innovate Inc',
     image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    content: "The level of expertise and dedication from the MaaS team is unmatched. They're not just a service provider; they're a true extension of our marketing team.",
+    content: "The level of expertise and dedication from the Runrly team is unmatched. They're not just a service provider; they're a true extension of our marketing team.",
   },
 ];
 

@@ -118,7 +118,7 @@ export default function AIFeatures() {
 
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Dashboard Preview */}
-          <div className="relative order-2 lg:order-1">
+          <div className="hidden lg:block relative order-2 lg:order-1">
             <div className="bg-gradient-to-r from-[#1F2223] to-[#2A2D2E] rounded-lg shadow-xl overflow-hidden">
               <div className="relative">
                 <div className="aspect-w-16 aspect-h-9">

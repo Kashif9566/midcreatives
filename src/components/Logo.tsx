@@ -32,22 +32,22 @@ export default function Logo({
 
   return (
     <div className={`flex items-center ${className}`}>
-      {showText && (
-        <>
-          <span className={`${textSizeClasses[size]} font-bold ${textColor} ml-2`}>
-            MaaS
-          </span>
-          
-          {/* Vertical Line Separator */}
-          <div className={`h-7 w-[2px] ${centerLineColor} mx-3`} />
-        </>
-      )}
-    
       <img 
         src="/images/mass_logo.png" 
         alt="MaaS Logo" 
         className={`${sizeClasses[size]} object-contain`}
       />
+      
+      {showText && (
+        <>
+          {/* Vertical Line Separator */}
+          <div className={`h-7 w-[2px] ${centerLineColor} mx-3`} />
+          
+          <span className={`${textSizeClasses[size]} font-bold ${textColor} ml-2`}>
+            Runrly
+          </span>
+        </>
+      )}
     </div>
   );
 }

@@ -352,7 +352,7 @@ export default function PricingPage() {
                     </span>
                     <span className="text-[14px] font-normal font-['Plus_Jakarta_Sans'] text-black">
                       {" "}
-                      {card.title === "Pay-as-you-go" ? "No monthly retainers" : "per user/mo"}
+                      {card.title === "Pay-as-you-go" ? "No monthly retainers" : "Per/month"}
                     </span>
                   </div>
                   <AnimatedButton
@@ -365,7 +365,7 @@ export default function PricingPage() {
                           : "bg-[#E0FF82] text-black"
                     }`}
                   >
-                    Get started for free
+                    Get started
                   </AnimatedButton>
                   <h4 className="text-[18px] font-[500] font-['Onest'] text-black leading-[22px] mb-4">
                     Features

@@ -126,7 +126,8 @@ export default function Services() {
             Product Marketing
           </h2>
           <h3 className="pt-5 text_black_remote text-center font-[500] text-[32px] sm:text-[42px] lg:text-[54px] leading-[40px] sm:leading-[50px] lg:leading-[60px] font-[Onest]">
-            Your ready-made growth{" "}
+          Your all-in-one marketing
+          {" "}
             <span
               style={{
                 display: "inline",
@@ -138,13 +139,13 @@ export default function Services() {
                 padding: 0,
               }}
             >
-              engine
+              execution team
             </span>
           </h3>
 
           <p className="text-[#727986] mt-5 text-center font-normal text-[16px] sm:text-[18px] leading-[24px] sm:leading-[26px] font-[Onest] px-4 sm:px-0">
-            Building a full-stack marketing function takes years. Kaya delivers
-            a seasoned team
+          Runrly replaces slow hiring and scattered freelancers with an on-demand growth team — built to launch campaigns, grow your brand, and track performance from a single platform.
+
             <br className="hidden sm:block" /> and marketing analytics from the
             get-go, saving you significant time and money.
           </p>
@@ -227,11 +228,10 @@ export default function Services() {
                 </div>
 
                 <h3 className="mt-[130px] text-[#000] font-['Onest'] text-[24px] sm:text-[28px] font-[500] leading-normal">
-                  We manage your campaigns end-to-end
+                We manage your campaigns end-to-end
                 </h3>
                 <p className="text-[#000] font-['Onest'] text-[14px] sm:text-[16px] font-normal leading-[22px] mt-4">
-                  Our elite team handles every aspect of your campaigns, from
-                  strategy through to optimization. And we get them done fast.
+                Our team handles targeting, creatives, tracking, and optimization — so you can launch fast, grow smarter, and focus on what matters.
                 </p>
               </div>
 
@@ -240,10 +240,11 @@ export default function Services() {
                 <img src="/images/Comparison Table - 4.png" alt="" className="border-t border-l border-r border-[#DBFE70] rounded-tr-[16px] rounded-tl-[16px]" />
                 <div className="bg-[#F7F8F8] pt-5 pb-6 border border-t-0 border-[#DBFE70] rounded-br-[16px] rounded-bl-[16px] px-4">
                 <h3 className="text-[#000] font-['Onest'] text-[24px] sm:text-[28px] font-[500] leading-normal">
-                Expertise at your fingertips
+                We handle the technical foundation 
                 </h3>
                 <p className="text-[#000] font-['Onest'] text-[14px] sm:text-[16px] font-normal leading-[22px] mt-4">
-                We're YC founders ourselves and our team has years of experience working with the world's growing startups.
+                From tracking to testing, our team sets up the infrastructure you need to measure, optimize, and grow with confidence.
+
                 </p>
                 </div>
               </div>
@@ -290,10 +291,10 @@ export default function Services() {
     {/* Text Content */}
     <div className="relative z-30 flex flex-col items-start justify-start w-full pt-[120px] sm:pt-[160px] md:pt-[200px]">
       <h2 className="text-[#000] font-['Onest'] text-[18px] sm:text-[20px] lg:text-[25px] font-[500] leading-normal text-left">
-        Marketing analytics you don't need to build
+      Data clarity in minutes
       </h2>
       <p className="text-[#000] font-['Onest'] text-[14px] sm:text-[16px] font-normal leading-[22px] mt-4 text-left">
-        Get access to dashboards and alerts that uncover insights you need to maximise growth and ROI.
+      Access real-time dashboards and attribution insights — built to track performance across every channel. No spreadsheets. No guesswork.
       </p>
     </div>
   </div>
@@ -310,15 +311,13 @@ export default function Services() {
           <div className="grid grid-cols-12 gap-4 items-center">
             <div className="col-span-12 lg:col-span-5">
               <h3 className="text-black_remote font-['Onest'] text-[32px] sm:text-[42px] lg:text-[50px] font-[500] leading-[40px] sm:leading-[50px] lg:leading-[60px]">
-                Powerful Platform Marketing Success
+              Brand, Content, and community
               </h3>
             </div>
             <div className="col-span-1 hidden lg:block"></div>
             <div className="col-span-12 lg:col-span-6 mt-6 lg:mt-0">
               <p className="text-[#727986] font-['Onest'] text-[18px] sm:text-[20px] lg:text-[22px] font-normal leading-[24px] sm:leading-[26px]">
-                Discover how our tech-driven platform delivers fast, scalable
-                marketing solutions. Discover how our tech-driven platform
-                delivers fast, scalable marketing solutions.
+              We plan, create, and publish content with speed and strategy — turning your LinkedIn, YouTube, TikTok, and Instagram into inbound growth channels.
               </p>
             </div>
           </div>

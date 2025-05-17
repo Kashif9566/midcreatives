@@ -4,32 +4,32 @@ import { useNavigate } from "react-router-dom";
 import AnimatedButton from "./AnimatedButton";
 
 const features = [
-  "24/7 Marketing Support",
-  "Dedicated Account Manager",
-  "We Work in Your Tools",
+  "No retainers or contracts.", 
+"Dedicated Account Manager ",
+"24/7 Marketing Support" 
 ];
 
 const testimonials = [
   {
-    quote: "Marketing requests have gone up 300%",
+    quote: "3.4x ROAS on Google + Meta by week 5",
     name: "SARAH JOHNSON",
     role: "Director, Strategic Planning",
     bgColor: "bg-gray-100",
   },
   {
-    quote: "Our campaigns see 3x higher CTR",
+    quote: "End-to-end ad management, zero lift on my side",
     name: "MICHAEL CHEN",
     role: "Director of Marketing",
     bgColor: "bg-rose-100",
   },
   {
-    quote: "Perfect execution every time",
+    quote: "Content publishing made effortless — and effective",
     name: "EMILY RODRIGUEZ",
     role: "Head of Marketing",
     bgColor: "bg-orange-100",
   },
   {
-    quote: "Zero to full-scale marketing overnight",
+    quote: "Our campaigns see 3x higher CTR",
     name: "DAVID WILSON",
     role: "Director, Product Marketing",
     bgColor: "bg-yellow-100",
@@ -55,15 +55,14 @@ export default function Hero() {
                 <div className="lg:flex lg:space-x-12 items-center">
                   <div className="lg:w-[45.83%]">
                     <h1 className="font-[500] text-[36px] leading-[44px] sm:text-[42px] sm:leading-[50px] md:text-[48px] md:leading-[56px] lg:text-[54px] lg:leading-[60px] tracking-[0] text-black_remote">
-                      <span className="block">Scalable Marketing,</span>
+                      <span className="block">Your <span className="font-['Instrument_Serif'] font-[400] italic">startup</span></span>
                       <span className="relative inline-block">
                         <span className="absolute inset-0 bg-[#E0FF82] h-[50%] top-1/2 -translate-y-1/2 -z-10 rounded"></span>
-                        On Demand.
+                        marketing team
                       </span>
                     </h1>
                     <p className="mt-4 text-[18px] leading-[26px] font-[300] text-[#727986]">
-                      Access a dedicated team of marketing experts for SEO, PPC,
-                      social media, content, and more. No hiring, no hassle.
+                    Access a dedicated team of marketing experts for paid acquisition, SEO, social media, content, and more. No hiring, no hassle. 
                     </p>
                     
 
@@ -100,10 +99,10 @@ export default function Hero() {
                   </div>
 
                   {/* Right Column - Testimonial Cards */}
-                  <div className="lg:w-[54.17%] relative w-full min-h-[500px] lg:h-[500px]">
+                  <div className="hidden lg:block lg:w-[54.17%] relative w-full min-h-[500px] lg:h-[500px]">
                     {/* Container for mobile view */}
-                    <div className="lg:hidden flex flex-col space-y-8 mb-12 mt-8">
-                      {/* Mobile cards */}
+                    {/* <div className="lg:hidden flex flex-col space-y-8 mb-12 mt-8">
+                      
                       <div className="w-full px-4">
                         <div className="bg-[#A6D8FF] px-8 pt-10 pb-8 rounded-xl shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] relative transition-all duration-300 ease-in-out hover:shadow-lg group">
                           <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-[40px] h-[40px] overflow-hidden transition-all duration-300 ease-in-out group-hover:w-[48px] group-hover:h-[48px] group-hover:-top-8 rounded-[4px]">
@@ -195,7 +194,7 @@ export default function Hero() {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Desktop layout - original cards */}
                     <div className="hidden lg:block">

@@ -69,7 +69,7 @@ export default function Footer() {
           Break free from traditional agencies & freelancers
         </h2>
         <p className="mt-4 sm:mt-8 text-[#919191] text-center text-[16px] sm:text-[20px] font-normal leading-[24px] sm:leading-[32px]">
-          Frustrated by slow agencies and rigid contracts? MaaS is built differently— fast, transparent, and growth-focused. Fill out a quick form, and we'll deliver a tailored plan in 3 days to accelerate your startup's growth.
+          Frustrated by slow agencies and rigid contracts? Runrly is built differently— fast, transparent, and growth-focused. Fill out a quick form, and we'll deliver a tailored plan in 3 days to accelerate your startup's growth.
         </p>
           <AnimatedButton onClick={() => window.location.href = '/register'} className="rounded-[8px] bg-[#E0FF82] px-6 sm:px-8 py-[10px] text-[#000] font-['Onest'] text-[14px] sm:text-[16px] font-medium leading-[22px] sm:leading-[26px] mt-6 sm:mt-8">
             Get Started Now

@@ -24,6 +24,7 @@ export default function Navigation() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [showServices, setShowServices] = useState(false);
+  const [showMobileServices, setShowMobileServices] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -83,13 +84,16 @@ export default function Navigation() {
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${showServices ? 'rotate-180' : ''}`} />
               </button>
 
+              {/* Invisible bridge to prevent gap */}
+              <div className="absolute left-0 right-0 h-2" style={{ top: '100%' }} />
+
               <div
                 className={`absolute left-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition-all duration-200 ease-in-out transform ${
                   showServices 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 -translate-y-2 pointer-events-none'
                 }`}
-                style={{ top: 'calc(100% + 0.25rem)' }}
+                style={{ top: 'calc(100% + 0.5rem)' }}
               >
                 {services.map((service) => (
                   <button
@@ -139,8 +143,14 @@ export default function Navigation() {
 
           {/* Mobile Services Menu */}
           <div className="px-3 py-2">
-            <span className="text-gray-500 font-medium">Services</span>
-            <div className="mt-2 space-y-1">
+            <button
+              onClick={() => setShowMobileServices(!showMobileServices)}
+              className="flex items-center justify-between w-full text-gray-500 font-medium"
+            >
+              <span>Services</span>
+              <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${showMobileServices ? 'rotate-180' : ''}`} />
+            </button>
+            <div className={`mt-2 space-y-1 transition-all duration-200 ${showMobileServices ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
               {services.map((service) => (
                 <button
                   key={service.name}

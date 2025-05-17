@@ -67,7 +67,7 @@ export default function ComparisonSection() {
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-base font-normal text_black_remote tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
-            MaaS vs Traditional Alternatives
+            Runrly vs Traditional Alternatives
           </h2>
           <p style={{ color: '#1F2223 !important' }} className="text-[54px] pt-5 font-[500] text_black_remote text-center leading-[60px]">
             Hiring or traditional outsourcing?{' '}
@@ -113,7 +113,7 @@ export default function ComparisonSection() {
 
       {/* Right: Scrollable metrics */}
       <div className="overflow-x-auto flex-1">
-        <div className="min-w-[300px] grid grid-cols-5 gap-4 items-center p-4">
+        <div className="min-w-[400px] grid grid-cols-5 gap-8 items-center p-4">
           {Object.entries(option.metrics).map(([key, metric]) => (
             <div key={key} className="flex flex-col items-center justify-center">
               <span className="text-[12px] font-semibold text_black_remote mb-3">
