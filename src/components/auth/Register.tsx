@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../../store/authStore';
-import Logo from '../Logo';
 
 export default function Register() {
   const [email, setEmail] = useState('');
@@ -30,18 +29,20 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8" style={{
+    <div className="min-h-screen w-full flex flex-col justify-center py-12 sm:px-6 lg:px-8" style={{
       backgroundImage: "url('/images/Log In - 3.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
+      backgroundRepeat: 'no-repeat',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0
     }}>
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white pt-[40px] pb-[50px] px-4 shadow sm:rounded-lg sm:px-10">
-          <div className="flex justify-center">
-            <Logo size="large" showText={false} />
-          </div>
-          <h2 className="mt-6 text-center text-3xl font-bold text-[#282828]">
+          <h2 className="text-center text-3xl font-bold text-[#282828]">
             Create your account
           </h2>
 

@@ -66,25 +66,39 @@ export default function TrustedBrands() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [modalPosition, setModalPosition] = useState<{ top: number; left: number } | null>(null);
   const pillRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const scroll = () => {
-      if (scrollRef.current && !isHovered) {
-        if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth / 2) {
-          scrollRef.current.scrollLeft = 0;
-        } else {
-          scrollRef.current.scrollLeft += 1;
+    const startScrolling = () => {
+      if (scrollIntervalRef.current) return;
+      
+      scrollIntervalRef.current = setInterval(() => {
+        if (scrollRef.current && !isHovered) {
+          const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+          const maxScroll = scrollWidth - clientWidth;
+          
+          if (scrollLeft >= maxScroll) {
+            scrollRef.current.scrollLeft = 0;
+          } else {
+            scrollRef.current.scrollLeft += 1; // Increased scroll speed
+          }
         }
+      }, 30); // Adjusted interval timing
+    };
+
+    const stopScrolling = () => {
+      if (scrollIntervalRef.current) {
+        clearInterval(scrollIntervalRef.current);
+        scrollIntervalRef.current = null;
       }
     };
-  
-    // Continue scrolling even when hover state changes
-    const intervalId = setInterval(scroll, 30);
-  
-    // Clear the interval on component unmount
-    return () => clearInterval(intervalId);
-  }, []);  // Removed `isHovered` as dependency to prevent resetting interval
-  
+
+    startScrolling();
+
+    return () => {
+      stopScrolling();
+    };
+  }, [isHovered]);
 
   // Helper to handle mouse leave for modal
   const handleModalMouseLeave = () => {
@@ -171,8 +185,19 @@ export default function TrustedBrands() {
                     </span>
                   </div>
                 )}
-                <div className="h-12 w-32 rounded-lg flex items-center justify-center">
-                  <img src={brand.logo} alt={brand.name} className="w-full h-full object-contain" />
+                <div className="h-16 w-40 rounded-lg flex items-center justify-center bg-white">
+                  <img 
+                    src={brand.logo} 
+                    alt={brand.name} 
+                    className={`max-h-12 max-w-32 w-auto h-auto object-contain ${brand.name === 'CGDEN' ? 'max-h-20' : ''}`}
+                    style={{ 
+                      maxHeight: brand.name === 'CGDEN' ? '80px' : '48px',
+                      maxWidth: '128px',
+                      width: 'auto',
+                      height: 'auto',
+                      objectFit: 'contain'
+                    }}
+                  />
                 </div>
               </div>
             ))}
@@ -196,15 +221,6 @@ export default function TrustedBrands() {
                   <span className="font-semibold text-black text-lg">{brands[hoveredIndex % brands.length].name}</span>
                 </div>
                 <div className="text-gray-700 mb-4 text-base">{brands[hoveredIndex % brands.length].testimonial}</div>
-                {/* <div className="flex items-center mt-2">
-                  {brands[hoveredIndex % brands.length].authorAvatar && (
-                    <img src={brands[hoveredIndex % brands.length].authorAvatar} alt={brands[hoveredIndex % brands.length].author} className="w-10 h-10 rounded-full mr-3" />
-                  )}
-                  <div>
-                    <div className="font-semibold text-black text-sm">{brands[hoveredIndex % brands.length].author}</div>
-                    <div className="text-gray-500 text-xs">{brands[hoveredIndex % brands.length].authorTitle}</div>
-                  </div>
-                </div> */}
               </div>
             </PortalModal>
           )}

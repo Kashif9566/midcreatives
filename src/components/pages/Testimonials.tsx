@@ -47,24 +47,24 @@ const testimonials = [
 
 const caseStudies = [
   {
-    name: "TechCorp Solutions",
-    logo: "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=80&q=80",
+    name: "GGDEN",
+    logo: "images/WhatsApp Image 2025-03-05 at 12.16.44 AM.jpeg",
     problem:
-      "Struggling to scale marketing efforts while maintaining quality and consistency across channels.",
+      "GGDEN needed full-stack marketing support to drive awareness, acquire users, and scale in a niche market of local payment solutions for YouTube streamers.",
     solution:
-      "Implemented comprehensive marketing automation and content strategy using Runrly platform.",
+      "We became GGDEN's external growth team — responsible for creating all performance and brand marketing content, managing their Meta ad campaigns, and running a targeted outreach effort to onboard creators.",
     results:
-      "50% increase in qualified leads within 3 months, 3x improvement in campaign execution speed.",
+      "25+ Ad Creatives, 3.2x Paid Signups and 20+ Creator Partners",
   },
   {
-    name: "GrowthWave",
-    logo: "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=80&q=80",
+    name: "Manji TV",
+    logo: "/images/WhatsApp Image 2025-03-05 at 12.15.02 AM.jpeg",
     problem:
-      "Limited visibility into marketing performance and difficulty in optimizing campaigns.",
+      "Manji wanted to grow their presence on YouTube but lacked a clear strategy and consistent production workflow",
     solution:
-      "Deployed advanced analytics and multi-channel campaign management.",
+      "We partnered with Manji to build a content engine tailored for YouTube, handling everything from content ideation and video strategy to editing and publishing.",
     results:
-      "200% increase in ROI, 45% reduction in customer acquisition costs.",
+      "40+ Videos Produced and YouTube Views increases +300%.",
   },
 ];
 
@@ -269,7 +269,7 @@ export default function TestimonialsPage() {
                 <img
                   src={study.logo}
                   alt={study.name}
-                  className="h-12 mb-7 rounded-lg"
+                  className={`${study.name === "GGDEN" ? "h-16" : "h-8"} w-auto mb-7 rounded-lg`}
                 />
                 <div className="space-y-9">
                   <div>
@@ -360,7 +360,7 @@ export default function TestimonialsPage() {
             {metrics.map((metric) => (
               <div key={metric.title} className="text-center">
                 <metric.icon className="h-12 w-12 text-black bg-primary rounded-lg p-3 mx-auto" />
-                <h3 className="mt-6 text-[#000] text-center font-onest text-[40px] leading-[64px] tracking-[-0.4px]">
+                <h3 className="mt-6 text-[#000] text-center font-onest text-[28px] leading-[64px] tracking-[-0.4px]">
                   {metric.title}
                 </h3>
               </div>
@@ -412,7 +412,7 @@ export default function TestimonialsPage() {
 
       {/* Contact Form */}
       <div className="bg-white py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-[#000] text-center font-onest text-[40px] leading-[64px] tracking-[-0.4px] font-medium">
               Ready to experience marketing{" "}

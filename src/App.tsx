@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useAuthStore } from './store/authStore';
 import Navigation from './components/Navigation';
 import AuthHeader from './components/AuthHeader';
@@ -26,102 +26,79 @@ import PricingPage from './components/pages/Pricing';
 import TestimonialsPage from './components/pages/Testimonials';
 import CaseStudiesPage from './components/pages/CaseStudies';
 import CaseStudyDetail from './components/pages/CaseStudyDetail';
-import Chatbot from './components/Chatbot';
 import ComparisonSection from './components/ComparisonSection';
 import AIFeatures from './components/AIFeatures';
 import ExitIntent from './components/ExitIntent';
 import OnboardingQuestionnaire from './components/onboarding/OnboardingQuestionnaire';
 import Pricing from './components/Pricing';
 import Services from './components/Services';
-import About from './components/About';
 import ScrollToTop from './components/ScrollToTop';
+import About from './components/About';
 
-export default function App() {
+function AppContent() {
   const user = useAuthStore(state => state.user);
-  const checkOnboardingStatus = useAuthStore(state => state.checkOnboardingStatus);
-  const [isCheckingOnboarding, setIsCheckingOnboarding] = useState(true);
-  const [needsOnboarding, setNeedsOnboarding] = useState(false);
-
-  useEffect(() => {
-    const checkUserOnboardingStatus = async () => {
-      if (user && user.email) {
-        const hasCompletedOnboarding = await checkOnboardingStatus(user.email);
-        setNeedsOnboarding(!hasCompletedOnboarding);
-      } else {
-        setNeedsOnboarding(false);
-      }
-      setIsCheckingOnboarding(false);
-    };
-
-    checkUserOnboardingStatus();
-  }, [user, checkOnboardingStatus]);
+  const location = useLocation();
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
 
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
+      {!isAuthPage && (
         <div className="fixed top-0 left-0 right-0 z-50">
           {user ? <AuthHeader /> : <Navigation />}
         </div>
-        <div className="pt-16">
-          <Routes>
-            <Route path="/" element={
-              user ? (
-                <Navigate to="/dashboard" />
-              ) : (
-                <div>
-                  <Hero />
-                  <TrustedBrands />
-                  <Benefits />
-                  <Services />
-                  <HowItWorks />
-                  <ComparisonSection />
-                  <AIFeatures />
-                  <Pricing />
-                  <Testimonials />
-                  <About />
-                  {/* <Contact /> */}
-                  <Footer />
-                  <ExitIntent />
-                </div>
-              )
-            } />
-            <Route path="/services/seo" element={<SEOServices />} />
-            <Route path="/services/ppc-advertising" element={<PPCAdvertising />} />
-            <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
-            <Route path="/services/content-marketing" element={<ContentMarketing />} />
-            <Route path="/services/email-marketing" element={<EmailMarketing />} />
-            <Route path="/services/content-creation" element={<ContentCreation />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/features" element={<FeaturesPage />} />
-            <Route path="/pricing" element={<PricingPage />} />
-            <Route path="/testimonials" element={<TestimonialsPage />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
-            <Route path="/get-started" element={user ? <Navigate to="/dashboard" /> : <Register />} />
-            <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <Login />} />
-            <Route path="/register" element={user ? <Navigate to="/dashboard" /> : <Register />} />
-            <Route path="/onboarding" element={
-              <ProtectedRoute>
-                <OnboardingQuestionnaire />
-              </ProtectedRoute>
-            } />
-            <Route path="/dashboard/*" element={
-              <ProtectedRoute>
-                {isCheckingOnboarding ? (
-                  <div className="flex items-center justify-center h-screen">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
-                  </div>
-                ) : (
-                  needsOnboarding ? <Navigate to="/onboarding" /> : <Dashboard />
-                )}
-              </ProtectedRoute>
-            } />
-          </Routes>
-        </div>
-        {/* <Chatbot /> */}
+      )}
+      <div className={!isAuthPage ? "pt-16" : ""}>
+        <Routes>
+          <Route path="/" element={
+            user ? (
+              <Navigate to="/dashboard" />
+            ) : (
+              <div>
+                <Hero />
+                <TrustedBrands />
+                <Benefits />
+                <Services />
+                <HowItWorks />
+                <ComparisonSection />
+                <AIFeatures />
+                <Pricing />
+                <Testimonials />
+                <About/>                
+                <Footer />
+                <ExitIntent />
+              </div>
+            )
+          } />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/services/seo" element={<SEOServices />} />
+          <Route path="/services/ppc-advertising" element={<PPCAdvertising />} />
+          <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
+          <Route path="/services/content-marketing" element={<ContentMarketing />} />
+          <Route path="/services/email-marketing" element={<EmailMarketing />} />
+          <Route path="/services/content-creation" element={<ContentCreation />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/testimonials" element={<TestimonialsPage />} />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
+          <Route path="/get-started" element={user ? <Navigate to="/dashboard" /> : <Register />} />
+          <Route path="/onboarding" element={<OnboardingQuestionnaire />} />
+          {/* <Route path="/dashboard/*" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} /> */}
+          <Route path='/dashboard/*' element={<Dashboard/>}/>
+        </Routes>
       </div>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <AppContent />
     </Router>
   );
 }

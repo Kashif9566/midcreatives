@@ -397,20 +397,20 @@ export default function PricingPage() {
           </div>
         </div>
       </div>
-      <div className="bg-white py-[88px]">
-        <div className="max-w-7xl mx-auto flex flex-col items-center justify-center">
+      <div className="bg-white sm:py-[88px] py-12">
+        <div className="max-w-7xl mx-auto flex flex-col items-center justify-center px-4">
           <h2 className="text-[18px] font-normal leading-[26px] text-[#727986] text-center font-[Onest]">
             16,000+ businesses trust MaaS
           </h2>
           <div className="mt-8 flex flex-col items-center gap-8">
-            <div className="flex gap-12">
-              <img src="/images/JW-Logo-Gold-Black.svg" alt="JW Logo" className="h-8" />
-              <img src="/images/memphis-colored.svg" alt="Memphis Logo" className="h-8" />
-              <img src="/images/Springfield-colored.svg" alt="Springfield Logo" className="h-8" />
+            <div className="flex flex-wrap justify-center gap-6 sm:gap-12">
+              <img src="/images/JW-Logo-Gold-Black.svg" alt="JW Logo" className="h-6 sm:h-8" />
+              <img src="/images/memphis-colored.svg" alt="Memphis Logo" className="h-6 sm:h-8" />
+              <img src="/images/Springfield-colored.svg" alt="Springfield Logo" className="h-6 sm:h-8" />
             </div>
-            <div className="flex gap-12">
-              <img src="/images/Basel-colored.svg" alt="Basel Logo" className="h-8" />
-              <img src="/images/Drink Myx.webp" alt="Drink Myx Logo" className="h-8" />
+            <div className="flex flex-wrap justify-center gap-6 sm:gap-12">
+              <img src="/images/Basel-colored.svg" alt="Basel Logo" className="h-6 sm:h-8" />
+              <img src="/images/Drink Myx.webp" alt="Drink Myx Logo" className="h-6 sm:h-8" />
             </div>
           </div>
         </div>

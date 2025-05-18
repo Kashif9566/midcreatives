@@ -6,49 +6,30 @@ export default function ExitIntent() {
   const [showPopup, setShowPopup] = useState(false);
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
-  const [mouseLeft, setMouseLeft] = useState(false);
   const [scrolledPast, setScrolledPast] = useState(false);
 
   useEffect(() => {
-    // Show popup automatically after a short delay, but only if it hasn't been shown this session
-    const timer = setTimeout(() => {
-      if (!sessionStorage.getItem('exitPopupShown')) {
-        setShowPopup(true);
-        sessionStorage.setItem('exitPopupShown', 'true');
-      }
-    }, 2000); // Show after 2 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0 && !sessionStorage.getItem('exitPopupShown')) {
-        setMouseLeft(true);
-      }
-    };
-
     const handleScroll = () => {
-      const pricingSection = document.getElementById('pricing');
-      if (pricingSection) {
-        const rect = pricingSection.getBoundingClientRect();
-        if (rect.bottom < 0 && !sessionStorage.getItem('exitPopupShown')) {
-          setScrolledPast(true);
-        }
+      // Get the viewport height
+      const viewportHeight = window.innerHeight;
+      // Get the current scroll position
+      const scrollPosition = window.scrollY;
+      
+      // Show popup when user has scrolled past 1.5 viewport heights
+      if (scrollPosition > viewportHeight * 1.5 && !sessionStorage.getItem('exitPopupShown')) {
+        setScrolledPast(true);
       }
     };
 
-    document.addEventListener('mouseleave', handleMouseLeave);
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      document.removeEventListener('mouseleave', handleMouseLeave);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   useEffect(() => {
-    if ((mouseLeft || scrolledPast) && !sessionStorage.getItem('exitPopupShown')) {
+    if (scrolledPast && !sessionStorage.getItem('exitPopupShown')) {
       const timer = setTimeout(() => {
         setShowPopup(true);
         sessionStorage.setItem('exitPopupShown', 'true');
@@ -56,7 +37,7 @@ export default function ExitIntent() {
       
       return () => clearTimeout(timer);
     }
-  }, [mouseLeft, scrolledPast]);
+  }, [scrolledPast]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

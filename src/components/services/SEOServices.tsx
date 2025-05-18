@@ -137,7 +137,7 @@ export default function SEOServices() {
                 className="bg-black text-white px-4 py-3 rounded-lg"
               >
                 <AnimatedButton>
-                Start Your SEO Journey
+              Get Started
                 </AnimatedButton>
               </Link>
               {/* <a

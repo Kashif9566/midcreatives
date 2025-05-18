@@ -609,10 +609,10 @@ export default function CaseStudyDetail() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {caseStudy.results.map((result, index) => (
               <div key={index} className="bg-white text-center">
-                <p className="mt-4 text-5xl font-medium text-black_remote">
+                <p className="mt-4 text-3xl font-medium text-black_remote">
                   {result.value}
                 </p>
-                <p className="mt-2 text-[16px] text-black_remote">
+                <p className="mt-2 text-[13px] text-black_remote">
                   {result.metric}
                 </p>
               </div>
