@@ -376,7 +376,7 @@ export default function PricingPage() {
                         key={featureIndex}
                         className={`text-[14px] font-normal font-['Onest'] text-black leading-[32px] flex items-start ${
                           feature === "Creative Support" || feature === "Audience Growth & Engagement"
-                            ? "text-[18px] font-[600] mt-4 mb-2 bg-primary border inline-flex border-black px-2 py-2 rounded-lg"
+                            ? "text-[16px] font-[600] mt-4 mb-2 bg-primary border inline-flex border-black px-2 py-0 rounded-full"
                             : ""
                         }`}
                       >
