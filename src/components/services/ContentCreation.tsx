@@ -154,7 +154,6 @@ export default function ContentCreation() {
                   backgroundSize: "100% 60%",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center 60%",
-                  whiteSpace: "nowrap",
                   padding: 0,
                 }}
               >

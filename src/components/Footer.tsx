@@ -27,24 +27,24 @@ const navigation = {
     { name: 'Contact Us', href: '/contact' },
   ],
   social: [
-    {
-      name: 'Facebook',
-      href: 'https://facebook.com',
-      icon: Facebook,
-    },
-    {
-      name: 'Twitter',
-      href: 'https://twitter.com',
-      icon: Twitter,
-    },
+    // {
+    //   name: 'Facebook',
+    //   href: 'https://facebook.com',
+    //   icon: Facebook,
+    // },
+    // {
+    //   name: 'Twitter',
+    //   href: 'https://twitter.com',
+    //   icon: Twitter,
+    // },
     {
       name: 'Instagram',
-      href: 'https://instagram.com',
+      href: 'https://www.instagram.com/runrly?igsh=MTVoOXpxMDFkOXJ1Zg%3D%3D&utm_source=qr',
       icon: Instagram,
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/company/runrly1/',
       icon: Linkedin,
     },
   ],

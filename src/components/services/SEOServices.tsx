@@ -121,16 +121,15 @@ export default function SEOServices() {
                   backgroundSize: "100% 60%",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center 60%",
-                  whiteSpace: "nowrap",
                   padding: 0,
                 }}
               >
                Data-Driven SEO
               </span>
             </h1>
-            <p className="mt-6 max-w-md mx-auto text-lg text-[#727986] sm:text-xl md:max-w-5xl">
+            {/* <p className="mt-6 max-w-md mx-auto text-lg text-[#727986] sm:text-xl md:max-w-5xl">
               Drive organic traffic and improve your search visibility with our comprehensive SEO solutions.
-            </p>
+            </p> */}
             <div className="mt-8 flex justify-center gap-4">
               <Link
                 to="/register"
@@ -140,12 +139,6 @@ export default function SEOServices() {
               Get Started
                 </AnimatedButton>
               </Link>
-              {/* <a
-                href="/contact"
-                className="btn-secondary"
-              >
-                Schedule a Free Audit
-              </a> */}
             </div>
           </div>
         </div>

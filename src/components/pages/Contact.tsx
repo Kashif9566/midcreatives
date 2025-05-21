@@ -44,7 +44,7 @@ export default function Contact() {
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-center text-center">
             <img src="/images/Group 11.svg" alt="Contact" className='mb-5'/>
-            <h1 className="text-[54px] font-medium font-['Onest'] tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+            <h1 className="text-[54px] font-medium font-['Onest'] tracking-tight text-gray-900 sm:text-5xl md:text-6xl leading-tight sm:leading-normal">
               Get in  <span
                 style={{
                   display: "inline",
@@ -191,19 +191,19 @@ export default function Contact() {
                   <div className="p-2 bg-primary rounded-lg">
                     <Mail className="h-6 w-6 text-black_remote" />
                   </div>
-                  <a href="mailto:contact@example.com" className="ml-3 text-gray-500 hover:text-black_remote transition-colors">
-                    contact@example.com
+                  <a href="mailto:azam@runrly.com" className="ml-3 text-gray-500 hover:text-black_remote transition-colors">
+                    azam@runrly.com
                   </a>
                 </div>
                 <div className="flex items-center">
                   <div className="p-2 bg-primary rounded-lg">
                     <Phone className="h-6 w-6 text-black_remote" />
                   </div>
-                  <a href="tel:+15551234567" className="ml-3 text-gray-500 hover:text-black_remote transition-colors">
-                    +1 (555) 123-4567
+                  <a href="tel:+923144179121" className="ml-3 text-gray-500 hover:text-black_remote transition-colors">
+                    +92 314 4179121
                   </a>
                 </div>
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <div className="p-2 bg-primary rounded-lg">
                     <MapPin className="h-6 w-6 text-black_remote" />
                   </div>
@@ -215,7 +215,7 @@ export default function Contact() {
                   >
                     New York, USA
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
 

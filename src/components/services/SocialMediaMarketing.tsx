@@ -21,7 +21,7 @@ interface ServiceFeature {
 const stats: StatCard[] = [
   {
     title: 'Active Users',
-    value: '4.7B',
+    value: '4.7',
     description: 'Global social media audience',
     icon: Users
   },
@@ -154,7 +154,6 @@ export default function SocialMediaMarketing() {
                   backgroundSize: "100% 60%",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center 60%",
-                  whiteSpace: "nowrap",
                   padding: 0,
                 }}
               >

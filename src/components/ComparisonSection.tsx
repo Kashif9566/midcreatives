@@ -69,7 +69,7 @@ export default function ComparisonSection() {
           <h2 className="text-base font-normal text_black_remote tracking-wide uppercase text-center font-['Onest'] rounded-[100px] border border-[#727986] bg-[#E0FF82] px-4 py-1.5 inline-block">
             Runrly vs Traditional Alternatives
           </h2>
-          <p style={{ color: '#1F2223 !important' }} className="text-[54px] pt-5 font-[500] text_black_remote text-center leading-[60px]">
+          <p style={{ color: '#1F2223 !important' }} className="text-[48px] pt-5 font-[500] text_black_remote text-center leading-[60px]">
             Hiring or traditional outsourcing?{' '}
           </p>
           <p className="text-[54px] font-[500] text_black_remote text-center leading-[60px]">
@@ -80,7 +80,6 @@ export default function ComparisonSection() {
                 backgroundSize: '100% 60%',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center 60%',
-                whiteSpace: 'nowrap',
                 padding: 0
               }}
             >

@@ -80,14 +80,14 @@ export default function Hero() {
                     <div className="mt-8 flex gap-4">
                       <AnimatedButton
                         onClick={handleStartRequest}
-                        className="px-[32px] py-[10px] text-base rounded-[8px] text-white bg-[#1F2223] hover:bg-[#1F2223] transition-all duration-300 shadow-md hover:shadow-lg flex justify-center items-center font-[Onest] text-[16px] font-[500] leading-[26px]"
+                        className="px-[24px] md:px-[32px] py-[8px] md:py-[10px] text-sm md:text-base rounded-[8px] text-white bg-[#1F2223] hover:bg-[#1F2223] transition-all duration-300 shadow-md hover:shadow-lg flex justify-center items-center font-[Onest] text-[14px] md:text-[16px] font-[500] leading-[22px] md:leading-[26px]"
                       >
                         Get Started Now
                       </AnimatedButton>
 
                       <AnimatedButton
                         onClick={() => setShowVideo(true)}
-                        className="px-[32px] py-[10px] text-[16px] font-[500] text-[#727986] font-[Onest] leading-[26px] rounded-[8px] bg-gray-100 hover:bg-gray-200 inline-flex items-center justify-center gap-[10px] transition-all duration-300"
+                        className="px-[24px] md:px-[32px] py-[8px] md:py-[10px] text-[14px] md:text-[16px] font-[500] text-[#727986] font-[Onest] leading-[22px] md:leading-[26px] rounded-[8px] bg-gray-100 hover:bg-gray-200 inline-flex items-center justify-center gap-[8px] md:gap-[10px] transition-all duration-300"
                       >
                         See How It Works
                       </AnimatedButton>
