@@ -29,7 +29,7 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center py-12 sm:px-6 lg:px-8" style={{
+    <div className="min-h-screen w-full flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8" style={{
       backgroundImage: "url('/images/Log In - 3.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -40,8 +40,8 @@ export default function Register() {
       right: 0,
       bottom: 0
     }}>
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white pt-[40px] pb-[50px] px-4 shadow sm:rounded-lg sm:px-10">
+      <div className="mx-auto w-full max-w-[320px] sm:max-w-md">
+        <div className="bg-white pt-6 pb-8 px-4 shadow rounded-lg sm:px-10 sm:pt-[40px] sm:pb-[50px]">
           <h2 className="text-center text-3xl font-bold text-[#282828]">
             Create your account
           </h2>
