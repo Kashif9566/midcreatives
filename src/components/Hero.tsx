@@ -54,8 +54,8 @@ export default function Hero() {
                 {/* Left Column */}
                 <div className="lg:flex lg:space-x-12 items-center">
                   <div className="lg:w-[45.83%]">
-                    <h1 className="font-[500] text-[36px] leading-[44px] sm:text-[42px] sm:leading-[50px] md:text-[48px] md:leading-[56px] lg:text-[54px] lg:leading-[60px] tracking-[0] text-black_remote">
-                      <span className="block">Your <span className="font-['Instrument_Serif'] font-[400] italic">startup</span></span>
+                    <h1 className="font-[500] text-[36px] leading-[44px] sm:text-[42px] sm:leading-[50px] md:text-[48px] md:leading-[56px] lg:text-[54px] lg:leading-[60px] tracking-tight text-black_remote">
+                      <span className="block">Your <span className="font-['Instrument_Serif'] font-[400] italic tracking-tight">startup</span></span>
                       <span className="relative inline-block">
                         <span className="absolute inset-0 bg-[#E0FF82] h-[50%] top-1/2 -translate-y-1/2 -z-10 rounded"></span>
                         marketing team
