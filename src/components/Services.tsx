@@ -145,9 +145,6 @@ export default function Services() {
 
           <p className="text-[#727986] mt-5 text-center font-normal text-[16px] sm:text-[18px] leading-[24px] sm:leading-[26px] font-[Onest] px-4 sm:px-0">
           Runrly replaces slow hiring and scattered freelancers with an on-demand growth team — built to launch campaigns, grow your brand, and track performance from a single platform.
-
-            <br className="hidden sm:block" /> and marketing analytics from the
-            get-go, saving you significant time and money.
           </p>
         </div>
         <div className="mt-10">
