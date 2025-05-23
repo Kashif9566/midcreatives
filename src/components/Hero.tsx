@@ -85,12 +85,12 @@ export default function Hero() {
                         Get Started Now
                       </AnimatedButton>
 
-                      <AnimatedButton
+                      {/* <AnimatedButton
                         onClick={() => setShowVideo(true)}
                         className="px-[24px] md:px-[32px] py-[8px] md:py-[10px] text-[14px] md:text-[16px] font-[500] text-[#727986] font-[Onest] leading-[22px] md:leading-[26px] rounded-[8px] bg-gray-100 hover:bg-gray-200 inline-flex items-center justify-center gap-[8px] md:gap-[10px] transition-all duration-300"
                       >
                         See How It Works
-                      </AnimatedButton>
+                      </AnimatedButton> */}
                     </div>
 
                     <p className="mt-4 text-[14px] text-[#727986] font-[400] font-[Onest] leading-[26px]">

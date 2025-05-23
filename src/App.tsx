@@ -50,24 +50,20 @@ function AppContent() {
       <div className={!isAuthPage ? "pt-16" : ""}>
         <Routes>
           <Route path="/" element={
-            user ? (
-              <Navigate to="/dashboard" />
-            ) : (
-              <div>
-                <Hero />
-                <TrustedBrands />
-                <Benefits />
-                <Services />
-                <HowItWorks />
-                <ComparisonSection />
-                <AIFeatures />
-                <Pricing />
-                <Testimonials />
-                <About/>                
-                <Footer />
-                <ExitIntent />
-              </div>
-            )
+            <div>
+              <Hero />
+              <TrustedBrands />
+              <Benefits />
+              <Services />
+              <HowItWorks />
+              <ComparisonSection />
+              <AIFeatures />
+              <Pricing />
+              <Testimonials />
+              <About/>                
+              <Footer />
+              <ExitIntent />
+            </div>
           } />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

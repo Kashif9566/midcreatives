@@ -23,15 +23,15 @@ export default function Login() {
       await signIn(email, password);
 
       // Check if user has completed onboarding
-      const hasCompletedOnboarding = await checkOnboardingStatus(email);
+      // const hasCompletedOnboarding = await checkOnboardingStatus(email);
 
-      if (hasCompletedOnboarding) {
-        // Existing user - go directly to dashboard
-        navigate("/dashboard");
-      } else {
-        // New user - go to onboarding
-        navigate("/onboarding");
-      }
+      // if (hasCompletedOnboarding) {
+      //   // Existing user - go directly to dashboard
+      //   navigate("/dashboard");
+      // } else {
+      //   // New user - go to onboarding
+      //   navigate("/onboarding");
+      // }
     } catch (err: any) {
       setError(err.message || "Failed to sign in");
     } finally {
